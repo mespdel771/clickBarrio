@@ -1,0 +1,342 @@
+
+/* =========================
+   RESET / BASE
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    color: #1f2937;
+}
+
+
+/* =========================
+   WELCOME CARD
+========================= */
+
+.welcome-card {
+    width: calc(100% - 2rem);
+    max-width: 500px;
+    margin: 6rem auto;
+    padding: 2.5rem;
+
+    background: #ffffff;
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.welcome-card h1 {
+    margin: 0 0 0.5rem;
+
+    font-size: 1.8rem;
+    line-height: 1.3;
+}
+
+.welcome-card p {
+    margin: 0 0 1.5rem;
+
+    color: #6b7280;
+}
+
+
+/* =========================
+   LOGO SVG
+========================= */
+
+.logo-container {
+    margin-bottom: 1.5rem;
+}
+
+.logo-container svg {
+    width: 80px;
+    height: 80px;
+
+    fill: none;
+    stroke: #4f46e5;
+    stroke-width: 1.5;
+}
+
+.store-grocery {
+    stroke: #10b981;
+}
+
+.store-boutique {
+    stroke: #8b5cf6;
+}
+
+.store-bakery {
+    stroke: #f59e0b;
+}
+
+
+/* Animación del logo */
+
+.logo-container svg g {
+    transition: transform 0.3s ease;
+}
+
+.logo-container svg:hover g {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   BOTONES LOGIN / REGISTER
+========================= */
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 0.7rem 1.2rem;
+
+    border-radius: 6px;
+
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-login {
+    background-color: #3b82f6;
+}
+
+.btn-login:hover {
+    background-color: #2563eb;
+}
+
+.btn-register {
+    background-color: #10b981;
+}
+
+.btn-register:hover {
+    background-color: #059669;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard-container {
+    width: calc(100% - 2rem);
+    max-width: 1100px;
+
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+
+/* Título */
+
+.main-title {
+    margin-bottom: 2rem;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .button-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+/* =========================
+   BOTONES DASHBOARD
+========================= */
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.5rem;
+
+    padding: 1.5rem;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.nav-button:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   COLORES DASHBOARD
+========================= */
+
+.btn-tiendas {
+    background: #3b82f6;
+}
+
+.btn-tiendas:hover {
+    background: #2563eb;
+}
+
+.btn-productos {
+    background: #10b981;
+}
+
+.btn-productos:hover {
+    background: #059669;
+}
+
+.btn-categorias {
+    background: #8b5cf6;
+}
+
+.btn-categorias:hover {
+    background: #7c3aed;
+}
+
+.btn-reservas {
+    background: #ef4444;
+}
+
+.btn-reservas:hover {
+    background: #dc2626;
+}
+
+
+/* =========================
+   PANEL INFO
+========================= */
+
+.panel-info {
+    margin-top: 2rem;
+
+    padding: 1.5rem;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.role-text {
+    margin-bottom: 1rem;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   ALERTAS
+========================= */
+
+.alert-box {
+    padding: 1rem;
+
+    margin-top: 0.5rem;
+
+    border-radius: 6px;
+}
+
+.alert-title {
+    margin-bottom: 0.3rem;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   COLORES ROLES
+========================= */
+
+.box-usuario {
+    background: #eff6ff;
+    color: #1e40af;
+}
+
+.box-gestor {
+    background: #fefce8;
+    color: #854d0e;
+}
+
+.box-admin {
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .welcome-card {
+        margin: 3rem auto;
+        padding: 2rem 1.5rem;
+    }
+
+    .welcome-card h1 {
+        font-size: 1.5rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+

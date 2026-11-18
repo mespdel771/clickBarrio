@@ -1,0 +1,67 @@
+.grupo-botones-principales {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.boton-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    min-height: 120px;
+}
+
+.boton-principal .titulo {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.boton-principal .numero {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.boton-tiendas { background: #3498db; }
+.boton-productos { background: #2ecc71; }
+.boton-reservas { background: #e67e22; }
+.boton-categorias { background: #9b59b6; }
+.boton-usuarios { background: #e74c3c; }
+
+/* LOGO */
+
+.logo-container {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container svg {
+    width: 80px;
+    height: 80px;
+    fill: none;
+    stroke: #4f46e5;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.logo-linea { stroke: #4f46e5; }
+.store-grocery { stroke: #10b981; }
+.store-boutique { stroke: #8b5cf6; }
+.store-bakery { stroke: #f59e0b; }
+
+.nombre-proyecto {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1f2937;
+}

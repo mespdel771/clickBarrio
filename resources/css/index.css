@@ -1,0 +1,66 @@
+ body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .welcome-card {
+            text-align: center;
+            background: #ffffff;
+            padding: 3.5rem 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+        .logo-container {
+            margin-bottom: 2rem;
+        }
+        .shop-logo {
+            width: 100px;
+            height: 100px;
+            color: #4f46e5; /* Color del icono */
+        }
+        h1 {
+            color: #1e293b;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            color: #64748b;
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .btn {
+            padding: 0.85rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s ease-in-out;
+            border: 2px solid transparent;
+        }
+        .btn-login {
+            background-color: #4f46e5;
+            color: #ffffff;
+        }
+        .btn-login:hover {
+            background-color: #4338ca;
+        }
+        .btn-register {
+            background-color: transparent;
+            border-color: #cbd5e1;
+            color: #475569;
+        }
+        .btn-register:hover {
+            background-color: #f1f5f9;
+            border-color: #94a3b8;
+        }

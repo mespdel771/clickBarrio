@@ -1,0 +1,1075 @@
+/* =========================
+RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+GENERAL
+========================= */
+
+body {
+
+    min-height: 100vh;
+
+    background: #f3f4f6;
+
+    color: #1f2937;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+/* =========================
+CONTENEDOR PRINCIPAL
+========================= */
+
+.contenedor-formulario {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 2rem;
+
+}
+
+
+/* =========================
+CABECERA
+========================= */
+
+.cabecera-formulario {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 2rem;
+
+}
+
+
+.cabecera-izquierda {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+/* =========================
+LOGO
+========================= */
+
+.logo-container {
+
+    width: 80px;
+
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.logo-container svg {
+
+    width: 80px;
+
+    height: 80px;
+
+    fill: none;
+
+    stroke: #4f46e5;
+
+    stroke-width: 1.5;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+}
+
+
+.logo-linea {
+    stroke: #4f46e5;
+}
+
+
+.store-grocery {
+    stroke: #10b981;
+}
+
+
+.store-boutique {
+    stroke: #8b5cf6;
+}
+
+
+.store-bakery {
+    stroke: #f59e0b;
+}
+
+
+.nombre-proyecto {
+
+    font-size: 1.2rem;
+
+    font-weight: 700;
+
+    color: #1f2937;
+
+}
+
+
+/* =========================
+TITULO
+========================= */
+
+.titulo-formulario {
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    color: #1f2937;
+
+}
+
+
+/* =========================
+BOTON VOLVER
+========================= */
+
+.boton-volver {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: .8rem 1.5rem;
+
+    background: #6b7280;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+}
+
+
+.boton-volver:hover {
+
+    background: #4b5563;
+
+}
+
+
+/* =========================
+TARJETA
+========================= */
+
+.tarjeta-formulario {
+
+    width: 100%;
+
+    background: white;
+
+    padding: 2rem;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+
+}
+
+
+/* =========================
+FORMULARIOS
+========================= */
+
+.campo-formulario {
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+.campo-formulario label {
+
+    display: block;
+
+    margin-bottom: .5rem;
+
+    font-weight: 700;
+
+}
+
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+
+    width: 100%;
+
+    padding: .8rem 1rem;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+}
+
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+
+    outline: none;
+
+    border-color: #2563eb;
+
+}
+
+
+/* =========================
+BOTONES FORMULARIO
+========================= */
+
+.botones-formulario {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 1rem;
+
+}
+
+
+.boton-guardar {
+
+    padding: .8rem 1.8rem;
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+}
+
+
+.boton-guardar:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+.boton-cancelar {
+
+    padding: .8rem 1.8rem;
+
+    background: #9ca3af;
+
+    color: white;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================
+TABLAS CRUD
+========================= */
+
+.tabla-contenedor {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+}
+
+
+.tabla-crud {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+}
+
+
+.tabla-crud th {
+
+    background: #1f2937;
+
+    color: white;
+
+    padding: 1rem;
+
+    text-align: left;
+
+}
+
+
+.tabla-crud td {
+
+    padding: 1rem;
+
+    border-bottom: 1px solid #e5e7eb;
+
+}
+
+
+.tabla-crud tr:hover {
+
+    background: #f9fafb;
+
+}
+
+
+/* =========================
+ACCIONES TABLA
+========================= */
+
+.acciones-tabla {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: .5rem;
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+.boton-editar {
+
+    background: #f59e0b;
+
+    color: white;
+
+    padding: .5rem 1rem;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+}
+
+
+.boton-eliminar {
+
+    background: #dc2626;
+
+    color: white;
+
+    padding: .5rem 1rem;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================
+MENSAJES
+========================= */
+
+.mensaje-exito {
+
+    padding: 1rem;
+
+    margin-bottom: 1rem;
+
+    background: #dcfce7;
+
+    color: #166534;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+}
+
+
+.mensaje-error {
+
+    padding: 1rem;
+
+    margin-bottom: 1rem;
+
+    background: #fee2e2;
+
+    color: #991b1b;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================================
+   CATÁLOGO DE PRODUCTOS
+===================================================== */
+
+.catalogo-categoria {
+
+    margin-bottom: 2rem;
+
+}
+
+
+.titulo-categoria {
+
+    margin-top: 1.5rem;
+
+    margin-bottom: 1rem;
+
+    padding: .8rem 1rem;
+
+    background: #f3f4f6;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 6px;
+
+    color: #1f2937;
+
+}
+
+
+/* =========================
+PRODUCTO
+========================= */
+
+.producto-catalogo {
+
+    width: 100%;
+
+    margin-bottom: 1.5rem;
+
+    background: white;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,.08);
+
+}
+
+
+/* =========================
+CABECERA PRODUCTO
+========================= */
+
+.producto-cabecera {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 1rem 1.5rem;
+
+    background: #f8fafc;
+
+    border-bottom: 1px solid #e5e7eb;
+
+}
+
+
+.producto-titulo {
+
+    flex: 1;
+
+}
+
+
+.producto-titulo h3 {
+
+    font-size: 1.25rem;
+
+    color: #111827;
+
+    font-weight: 700;
+
+}
+
+
+.producto-imagen {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.producto-imagen img {
+
+    max-width: 70px;
+
+    max-height: 70px;
+
+    object-fit: contain;
+
+    border-radius: 6px;
+
+}
+
+
+/* =========================
+CONTENIDO PRODUCTO
+========================= */
+
+.producto-contenido {
+
+    padding: 1rem 1.5rem 1.3rem;
+
+}
+
+
+.producto-disponibilidad-titulo {
+
+    margin-bottom: .8rem;
+
+    font-size: .95rem;
+
+    font-weight: 700;
+
+    color: #6b7280;
+
+}
+
+/* =========================
+TIENDAS
+========================= */
+
+.tiendas-producto {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: .7rem;
+
+}
+
+
+
+.tienda-producto {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    grid-template-rows: auto auto;
+
+    align-items: center;
+
+    gap: .5rem 1rem;
+
+    padding: .8rem 1rem;
+
+    background: #f9fafb;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 8px;
+
+}
+
+
+
+.tienda-nombre {
+
+    grid-column: 1 / 3;
+
+    font-weight: bold;
+
+}
+
+
+
+.tienda-info {
+
+    grid-column: 1;
+
+}
+
+
+
+.boton-tienda {
+
+    grid-column: 2;
+
+    grid-row: 2;
+
+    white-space: nowrap;
+
+}
+
+/* =========================
+DATOS TIENDA
+========================= */
+
+.tienda-datos {
+
+    flex: 1;
+
+    min-width: 0;
+
+    display: grid;
+
+    grid-template-columns: minmax(180px, 2fr) minmax(100px, 1fr) minmax(120px, 1fr);
+
+    align-items: center;
+
+    gap: 1rem;
+
+}
+
+
+.tienda-nombre {
+
+    min-width: 0;
+
+    color: #1f2937;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+.tienda-precio {
+
+    font-weight: 700;
+
+    color: #2563eb;
+
+    white-space: nowrap;
+
+}
+
+
+.tienda-stock {
+
+    color: #374151;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================
+BOTÓN TIENDA
+========================= */
+
+.tienda-boton {
+
+    flex-shrink: 0;
+
+}
+
+
+.boton-tienda {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 135px;
+
+    padding: .65rem 1rem;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+
+.boton-tienda:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+/* =========================
+SIN TIENDAS
+========================= */
+
+.sin-tiendas {
+
+    padding: 1rem;
+
+    background: #f9fafb;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 8px;
+
+    color: #6b7280;
+
+}
+
+/* =========================
+PAGINACIÓN (CORREGIDA)
+========================= */
+
+.paginacion {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    width: 100%;
+}
+
+
+/* UL CONTENEDOR */
+.paginacion ul {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    flex-wrap: wrap; /* 🔥 evita que se pisen */
+}
+
+
+/* ITEMS */
+.paginacion li {
+
+    display: flex;
+
+}
+
+
+/* BOTONES Y TEXTOS */
+.paginacion a,
+.paginacion span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0.4rem 0.75rem;
+
+    min-width: 38px;
+
+    height: 38px;
+
+    border-radius: 8px;
+
+    background: #f3f4f6;
+
+    color: #1f2937;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    border: 1px solid #e5e7eb;
+
+    white-space: nowrap; /* 🔥 evita saltos raros */
+}
+
+
+/* HOVER */
+.paginacion a:hover {
+
+    background: #dbeafe;
+
+}
+
+
+/* ACTIVO */
+.paginacion .activo span {
+
+    background: #2563eb;
+
+    color: white;
+
+    border-color: #2563eb;
+
+}
+
+
+/* DESHABILITADO */
+.paginacion .disabled span {
+
+    background: #e5e7eb;
+
+    color: #9ca3af;
+
+}
+
+
+/* =========================
+MODAL
+========================= */
+
+.modal-fondo {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.5);
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.modal-contenido {
+
+    background: white;
+
+    width: 400px;
+
+    max-width: 90%;
+
+    padding: 2rem;
+
+    border-radius: 12px;
+
+}
+
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width: 900px) {
+
+    .contenedor-formulario {
+
+        max-width: 100%;
+
+        padding: 1rem;
+
+    }
+
+
+    .tienda-datos {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .tienda-stock {
+
+        grid-column: 1;
+
+    }
+
+
+    .tienda-boton {
+
+        grid-column: 2;
+
+        grid-row: 2;
+
+        justify-self: end;
+
+    }
+
+}
+
+
+@media(max-width: 700px) {
+
+    .cabecera-formulario {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 1rem;
+
+    }
+
+
+    .acciones-tabla {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .producto-cabecera {
+
+        padding: 1rem;
+
+    }
+
+
+    .producto-contenido {
+
+        padding: 1rem;
+
+    }
+
+
+    .tienda-producto {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .tienda-datos {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: .5rem;
+
+    }
+
+
+    .tienda-nombre {
+
+        grid-column: 1 / -1;
+
+    }
+
+
+    .tienda-boton {
+
+        width: 100%;
+
+    }
+
+
+    .boton-tienda {
+
+        width: 100%;
+
+    }
+     
+
+}
+/* ===================================
+   FORZAR IMAGENES RESERVAS
+=================================== */
+
+img.carrito-imagen {
+    width: 80px !important;
+    height: 80px !important;
+    max-width: 80px !important;
+    max-height: 80px !important;
+    min-width: 80px !important;
+    min-height: 80px !important;
+    object-fit: contain !important;
+    display: block !important;
+}
