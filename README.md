@@ -18,12 +18,12 @@ Plataforma web desarrollada en **Laravel 12** para la gestión integral de comer
 
 ---
 
-## 🛠️ Requisitos del sistema
+## 🛠️ Requisitos del sistema (Windows, macOS y Linux)
 
 * **PHP:** 8.2 o superior
 * **Composer**
 * **Node.js y NPM**
-* **Servidor web y base de datos:** Apache / XAMPP y MySQL / MariaDB
+* **Servidor web y base de datos:** XAMPP / Laragon / MAMP / Apache y MySQL / MariaDB
 
 ---
 
@@ -41,13 +41,23 @@ Plataforma web desarrollada en **Laravel 12** para la gestión integral de comer
    npm install && npm run build
    ```
 
-3. **Configurar variables de entorno:**
-   Copia el archivo de ejemplo y genera la clave de aplicación:
+3. **Configurar variables de entorno y enlace de imágenes:**
+   Copia el archivo de ejemplo según tu sistema operativo:
+   * **En Linux, macOS o Git Bash / PowerShell (Windows):**
+     ```bash
+     cp .env.example .env
+     ```
+   * **En Símbolo del sistema de Windows (CMD):**
+     ```cmd
+     copy .env.example .env
+     ```
+
+   A continuación, genera la clave de aplicación y crea el enlace simbólico para las imágenes:
    ```bash
-   cp .env.example .env
    php artisan key:generate
+   php artisan storage:link
    ```
-   Asegúrate de tener creada la base de datos `click` en MySQL con las credenciales definidas en `.env.example` (o ajústalas según tu entorno local).
+   Asegúrate de tener creada la base de datos `click` en MySQL con las credenciales definidas en `.env.example` (o ajústalas en tu archivo `.env` según tu entorno local).
 
 4. **Ejecutar migraciones y datos de prueba (Seeders):**
    ```bash
@@ -68,6 +78,12 @@ Plataforma web desarrollada en **Laravel 12** para la gestión integral de comer
    php artisan config:clear
    ```
 
+6. **Arrancar el servidor local:**
+   ```bash
+   php artisan serve
+   ```
+   Accede desde tu navegador a `http://127.0.0.1:8000` (o a través de tu VirtualHost en XAMPP/Laragon).
+
 ---
 
 ## 👥 Usuarios de prueba (Generados por `UserSeeder`)
@@ -80,6 +96,15 @@ Todos los usuarios creados por defecto comparten la misma contraseña (`password
 | **Gestor de Tienda** | `gestor1@gmail.com` *(y `gestor2@gmail.com`, etc.)* | `password` | Propietario y gestor de su tienda asignada según ID |
 | **Cliente principal** | `usuario@gmail.com` | `password` | Usuario comprador de prueba |
 | **Clientes adicionales** | `user1@gmail.com` hasta `user5@gmail.com` | `password` | Cuentas adicionales de clientes para pruebas |
+
+---
+
+## 🧪 Ejecución de pruebas automatizadas
+
+El proyecto incluye pruebas unitarias y de integración (`tests/Unit` y `tests/Feature`). Para ejecutarlas:
+```bash
+php artisan test
+```
 
 ---
 
