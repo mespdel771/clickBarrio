@@ -33,14 +33,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])
         ->name('profile.destroy');
 });
+// Listado de categorías y tiendas (requiere sesión iniciada)
+Route::middleware('auth')->group(function () {
+    Route::get('/categorias', [CategoriaController::class, 'index'])
+        ->name('categorias.index');
 
-// Listado público de categorías
-Route::get('/categorias', [CategoriaController::class, 'index'])
-    ->name('categorias.index');
-
-// Listado público de tiendas
-Route::get('/tiendas', [TiendaController::class, 'index'])
-    ->name('tiendas.index');
+    Route::get('/tiendas', [TiendaController::class, 'index'])
+        ->name('tiendas.index');
+});
 
 // Creación de nuevas tiendas (exclusivo para administradores)
 Route::middleware(['auth', 'role:administrador'])->group(function () {
@@ -51,8 +51,9 @@ Route::middleware(['auth', 'role:administrador'])->group(function () {
         ->name('tiendas.store');
 });
 
-// Escaparate y detalle público de una tienda concreta
-Route::get('/tiendas/{store}', [TiendaController::class, 'show'])
+// Escaparate y detalle de una tienda concreta (requiere sesión iniciada)
+Route::middleware('auth')
+    ->get('/tiendas/{store}', [TiendaController::class, 'show'])
     ->name('tiendas.show');
 
 // Listado general de productos (requiere autenticación)

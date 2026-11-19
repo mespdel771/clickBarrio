@@ -169,18 +169,16 @@
                             </td>
 
                             <td>
-                                @if($producto->imagen && file_exists(public_path('storage/' . $producto->imagen)))
+                                @if($producto->imagen && \Illuminate\Support\Facades\Storage::disk('public')->exists($producto->imagen))
                                     <img src="{{ asset('storage/' . $producto->imagen) }}"
-                                         alt=""
-                                         style="
-                                            width:80px;
-                                            height:80px;
-                                            object-fit:cover;
-                                            border-radius:12px;
-                                         ">
+                                    alt="{{ $producto->denominacion }}"
+                                    style="width:80px; height:80px; object-fit:cover; border-radius:8px;">
                                 @else
-                                    Sin imagen
-                                @endif
+                                    <span>
+                                     Sin imagen
+                                    </span>
+                                 @endif
+
                             </td>
 
                             <td>
@@ -189,7 +187,7 @@
                                 </a>
                             </td>
                         </tr>
-                    @empty
+                                    @empty
                         <tr>
                             <td colspan="3">
                                 No hay productos disponibles
@@ -200,15 +198,14 @@
             </table>
         </div>
 
-
-       {{-- SECCIÓN PARA EL ROL ADMINISTRADOR --}}
+    {{-- SECCIÓN PARA EL ROL ADMINISTRADOR --}}
     @elseif(auth()->user()->hasRole('administrador'))
 
         {{-- Cuadrícula completa de productos con opciones de edición y borrado --}}
         <div class="catalogo-productos">
             @foreach($productos as $producto)
                 <article class="producto-catalogo">
-                    @if($producto->imagen)
+                    @if($producto->imagen && \Illuminate\Support\Facades\Storage::disk('public')->exists($producto->imagen))
                         <img src="{{ asset('storage/'.$producto->imagen) }}"
                              alt="{{ $producto->denominacion }}"
                              style="
@@ -217,6 +214,21 @@
                                 object-fit:cover;
                                 border-radius:12px;
                              ">
+                    @else
+                        <div style="
+                            width:120px;
+                            height:120px;
+                            border-radius:12px;
+                            background:#f3f4f6;
+                            color:#6b7280;
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                            font-size:13px;
+                            margin: 0 auto;
+                        ">
+                            Sin imagen
+                        </div>
                     @endif
 
                     <h3>
@@ -270,12 +282,12 @@
                     {{ $categoria }}
                 </h3>
 
-                                @foreach($grupo as $producto)
+                @foreach($grupo as $producto)
                     <article class="producto-catalogo" style="display:flex; align-items:flex-start; gap:1.25rem; padding:1.25rem; border:1px solid #e5e7eb; border-radius:12px; background:#ffffff; margin-bottom:1rem; flex-wrap:wrap;">
                         {{-- Imagen del producto o marcador 'Sin imagen' si no existe el archivo físico --}}
-                        @if($producto->imagen && file_exists(public_path('storage/' . $producto->imagen)))
+                        @if($producto->imagen && \Illuminate\Support\Facades\Storage::disk('public')->exists($producto->imagen))
                             <img src="{{ asset('storage/' . $producto->imagen) }}"
-                                 alt=""
+                                 alt="{{ $producto->denominacion }}"
                                  style="
                                     width:120px;
                                     height:120px;
@@ -343,17 +355,10 @@
                                 @endforeach
                             </div>
                         </div>
-                                      </article>
+                    </article>
                 @endforeach
             </section>
         @endforeach
-
-        {{-- Paginación del catálogo para cliente --}}
-        @if($productos instanceof \Illuminate\Pagination\LengthAwarePaginator && $productos->hasPages())
-            <div class="paginacion">
-                {{ $productos->links('vendor.pagination.custom') }}
-            </div>
-        @endif
 
         {{-- Paginación del catálogo público para clientes --}}
         @if($productos instanceof \Illuminate\Pagination\LengthAwarePaginator && $productos->hasPages())

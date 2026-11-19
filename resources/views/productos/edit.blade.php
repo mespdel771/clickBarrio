@@ -65,11 +65,12 @@
                 Formatos permitidos: JPG, PNG, WEBP (máx 2MB)
             </small>
 
-            @if($producto->imagen)
+            @if($producto->imagen && \Illuminate\Support\Facades\Storage::disk('public')->exists($producto->imagen))
                 <div style="margin-top:10px;">
                     <p>Imagen actual:</p>
 
                     <img src="{{ asset('storage/' . $producto->imagen) }}"
+                         alt="{{ $producto->denominacion }}"
                          width="150"
                          style="border-radius:8px; border:1px solid #ccc;">
                 </div>
@@ -81,7 +82,7 @@
         {{-- Tiendas donde el producto ya se encuentra asignado --}}
         <h2>Tiendas asignadas</h2>
 
-               @foreach($tiendasAsignadas as $tienda)
+        @foreach($tiendasAsignadas as $tienda)
 
             @php
                 // Recupera el precio y el stock actuales indexados por el ID entero de la tienda
@@ -96,7 +97,7 @@
                     <input type="checkbox"
                            name="tiendas[{{ $tienda->id }}][activo]"
                            value="1"
-                           checked>
+                           {{ old("tiendas.$tienda->id.activo", '1') == '1' ? 'checked' : '' }}>
                     Activar en esta tienda
                 </label>
             </div>
@@ -106,7 +107,7 @@
 
                 <input type="number"
                        step="0.01"
-                       min="0"
+                       min="0.01"
                        name="tiendas[{{ $tienda->id }}][precio]"
                        value="{{ old("tiendas.$tienda->id.precio", $precio->precio ?? '') }}"
                        placeholder="0.00">
@@ -116,7 +117,7 @@
                 <label>Stock</label>
 
                 <input type="number"
-                       min="0"
+                       min="1"
                        name="tiendas[{{ $tienda->id }}][stock]"
                        value="{{ old("tiendas.$tienda->id.stock", $stock->stock ?? '') }}"
                        placeholder="0">
@@ -137,7 +138,8 @@
                 <label>
                     <input type="checkbox"
                            name="tiendas[{{ $tienda->id }}][activo]"
-                           value="1">
+                           value="1"
+                           {{ old("tiendas.$tienda->id.activo") == '1' ? 'checked' : '' }}>
                     Activar en esta tienda
                 </label>
             </div>
@@ -147,9 +149,9 @@
 
                 <input type="number"
                        step="0.01"
-                       min="0"
+                       min="0.01"
                        name="tiendas[{{ $tienda->id }}][precio]"
-                       value=""
+                       value="{{ old("tiendas.$tienda->id.precio") }}"
                        placeholder="0.00">
             </div>
 
@@ -157,9 +159,9 @@
                 <label>Stock</label>
 
                 <input type="number"
-                       min="0"
+                       min="1"
                        name="tiendas[{{ $tienda->id }}][stock]"
-                       value=""
+                       value="{{ old("tiendas.$tienda->id.stock") }}"
                        placeholder="0">
             </div>
 

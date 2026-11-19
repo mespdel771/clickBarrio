@@ -85,15 +85,18 @@ return new class extends Migration
             }
         });
 
-        // 6. Restricciones CHECK para evitar valores negativos o cero.
-        DB::statement('ALTER TABLE precios ADD CONSTRAINT chk_precios_precio CHECK (precio >= 0)');
-        DB::statement('ALTER TABLE stocks ADD CONSTRAINT chk_stocks_stock CHECK (stock >= 0)');
-        DB::statement('ALTER TABLE reserva_items ADD CONSTRAINT chk_reserva_items_cantidad CHECK (cantidad > 0)');
-        DB::statement('ALTER TABLE reserva_items ADD CONSTRAINT chk_reserva_items_precio CHECK (precio >= 0)');
+               // 6. Restricciones CHECK para evitar valores negativos o cero (compatibles con MySQL).
+        if (DB::getDriverName() !== 'sqlite') {
+            DB::statement('ALTER TABLE precios ADD CONSTRAINT chk_precios_precio CHECK (precio >= 0)');
+            DB::statement('ALTER TABLE stocks ADD CONSTRAINT chk_stocks_stock CHECK (stock >= 0)');
+            DB::statement('ALTER TABLE reserva_items ADD CONSTRAINT chk_reserva_items_cantidad CHECK (cantidad > 0)');
+            DB::statement('ALTER TABLE reserva_items ADD CONSTRAINT chk_reserva_items_precio CHECK (precio >= 0)');
 
-        if (Schema::hasColumn('carrito_items', 'cantidad')) {
-            DB::statement('ALTER TABLE carrito_items ADD CONSTRAINT chk_carrito_items_cantidad CHECK (cantidad > 0)');
+            if (Schema::hasColumn('carrito_items', 'cantidad')) {
+                DB::statement('ALTER TABLE carrito_items ADD CONSTRAINT chk_carrito_items_cantidad CHECK (cantidad > 0)');
+            }
         }
+
     }
 
     /**

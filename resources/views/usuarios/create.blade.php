@@ -54,10 +54,15 @@
         <div class="campo-formulario" id="contenedor-tienda" style="display: none;">
             <label for="tienda_id">Tienda</label>
             <select name="tienda_id" id="tienda_id">
-                <option value="">Sin asignar</option>
+                <option value="">Seleccione una tienda</option>
                 @foreach($tiendas as $tienda)
                     <option value="{{ $tienda->id }}" {{ old('tienda_id') == $tienda->id ? 'selected' : '' }}>
                         {{ $tienda->nombre }}
+                        @if($tienda->user)
+                            (Gestor actual: {{ $tienda->user->name }} — pasará a usuario)
+                        @else
+                            (Sin gestor)
+                        @endif
                     </option>
                 @endforeach
             </select>

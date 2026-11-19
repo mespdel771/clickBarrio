@@ -255,6 +255,14 @@ y vinculándolo a una tienda si su rol es gestor.</dd>
 <dd>Valida y actualiza los datos de un usuario existente, sincroniza su rol
 y actualiza su asignación como gestor de tienda si corresponde.</dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -method -private">
+    <a class="" href="classes/App-Http-Controllers-UserController.html#method_asignarTiendaAGestor">asignarTiendaAGestor()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>Asigna un usuario como gestor de una tienda y, si la tienda tenía un gestor anterior
+que ya no gestiona ninguna otra tienda, cambia su rol a &#039;usuario&#039;.</dd>
+
     </dl>
 
 
@@ -322,7 +330,7 @@ y actualiza su asignación como gestor de tienda si corresponde.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/UserController.php"><a href="files/app-http-controllers-usercontroller.html"><abbr title="app/Http/Controllers/UserController.php">UserController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">173</span>
+    <span class="phpdocumentor-element-found-in__line">179</span>
 
     </aside>
 
@@ -463,7 +471,7 @@ y actualiza su asignación como gestor de tienda si corresponde.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/UserController.php"><a href="files/app-http-controllers-usercontroller.html"><abbr title="app/Http/Controllers/UserController.php">UserController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">59</span>
+    <span class="phpdocumentor-element-found-in__line">61</span>
 
     </aside>
 
@@ -515,7 +523,7 @@ y vinculándolo a una tienda si su rol es gestor.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/UserController.php"><a href="files/app-http-controllers-usercontroller.html"><abbr title="app/Http/Controllers/UserController.php">UserController.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">127</span>
+    <span class="phpdocumentor-element-found-in__line">129</span>
 
     </aside>
 
@@ -562,6 +570,63 @@ y actualiza su asignación como gestor de tienda si corresponde.</p>
             </section>
 
 </article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_asignarTiendaAGestor">
+        asignarTiendaAGestor()
+        <a href="classes/App-Http-Controllers-UserController.html#method_asignarTiendaAGestor" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="app/Http/Controllers/UserController.php"><a href="files/app-http-controllers-usercontroller.html"><abbr title="app/Http/Controllers/UserController.php">UserController.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">204</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Asigna un usuario como gestor de una tienda y, si la tienda tenía un gestor anterior
+que ya no gestiona ninguna otra tienda, cambia su rol a &#039;usuario&#039;.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+                    <span class="phpdocumentor-signature__name">asignarTiendaAGestor</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__type">int|string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$tiendaId</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$nuevoGestorId</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-argument-list__argument__name">$tiendaId</span>
+                : <span class="phpdocumentor-argument-list__argument__type">int|string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>ID de la tienda a asignar.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-argument-list__argument__name">$nuevoGestorId</span>
+                : <span class="phpdocumentor-argument-list__argument__type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>ID del nuevo usuario gestor.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+
+        
+    
+    
+</article>
             </section>
 
         
@@ -590,6 +655,7 @@ y actualiza su asignación como gestor de tienda si corresponde.</p>
                                             <li class=""><a href="classes/App-Http-Controllers-UserController.html#method_index">index()</a></li>
                                             <li class=""><a href="classes/App-Http-Controllers-UserController.html#method_store">store()</a></li>
                                             <li class=""><a href="classes/App-Http-Controllers-UserController.html#method_update">update()</a></li>
+                                            <li class=""><a href="classes/App-Http-Controllers-UserController.html#method_asignarTiendaAGestor">asignarTiendaAGestor()</a></li>
                                     </ul>
             </li>
                     </ul>

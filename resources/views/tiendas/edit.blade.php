@@ -32,6 +32,58 @@
             @enderror
         </div>
 
+        {{-- Campo de correo electrónico de contacto de la tienda --}}
+        <div class="campo-formulario">
+            <label>
+                Correo electrónico
+            </label>
+
+            <input type="email"
+                   name="email"
+                   value="{{ old('email', $store->email) }}"
+                   required>
+
+            @error('email')
+                <div class="error-formulario">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+
+        {{-- Campo opcional de persona de contacto --}}
+        <div class="campo-formulario">
+            <label>
+                Persona de contacto
+            </label>
+
+            <input type="text"
+                   name="persona_contacto"
+                   value="{{ old('persona_contacto', $store->persona_contacto) }}">
+
+            @error('persona_contacto')
+                <div class="error-formulario">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+
+        {{-- Campo opcional de teléfono de contacto --}}
+        <div class="campo-formulario">
+            <label>
+                Teléfono
+            </label>
+
+            <input type="text"
+                   name="telefono"
+                   value="{{ old('telefono', $store->telefono) }}">
+
+            @error('telefono')
+                <div class="error-formulario">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+
         {{-- Campo de dirección física del establecimiento --}}
         <div class="campo-formulario">
             <label>

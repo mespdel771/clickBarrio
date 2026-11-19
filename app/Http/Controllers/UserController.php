@@ -39,8 +39,10 @@ class UserController extends Controller
      */
     public function create(): View
     {
-        // Obtiene todas las tiendas disponibles.
-        $tiendas = Tienda::all();
+        // Obtiene todas las tiendas disponibles junto con su gestor actual.
+        $tiendas = Tienda::with('user')
+            ->orderBy('nombre')
+            ->get();
 
         // Envía las tiendas al formulario.
         return view(
@@ -64,7 +66,9 @@ class UserController extends Controller
             'email'     => 'required|email|unique:users',
             'password'  => 'required|min:8',
             'rol'       => 'required|in:administrador,gestor,usuario',
-            'tienda_id' => 'nullable|exists:tiendas,id',
+            'tienda_id' => 'required_if:rol,gestor|nullable|exists:tiendas,id',
+        ], [
+            'tienda_id.required_if' => 'Debes seleccionar una tienda para asignar al gestor.',
         ]);
 
         // Crea el nuevo usuario.
@@ -74,13 +78,9 @@ class UserController extends Controller
         $usuario->password = Hash::make($request->password);
         $usuario->save(); // Guardamos primero para generar el ID del usuario.
 
-        // Si es gestor, guardamos el ID del usuario en la columna 'user_id' de la tabla 'tiendas'.
+        // Si es gestor, asignamos la tienda y degradamos al antiguo gestor a 'usuario' si se queda sin tiendas.
         if ($request->rol === 'gestor' && $request->filled('tienda_id')) {
-            $tienda = Tienda::find($request->tienda_id);
-            if ($tienda) {
-                $tienda->user_id = $usuario->id;
-                $tienda->save();
-            }
+            $this->asignarTiendaAGestor($request->tienda_id, $usuario->id);
         }
 
         // Asignamos el rol elegido.
@@ -103,8 +103,10 @@ class UserController extends Controller
      */
     public function edit(User $usuario): View
     {
-        // Obtiene todas las tiendas disponibles.
-        $tiendas = Tienda::all();
+        // Obtiene todas las tiendas disponibles junto con su gestor actual.
+        $tiendas = Tienda::with('user')
+            ->orderBy('nombre')
+            ->get();
 
         // Vista del formulario de edición de usuarios.
         return view(
@@ -116,7 +118,7 @@ class UserController extends Controller
         );
     }
 
-    /**
+      /**
      * Valida y actualiza los datos de un usuario existente, sincroniza su rol
      * y actualiza su asignación como gestor de tienda si corresponde.
      *
@@ -130,30 +132,33 @@ class UserController extends Controller
         $request->validate([
             'name'      => 'required',
             'email'     => 'required|email|unique:users,email,' . $usuario->id,
+            'password'  => 'nullable|min:8',
             'rol'       => 'required|in:administrador,gestor,usuario',
-            'tienda_id' => 'nullable|exists:tiendas,id',
+            'tienda_id' => 'required_if:rol,gestor|nullable|exists:tiendas,id',
+        ], [
+            'tienda_id.required_if' => 'Debes seleccionar una tienda para asignar al gestor.',
         ]);
 
         // Actualización de datos de usuario.
         $usuario->name = $request->name;
         $usuario->email = $request->email;
+
+        if ($request->filled('password')) {
+            $usuario->password = Hash::make($request->password);
+        }
+
         $usuario->save();
 
         // 1. Limpiamos cualquier vinculación previa que tuviera este usuario con alguna tienda.
         Tienda::where('user_id', $usuario->id)->update(['user_id' => null]);
 
-        // 2. Si sigue siendo gestor y seleccionó una tienda, le asignamos el usuario a la nueva tienda.
+        // 2. Si es gestor y seleccionó una tienda, la asignamos y degradamos al antiguo gestor si procede.
         if ($request->rol === 'gestor' && $request->filled('tienda_id')) {
-            $tienda = Tienda::find($request->tienda_id);
-            if ($tienda) {
-                $tienda->user_id = $usuario->id;
-                $tienda->save();
-            }
+            $this->asignarTiendaAGestor($request->tienda_id, $usuario->id);
         }
 
         // Actualizar rol de usuario.
-        $usuario->syncRoles([]);
-        $usuario->assignRole($request->rol);
+        $usuario->syncRoles([$request->rol]);
 
         // Redirige a la vista de usuarios.
         return redirect()
@@ -163,6 +168,7 @@ class UserController extends Controller
                 'Usuario actualizado correctamente'
             );
     }
+
 
     /**
      * Elimina un usuario de la base de datos tras desvincularlo de cualquier tienda que gestionara.
@@ -185,5 +191,38 @@ class UserController extends Controller
                 'success',
                 'Usuario eliminado correctamente'
             );
+    }
+
+    /**
+     * Asigna un usuario como gestor de una tienda y, si la tienda tenía un gestor anterior
+     * que ya no gestiona ninguna otra tienda, cambia su rol a 'usuario'.
+     *
+     * @param int|string $tiendaId ID de la tienda a asignar.
+     * @param int $nuevoGestorId ID del nuevo usuario gestor.
+     * @return void
+     */
+    private function asignarTiendaAGestor($tiendaId, int $nuevoGestorId): void
+    {
+        $tienda = Tienda::find($tiendaId);
+
+        if (!$tienda) {
+            return;
+        }
+
+        $antiguoGestorId = $tienda->user_id;
+
+        // Asignamos el nuevo gestor a la tienda.
+        $tienda->user_id = $nuevoGestorId;
+        $tienda->save();
+
+        // Si había un gestor anterior distinto y ya no tiene más tiendas a su cargo, pasa a rol 'usuario'.
+        if ($antiguoGestorId && $antiguoGestorId !== $nuevoGestorId) {
+            $tieneOtrasTiendas = Tienda::where('user_id', $antiguoGestorId)->exists();
+
+            if (!$tieneOtrasTiendas) {
+                $antiguoGestor = User::find($antiguoGestorId);
+                $antiguoGestor?->syncRoles(['usuario']);
+            }
+        }
     }
 }

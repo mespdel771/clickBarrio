@@ -88,7 +88,7 @@ class ProductoController extends Controller
              $productos = new LengthAwarePaginator([], 0, 10);
          }
 
-         // Productos disponibles de las categorías de sus tiendas para añadir
+               // Productos disponibles de las categorías de sus tiendas para añadir
          $categoriasGestor = $tiendas->pluck('categoria_id')->unique()->filter()->toArray();
          $queryDisponibles = Producto::query();
 
@@ -96,7 +96,7 @@ class ProductoController extends Controller
              $queryDisponibles->whereIn('categoria_id', $categoriasGestor);
          }
 
-         // Excluye únicamente los productos que ya están en TODAS sus tiendas
+         // Excluye los productos que ya están en TODAS las tiendas del gestor y evita duplicados por nombre
          $productosDisponibles = $queryDisponibles->with(['categoria'])
              ->orderBy('denominacion')
              ->get()
@@ -104,10 +104,12 @@ class ProductoController extends Controller
                  $tiendasDelProducto = DB::table('precios')
                      ->where('producto_id', $prod->id)
                      ->whereIn('tienda_id', $idsTiendasGestor)
-                     ->count();
+                     ->distinct('tienda_id')
+                     ->count('tienda_id');
 
                  return $tiendasDelProducto < count($idsTiendasGestor);
              })
+             ->unique(fn ($prod) => mb_strtolower(trim($prod->denominacion)))
              ->values();
      }
         // Usuario común
@@ -414,7 +416,7 @@ class ProductoController extends Controller
      *
      * @throws \Illuminate\Auth\Access\AuthorizationException Si el usuario no tiene permiso para actualizar el producto.
      */
-    public function update(Request $request, Producto $producto): RedirectResponse
+          public function update(Request $request, Producto $producto): RedirectResponse
     {
         $this->authorize(
             'update',
@@ -434,16 +436,48 @@ class ProductoController extends Controller
         // Autenticación de usuario.
         $user = auth()->user();
 
-        // Validación de permisos gestor.
+        // Validación de permisos y obligatoriedad de precio y stock para el gestor.
         if ($user->hasRole('gestor')) {
             $tiendasPermitidas = Tienda::where('user_id', $user->id)
                 ->pluck('id')
                 ->toArray();
 
-            foreach (array_keys($datos['tiendas'] ?? []) as $tiendaId) {
+            $tiendasFormulario = $request->input('tiendas', []);
+            $algunaTiendaConfigurada = false;
+
+            foreach ($tiendasFormulario as $tiendaId => $valores) {
                 if (!in_array($tiendaId, $tiendasPermitidas)) {
                     abort(403);
                 }
+
+                $estaActiva = (isset($valores['activo']) && $valores['activo'] == '1')
+                    || (!array_key_exists('activo', $valores) && (isset($valores['precio']) || isset($valores['stock'])));
+
+                if ($estaActiva) {
+                    $precio = $valores['precio'] ?? null;
+                    $stock  = $valores['stock'] ?? null;
+
+                    if ($precio === null || $precio === '' || (float) $precio <= 0) {
+                        return back()
+                            ->withInput()
+                            ->withErrors(["tiendas.{$tiendaId}.precio" => 'Debes indicar un precio obligatorio mayor que 0.']);
+                    }
+
+                    if ($stock === null || $stock === '' || (int) $stock < 1) {
+                        return back()
+                            ->withInput()
+                            ->withErrors(["tiendas.{$tiendaId}.stock" => 'Debes indicar un stock obligatorio de al menos 1 unidad.']);
+                    }
+
+                    $algunaTiendaConfigurada = true;
+                }
+            }
+
+            // Impide guardar si el gestor no ha activado y configurado precio y stock en ninguna de sus tiendas
+            if (!$algunaTiendaConfigurada) {
+                return back()
+                    ->withInput()
+                    ->withErrors(['tiendas' => 'Debes activar al menos una tienda e indicar obligatoriamente su precio y stock.']);
             }
         }
 
@@ -477,6 +511,8 @@ class ProductoController extends Controller
                 'Producto actualizado correctamente'
             );
     }
+
+
     /**
      * Elimina un producto junto con su imagen almacenada en disco y sus registros asociados
      * de precios y stock, previa autorización mediante Policy.

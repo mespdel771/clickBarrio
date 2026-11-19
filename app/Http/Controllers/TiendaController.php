@@ -157,8 +157,7 @@ class TiendaController extends Controller
      *
      * @param Request $request Solicitud HTTP con los datos de la tienda e imagen opcional.
      * @return RedirectResponse
-     */
-    public function store(Request $request): RedirectResponse
+     */    public function store(Request $request): RedirectResponse
     {
         // Verificación de rol administrador.
         if (!auth()->user()->hasRole('administrador')) {
@@ -167,11 +166,17 @@ class TiendaController extends Controller
 
         // Valida los datos recibidos del formulario.
         $datos = $request->validate([
-            'categoria_id' => 'required|exists:categorias,id',
-            'nombre'       => 'required|string|max:255',
-            'direccion'    => 'nullable|string|max:255',
-            'user_id'      => 'nullable|exists:users,id',
-            'imagen'       => 'nullable|image|max:2048',
+            'categoria_id'     => 'required|exists:categorias,id',
+            'nombre'           => 'required|string|max:255',
+            'persona_contacto' => 'nullable|string|max:255',
+            'telefono'         => 'nullable|string|max:20',
+            'email'            => 'required|email|max:255',
+            'direccion'        => 'nullable|string|max:255',
+            'user_id'          => 'nullable|exists:users,id',
+            'imagen'           => 'nullable|image|max:2048',
+        ], [
+            'email.required' => 'Por favor, introduce el correo electrónico de la tienda.',
+            'email.email'    => 'El formato del correo electrónico no es válido.',
         ]);
 
         // Comprueba si se ha seleccionado un gestor.
@@ -198,6 +203,7 @@ class TiendaController extends Controller
             ->route('tiendas.index')
             ->with('success', 'Tienda creada correctamente');
     }
+
 
     /**
      * Muestra el formulario de edición de una tienda verificando previamente los permisos
@@ -241,7 +247,7 @@ class TiendaController extends Controller
         );
     }
 
-    /**
+       /**
      * Valida y actualiza los datos de una tienda existente y su imagen en almacenamiento,
      * restringiendo la reasignación de propietario exclusivamente a administradores.
      *
@@ -272,10 +278,16 @@ class TiendaController extends Controller
 
         // Validación de datos recibidos.
         $datos = $request->validate([
-            'nombre'    => 'required|string|max:255',
-            'direccion' => 'nullable|string|max:255',
-            'imagen'    => 'nullable|image|max:2048',
-            'user_id'   => 'nullable|exists:users,id',
+            'nombre'           => 'required|string|max:255',
+            'persona_contacto' => 'nullable|string|max:255',
+            'telefono'         => 'nullable|string|max:20',
+            'email'            => 'required|email|max:255',
+            'direccion'        => 'nullable|string|max:255',
+            'imagen'           => 'nullable|image|max:2048',
+            'user_id'          => 'nullable|exists:users,id',
+        ], [
+            'email.required' => 'Por favor, introduce el correo electrónico de la tienda.',
+            'email.email'    => 'El formato del correo electrónico no es válido.',
         ]);
 
         // Comprueba si se ha enviado una nueva imagen.
@@ -312,14 +324,28 @@ class TiendaController extends Controller
             }
         }
 
+        // Guarda el ID del gestor anterior antes de actualizar la tienda.
+        $antiguoGestorId = $store->user_id;
+
         // Actualiza la tienda.
         $store->update($datos);
+
+        // Si el gestor anterior fue reemplazado o desasignado y ya no tiene más tiendas, pasa a rol 'usuario'.
+        if ($antiguoGestorId && $antiguoGestorId != $store->user_id) {
+            $tieneOtrasTiendas = Tienda::where('user_id', $antiguoGestorId)->exists();
+
+            if (!$tieneOtrasTiendas) {
+                $antiguoGestor = User::find($antiguoGestorId);
+                $antiguoGestor?->syncRoles(['usuario']);
+            }
+        }
 
         // Redirige al listado de tiendas.
         return redirect()
             ->route('tiendas.index')
             ->with('success', 'Tienda actualizada correctamente');
     }
+
 
     /**
      * Elimina una tienda de la base de datos junto con su imagen almacenada en disco

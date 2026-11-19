@@ -113,8 +113,8 @@
                                 {{ $producto->categoria?->denominacion ?? 'Sin categoría' }}
                             </td>
 
-                            <td>
-                                @if($producto->imagen)
+                                                      <td>
+                                @if($producto->imagen && \Illuminate\Support\Facades\Storage::disk('public')->exists($producto->imagen))
                                     <img src="{{ asset('storage/'.$producto->imagen) }}"
                                          alt="{{ $producto->denominacion }}"
                                          style="
