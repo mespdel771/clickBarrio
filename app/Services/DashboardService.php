@@ -39,7 +39,7 @@ class DashboardService
             // Número total de categorías existentes.
             'total_categorias' => Categoria::count(),
 
-            // Suma el importe total de todas las reservas calculado al vuelo.
+            // Suma el importe total de todas las reservas.
             'ingresos_totales' => DB::table('reserva_items')
                 ->sum(DB::raw('cantidad * precio')),
 

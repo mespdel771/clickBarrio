@@ -8,14 +8,14 @@ use Illuminate\View\View;
 /**
  * Controlador encargado de gestionar la visualización del panel principal (Dashboard).
  *
- * Determina el rol del usuario autenticado y delega en DashboardService
+ * Determina el rol del usuario autentificado y delega en DashboardService
  * la obtención y preparación de los datos específicos para administradores,
  * gestores o usuarios estándar.
  */
 class DashboardController extends Controller
 {
     /**
-     * Obtiene los datos correspondientes al rol del usuario autenticado y muestra la vista del Dashboard.
+     * Obtiene los datos correspondientes al rol del usuario autentificado y muestra la vista del Dashboard.
      *
      * @param DashboardService $dashboard Servicio encargado de recopilar las métricas y datos del panel.
      * @return View

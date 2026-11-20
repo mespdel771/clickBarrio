@@ -45,7 +45,7 @@ class CarritoItem extends Model
 
     /**
      * Obtiene la tienda asociada a este artículo del carrito,
-     * incluyendo tiendas eliminadas lógicamente (SoftDeletes) para evitar errores de lectura.
+     * incluyendo tiendas eliminadas (SoftDeletes) para evitar errores de lectura.
      *
      * @return BelongsTo<Tienda, $this>
      */

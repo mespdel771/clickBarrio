@@ -6,13 +6,13 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Seeder encargado de poblar la tabla 'productos' con el catálogo inicial
+ * Seeder encargado de rellenar la tabla 'productos' con el catálogo inicial
  * distribuido por categorías (Alimentación, Ropa, Peluquería, Ferretería y Otros).
  */
 class ProductoSeeder extends Seeder
 {
     /**
-     * Ejecuta el sembrado de datos insertando o actualizando los productos base del catálogo.
+     * Ejecuta el rellenado de datos insertando o actualizando los productos base del catálogo.
      *
      * @return void
      */

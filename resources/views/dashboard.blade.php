@@ -102,22 +102,9 @@
 
         <div class="cabecera-izquierda">
             <div class="logo-container">
-                <svg viewBox="0 0 48 48" xmlns="http://w3.org">
-                    <path class="logo-linea" d="M2 22h44" />
-
-                    <g class="store-grocery">
-                        <path d="M4 22V11m12 11V11M4 11l1.5-3h9l1.5 3M4 11h12" />
-                    </g>
-
-                    <g class="store-boutique">
-                        <path d="M18 22V8a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14M18 11h12" />
-                    </g>
-
-                    <g class="store-bakery">
-                        <path d="M32 22V12m12 11V12M32 12l2-3h8l2 3M32 12h12" />
-                    </g>
-                </svg>
-            </div>
+             <img src="{{ asset('imagen/logo.png') }}" alt="Logotipo Las Tiendas del Barrio" 
+             style="width: 180px !important; height: 80px !important; display: block; object-fit: contain;">
+        </div>
 
             <span class="nombre-proyecto">
                 Las Tiendas del Barrio

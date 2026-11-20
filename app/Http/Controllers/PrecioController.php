@@ -236,7 +236,7 @@ class PrecioController extends Controller
     }
 
     /**
-     * Comprueba si el usuario autenticado tiene permisos sobre la tienda asociada al precio.
+     * Comprueba si el usuario autentificado tiene permisos sobre la tienda asociada al precio.
      *
      * @param Precio $precio Instancia del precio cuya tienda se va a verificar.
      * @return bool

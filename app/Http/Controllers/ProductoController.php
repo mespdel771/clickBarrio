@@ -22,20 +22,20 @@ use Illuminate\View\View;
 class ProductoController extends Controller
 {
     /**
-     * Muestra el listado paginado de productos filtrado según el rol del usuario autenticado:
+     * Muestra el listado paginado de productos filtrado según el rol del usuario autentificado:
      * - Administrador: visualiza todos los productos del catálogo global.
-     * - Gestor: visualiza los productos asignados a su tienda y los productos disponibles de su categoría para incorporar.
+     * - Gestor: visualiza los productos asignados a su tienda o tiendas y los productos disponibles de su categoría para incorporar.
      * - Usuario: visualiza únicamente los productos que disponen de stock activo.
      *
      * @return View
      */
     public function index(): View
     {
-        // Obtiene el usuario autenticado.
+        // Obtiene el usuario autentificado.
         $user = auth()->user();
         $tiendas = collect();
 
-              // Detección blindada: comprueba si el usuario tiene tiendas asignadas en la BD
+              // Comprueba si el usuario tiene tiendas asignadas en la BD
         $userIdClean = intval($user->id);
         $tieneTiendasGestor = Tienda::where('user_id', $userIdClean)->exists();
 
@@ -51,7 +51,7 @@ class ProductoController extends Controller
 
             $productosDisponibles = collect();
         }
-            // Gestor (soporte multitienda: carga todas las tiendas asignadas al gestor)
+            // Gestor (carga todas las tiendas asignadas al gestor)
      elseif ($tieneTiendasGestor || $user->hasRole('gestor')) {
          // Obtiene todas las tiendas activas asignadas a este gestor
          $tiendas = Tienda::where('user_id', $userIdClean)
@@ -96,7 +96,7 @@ class ProductoController extends Controller
              $queryDisponibles->whereIn('categoria_id', $categoriasGestor);
          }
 
-         // Excluye los productos que ya están en TODAS las tiendas del gestor y evita duplicados por nombre
+         // Excluye los productos que ya están en todas las tiendas del gestor y evita duplicados por nombre
          $productosDisponibles = $queryDisponibles->with(['categoria'])
              ->orderBy('denominacion')
              ->get()
@@ -146,7 +146,7 @@ class ProductoController extends Controller
 
     /**
      * Muestra el formulario para crear un nuevo producto verificando previamente la Policy
-     * y filtrando las tiendas y categorías disponibles según el rol del usuario autenticado:
+     * y filtrando las tiendas y categorías disponibles según el rol del usuario autentificado:
      * - Administrador: acceso total a todas las categorías y tiendas del sistema.
      * - Gestor: acceso únicamente a sus tiendas asignadas y sus correspondientes categorías.
      *
@@ -198,7 +198,7 @@ class ProductoController extends Controller
     }
 
     /**
-     * Valida y almacena un nuevo producto en la base de datos junto con su imagen
+     * Valida y almacena un nuevo producto en la base de datos junto con su imagen 
      * y sus relaciones de precio y stock en las tiendas seleccionadas.
      *
      * @param Request $request Solicitud HTTP con los datos del producto, imagen opcional y configuración por tienda.
@@ -213,7 +213,7 @@ class ProductoController extends Controller
             Producto::class
         );
 
-        // 1. Validación inicial de los campos básicos del producto.
+        //  Validación inicial de los campos básicos del producto.
         $request->validate([
             'denominacion' => 'required|string|max:255',
             'categoria_id' => 'required|exists:categorias,id',
@@ -225,7 +225,7 @@ class ProductoController extends Controller
         $datosTiendas = $request->input('tiendas', []);
         $tiendasValidadas = [];
 
-        // 2. Validación dinámica de los controles gráficos de las tiendas.
+        //  Validación dinámica de los controles gráficos de las tiendas.
         if (!empty($datosTiendas)) {
             // Si el usuario es gestor, obtenemos solo sus tiendas asignadas por seguridad.
             $tiendasPermitidas = $user->hasRole('gestor')
@@ -262,20 +262,20 @@ class ProductoController extends Controller
             }
         }
 
-        // 3. Subir imagen al disco público si el archivo existe.
+        //  Subir imagen al disco público si el archivo existe.
         $rutaImagen = null;
         if ($request->hasFile('imagen')) {
             $rutaImagen = $request->file('imagen')->store('productos', 'public');
         }
 
-        // 4. Creación del producto (Protección contra asignación masiva).
+        //  Creación del producto (Protección contra asignación masiva).
         $producto = Producto::create([
             'denominacion' => $request->input('denominacion'),
             'categoria_id' => $request->input('categoria_id'),
             'imagen'       => $rutaImagen,
         ]);
 
-        // 5. Guardar relaciones con las tiendas validadas.
+        //  Guardar relaciones con las tiendas validadas.
         // Pasamos al método los datos limpios y filtrados para evitar QueryExceptions.
         $this->guardarTiendas(
             $producto,
@@ -291,7 +291,7 @@ class ProductoController extends Controller
     }
 
     /**
-     * Incorpora un producto existente del catálogo global a todas las tiendas del gestor autenticado,
+     * Incorpora un producto existente del catálogo global a todas las tiendas del gestor autentificado,
      * inicializando su stock en 0 y su precio base en 0.01 antes de redirigir a su configuración.
      *
      * @param Producto $producto Instancia del producto que el gestor desea añadir a su catálogo.
@@ -301,7 +301,7 @@ class ProductoController extends Controller
      */
     public function addToCatalog(Producto $producto): RedirectResponse
     {
-        // Autenticación de usuario.
+        // Autentificación de usuario.
         $user = auth()->user();
 
         $this->authorize('addToCatalog', $producto);
@@ -340,7 +340,7 @@ class ProductoController extends Controller
 
     /**
      * Muestra el formulario de edición de un producto filtrando categorías y tiendas
-     * (asignadas y disponibles) según el rol del usuario autenticado.
+     * (asignadas y disponibles) según el rol del usuario autentificado.
      *
      * @param Producto $producto Instancia del producto a editar.
      * @return View
@@ -351,7 +351,7 @@ class ProductoController extends Controller
     {
         $this->authorize('update', $producto);
 
-        // Autenticación de usuario.
+        // Autentificación de usuario.
         $user = auth()->user();
 
         // Tiendas según Rol.
@@ -433,7 +433,7 @@ class ProductoController extends Controller
             'tiendas.*.stock'  => 'nullable|integer|min:0',
         ]);
 
-        // Autenticación de usuario.
+        // Autentificación de usuario.
         $user = auth()->user();
 
         // Validación de permisos y obligatoriedad de precio y stock para el gestor.
@@ -522,7 +522,7 @@ class ProductoController extends Controller
      *
      * @throws \Illuminate\Auth\Access\AuthorizationException Si el usuario no tiene permiso para eliminar el producto.
      */    /**
-     * Elimina un producto si no tiene reservas históricas asociadas, o muestra aviso amigable
+     * Elimina un producto si no tiene reservas históricas asociadas, o muestra aviso 
      * respetando la restricción ON DELETE RESTRICT de la base de datos.
      *
      * @param Producto $producto Instancia del producto a eliminar.
@@ -633,7 +633,7 @@ class ProductoController extends Controller
         $tiendasFormulario = request()->input('tiendas', []);
         $tiendasActivasIds = [];
 
-        // 1. Procesa únicamente las tiendas que el usuario ha dejado marcadas como activas
+        //  Procesa únicamente las tiendas que el usuario ha dejado marcadas como activas
         foreach ($tiendasFormulario as $tiendaId => $data) {
             $estaActiva = isset($data['activo']) && $data['activo'] == '1';
 
@@ -663,14 +663,14 @@ class ProductoController extends Controller
             }
         }
 
-        // 2. Determina qué tiendas puede gestionar este usuario para no afectar a tiendas ajenas ni eliminadas (SoftDeletes)
+        //  Determina qué tiendas puede gestionar este usuario para no afectar a tiendas ajenas ni eliminadas (SoftDeletes)
         $tiendasGestionablesIds = $user->hasRole('gestor')
             ? Tienda::where('user_id', $user->id)->pluck('id')->toArray()
             : Tienda::pluck('id')->toArray();
 
         $tiendasADesactivar = array_diff($tiendasGestionablesIds, $tiendasActivasIds);
 
-        // 3. Para cada tienda desmarcada, elimina su oferta si no tiene ventas o pone el stock a 0 si tiene reservas
+        //  Para cada tienda desmarcada, elimina su oferta si no tiene ventas o pone el stock a 0 si tiene reservas
         foreach ($tiendasADesactivar as $tiendaId) {
             $tieneReservas = \App\Models\ReservaItem::where('producto_id', $producto->id)
                 ->where('tienda_id', $tiendaId)

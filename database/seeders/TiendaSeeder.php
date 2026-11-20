@@ -6,13 +6,13 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Seeder encargado de poblar la tabla 'tiendas' con los establecimientos iniciales
+ * Seeder encargado de rellenar la tabla 'tiendas' con los establecimientos iniciales
  * distribuidos entre las cinco categorías del sistema.
  */
 class TiendaSeeder extends Seeder
 {
     /**
-     * Ejecuta el sembrado de datos insertando o actualizando las tiendas base.
+     * Ejecuta el rellenado de datos insertando o actualizando las tiendas base.
      *
      * @return void
      */

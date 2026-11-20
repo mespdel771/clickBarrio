@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Seeder encargado de poblar la tabla 'categorias' con las categorías base del catálogo.
+ * Seeder encargado de rellenar la tabla 'categorias' con las categorías base del catálogo.
  */
 class CategoriaSeeder extends Seeder
 {

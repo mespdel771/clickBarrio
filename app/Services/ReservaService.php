@@ -21,7 +21,7 @@ class ReservaService
      * Crea una reserva utilizando los productos válidos añadidos al carrito bajo transacción,
      * descartando aquellos sin stock o precio disponible y descontando las unidades reservadas.
      *
-     * @param Carrito $carrito Instancia del carrito de compras a procesar.
+     * @param Carrito $carrito Instancia del carrito de reservas a procesar.
      * @return array{reserva: Reserva, eliminados: Collection<int, mixed>} Arreglo con la reserva generada y los artículos descartados.
      *
      * @throws \Exception Si ningún producto del carrito dispone de stock suficiente o precio activo.

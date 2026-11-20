@@ -19,7 +19,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // 1. Quitar la columna redundante tienda_id en users.
+        //  Quitar la columna redundante tienda_id en users.
         if (Schema::hasColumn('users', 'tienda_id')) {
             Schema::table('users', function (Blueprint $table) {
                 $table->dropForeign(['tienda_id']);
@@ -27,7 +27,7 @@ return new class extends Migration
             });
         }
 
-        // 2. Hacer coherente el ON DELETE (RESTRICT) en tiendas y productos, y email obligatorio.
+        //  Hacer coherente el ON DELETE (RESTRICT) en tiendas y productos, y email obligatorio.
         Schema::table('tiendas', function (Blueprint $table) {
             $table->dropForeign(['categoria_id']);
             $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('restrict');
@@ -45,7 +45,7 @@ return new class extends Migration
             });
         }
 
-        // 3. Proteger historial en reservas (RESTRICT) y eliminar columna calculada 'total'.
+        //  Proteger historial en reservas (RESTRICT) y eliminar columna calculada 'total'.
         Schema::table('reservas', function (Blueprint $table) {
             $table->dropForeign(['user_id']);
             $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
@@ -55,7 +55,7 @@ return new class extends Migration
             }
         });
 
-        // 4. Vincular reserva_items a precios, eliminar 'importe' y usar RESTRICT coherente.
+        //  Vincular reserva_items a precios, eliminar 'importe' y usar RESTRICT coherente.
         Schema::table('reserva_items', function (Blueprint $table) {
             $table->dropForeign(['producto_id']);
             $table->dropForeign(['tienda_id']);
@@ -72,7 +72,7 @@ return new class extends Migration
             }
         });
 
-        // 5. Un carrito por usuario y evitar duplicados en carrito_items.
+        //  Un carrito por usuario y evitar duplicados en carrito_items.
         Schema::table('carritos', function (Blueprint $table) {
             $table->unique('user_id');
         });
@@ -85,7 +85,7 @@ return new class extends Migration
             }
         });
 
-               // 6. Restricciones CHECK para evitar valores negativos o cero (compatibles con MySQL).
+               //  Restricciones CHECK para evitar valores negativos o cero (compatibles con MySQL).
         if (DB::getDriverName() !== 'sqlite') {
             DB::statement('ALTER TABLE precios ADD CONSTRAINT chk_precios_precio CHECK (precio >= 0)');
             DB::statement('ALTER TABLE stocks ADD CONSTRAINT chk_stocks_stock CHECK (stock >= 0)');

@@ -9,30 +9,30 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Seeder encargado de poblar las tablas 'reservas' y 'reserva_items'
+ * Seeder encargado de rellenar las tablas 'reservas' y 'reserva_items'
  * con reservas de prueba coherentes bajo la estructura Cabecera-Detalle sin columnas calculadas.
  */
 class ReservaSeeder extends Seeder
 {
     /**
-     * Ejecuta el sembrado de reservas de prueba generando hasta 15 registros aleatorios
+     * Ejecuta el rellenado de reservas de prueba generando hasta 15 registros aleatorios
      * a partir de los usuarios con rol cliente y los precios disponibles por tienda.
      *
      * @return void
      */
     public function run(): void
     {
-        // 1. Recuperamos los usuarios con rol de cliente común.
+        //  Recuperamos los usuarios con rol de cliente común.
         $usuarios = User::role('usuario')->get();
 
-        // 2. Recuperamos los precios existentes para garantizar consistencia relacional (Producto + Tienda).
+        //  Recuperamos los precios existentes para garantizar consistencia relacional (Producto + Tienda).
         $precios = Precio::all();
 
         if ($usuarios->isEmpty() || $precios->isEmpty()) {
             return;
         }
 
-        // 3. Generamos registros de prueba adaptados a la estructura Cabecera-Detalle sin datos calculados.
+        //  Generamos registros de prueba adaptados a la estructura Cabecera-Detalle sin datos calculados.
         foreach ($precios->random(min(15, $precios->count())) as $precio) {
             $usuario = $usuarios->random();
             $unidades = rand(1, 5);

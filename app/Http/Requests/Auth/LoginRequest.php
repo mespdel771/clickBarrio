@@ -12,7 +12,7 @@ use Illuminate\Validation\ValidationException;
 
 /**
  * FormRequest personalizado encargado de validar las credenciales de inicio de sesión
- * y gestionar la autenticación junto con el límite de intentos fallidos (rate limiting).
+ * y gestionar la autentificación junto con el límite de intentos fallidos (rate limiting).
  */
 class LoginRequest extends FormRequest
 {
@@ -40,7 +40,7 @@ class LoginRequest extends FormRequest
     }
 
     /**
-     * Intenta autenticar las credenciales de la solicitud verificando previamente
+     * Intenta autentificar las credenciales de la solicitud verificando previamente
      * que no se haya superado el límite de intentos fallidos.
      *
      * @return void

@@ -47,7 +47,7 @@ class Reserva extends Model
     }
 
     /**
-     * Calcula el total de la reserva al vuelo sumando (cantidad * precio) de sus líneas.
+     * Calcula el total de la reserva sumando (cantidad * precio) de sus líneas.
      *
      * @return float
      */

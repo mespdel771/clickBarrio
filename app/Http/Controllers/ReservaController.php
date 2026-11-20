@@ -22,7 +22,7 @@ use Illuminate\View\View;
 class ReservaController extends Controller
 {
     /**
-     * Muestra el listado de reservas filtrado según el rol del usuario autenticado:
+     * Muestra el listado de reservas filtrado según el rol del usuario autentificado:
      * - Administrador: visualiza todas las reservas del sistema.
      * - Gestor: visualiza las reservas que incluyen productos de sus tiendas.
      * - Usuario: visualiza únicamente sus propias reservas.
@@ -31,7 +31,7 @@ class ReservaController extends Controller
      */
     public function index(): View
     {
-        // Autenticación del usuario.
+        // Autentificación del usuario.
         $user = auth()->user();
 
         // El administrador puede ver todas las reservas.
@@ -78,7 +78,7 @@ class ReservaController extends Controller
      */
     public function show(Reserva $reserva): View
     {
-        // Autenticación del usuario.
+        // Autentificación del usuario.
         $user = auth()->user();
 
         // Control de acceso por roles.

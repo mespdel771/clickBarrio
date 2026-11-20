@@ -78,7 +78,7 @@ class UserController extends Controller
         $usuario->password = Hash::make($request->password);
         $usuario->save(); // Guardamos primero para generar el ID del usuario.
 
-        // Si es gestor, asignamos la tienda y degradamos al antiguo gestor a 'usuario' si se queda sin tiendas.
+        // Si es gestor, asignamos la tienda y cambiamos al antiguo gestor a 'usuario' si se queda sin tiendas.
         if ($request->rol === 'gestor' && $request->filled('tienda_id')) {
             $this->asignarTiendaAGestor($request->tienda_id, $usuario->id);
         }
@@ -152,7 +152,7 @@ class UserController extends Controller
         // 1. Limpiamos cualquier vinculación previa que tuviera este usuario con alguna tienda.
         Tienda::where('user_id', $usuario->id)->update(['user_id' => null]);
 
-        // 2. Si es gestor y seleccionó una tienda, la asignamos y degradamos al antiguo gestor si procede.
+        // 2. Si es gestor y seleccionó una tienda, la asignamos y cambiamos al antiguo gestor si procede.
         if ($request->rol === 'gestor' && $request->filled('tienda_id')) {
             $this->asignarTiendaAGestor($request->tienda_id, $usuario->id);
         }

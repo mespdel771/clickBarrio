@@ -11,13 +11,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Servicio encargado de gestionar el proceso completo de compra (checkout),
+ * Servicio encargado de gestionar el proceso completo de reserva (checkout),
  * validando stock y precios bajo transacción, generando la reserva y descontando el inventario.
  */
 class CheckoutService
 {
     /**
-     * Procesa la compra completa de un carrito de compras bajo una transacción de base de datos,
+     * Procesa la reserva completa de un carrito de reservas bajo una transacción de base de datos,
      * creando la reserva asociada, descontando el stock y vaciando el carrito.
      *
      * @param Carrito $carrito Instancia del carrito de compras que se va a procesar.
@@ -37,7 +37,7 @@ class CheckoutService
                 throw new \Exception('El carrito está vacío.');
             }
 
-            // Inicializa el importe total de la compra.
+            // Inicializa el importe total de la reserva.
             $total = 0;
 
             // Validación final (stock + precio). Recorre todos los artículos del carrito.
@@ -68,13 +68,13 @@ class CheckoutService
                     );
                 }
 
-                // Guarda en el carrito el precio utilizado finalmente en la compra.
+                // Guarda en el carrito el precio utilizado finalmente en la reserva.
                 $item->precio = $precio->precio;
                 // Calcula el importe del artículo: precio × cantidad.
                 $item->importe = $precio->precio * $item->cantidad;
                 $item->save();
 
-                // Suma el importe del artículo al total de la compra.
+                // Suma el importe del artículo al total de la reserva.
                 $total += $item->importe;
             }
 
@@ -96,7 +96,7 @@ class CheckoutService
                     'importe'     => $item->importe,
                 ]);
 
-                // Reduce del stock la cantidad comprada.
+                // Reduce del stock la cantidad reservada.
                 Stock::where('producto_id', $item->producto_id)
                     ->where('tienda_id', $item->tienda_id)
                     ->decrement('stock', $item->cantidad);

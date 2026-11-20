@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 /**
- * Controlador invocable encargado de mostrar la pantalla de verificación de correo electrónico.
+ * Controlador encargado de mostrar la pantalla de verificación de correo electrónico.
  */
 class EmailVerificationPromptController extends Controller
 {

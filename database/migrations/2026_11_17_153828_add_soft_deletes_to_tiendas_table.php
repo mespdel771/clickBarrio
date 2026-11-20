@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 /**
- * Migración encargada de añadir borrado lógico (columna deleted_at) a la tabla tiendas
+ * Migración encargada de añadir borrado (columna deleted_at) a la tabla tiendas
  * para ocultarlas del catálogo al eliminarlas sin romper las reservas históricas.
  */
 return new class extends Migration

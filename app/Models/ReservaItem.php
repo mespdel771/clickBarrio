@@ -66,7 +66,7 @@ class ReservaItem extends Model
     }
 
     /**
-     * Calcula el importe de la línea al vuelo (cantidad * precio).
+     * Calcula el importe de la línea (cantidad * precio).
      *
      * @return float
      */

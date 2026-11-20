@@ -15,7 +15,7 @@ use Illuminate\View\View;
 class ProfileController extends Controller
 {
     /**
-     * Muestra el formulario de edición del perfil del usuario autenticado.
+     * Muestra el formulario de edición del perfil del usuario autentificado.
      *
      * @param Request $request Solicitud HTTP actual con el usuario autenticado.
      * @return View
@@ -28,7 +28,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * Actualiza los datos del perfil del usuario autenticado.
+     * Actualiza los datos del perfil del usuario autentificado.
      *
      * @param ProfileUpdateRequest $request Solicitud validada con los nuevos datos del perfil.
      * @return RedirectResponse
@@ -50,7 +50,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * Elimina permanentemente la cuenta del usuario autenticado previa confirmación de contraseña.
+     * Elimina permanentemente la cuenta del usuario autentificado previa confirmación de contraseña.
      *
      * @param Request $request Solicitud HTTP que incluye la contraseña actual de confirmación.
      * @return RedirectResponse

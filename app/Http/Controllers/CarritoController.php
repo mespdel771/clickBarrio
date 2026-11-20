@@ -18,13 +18,13 @@ use Illuminate\View\View;
 use Illuminate\Support\Facades\Mail;
 
 /**
- * Controlador encargado de gestionar el carrito de compras del usuario,
- * la validación de stock y precios, y la conversión del carrito en reserva.
+ * Controlador encargado de gestionar el carrito de reservas del usuario,
+ * la validación de stock y precios, y la modificación del carrito en reserva.
  */
 class CarritoController extends Controller
 {
     /**
-     * Muestra la vista del carrito de compras del usuario autenticado.
+     * Muestra la vista del carrito de reservas del usuario autentificado.
      *
      * @return View
      */
@@ -42,7 +42,7 @@ class CarritoController extends Controller
 
     /**
      * Añade un producto al carrito comprobando previamente su disponibilidad de stock y precio en la tienda.
-     * Calcula los importes al vuelo sin persistir columnas calculadas en base de datos.
+     * Calcula los importes sin persistir columnas calculadas en base de datos.
      *
      * @param Request $request Solicitud HTTP con producto_id, tienda_id y cantidad.
      * @return JsonResponse
@@ -109,7 +109,7 @@ class CarritoController extends Controller
             ]);
         }
 
-        // Calcula el total acumulado del carrito al vuelo (cantidad * precio)
+        // Calcula el total acumulado del carrito (cantidad * precio)
         $total = $carrito->items()->sum(DB::raw('cantidad * precio'));
         $cantidadTotal = $carrito->items()->sum('cantidad');
         $importeItem = $item->cantidad * $item->precio;
@@ -175,7 +175,7 @@ class CarritoController extends Controller
     }
 
     /**
-     * Elimina un artículo del carrito del usuario autenticado.
+     * Elimina un artículo del carrito del usuario autentificado.
      *
      * @param CarritoItem $item Línea del carrito a eliminar.
      * @return JsonResponse
@@ -205,7 +205,7 @@ class CarritoController extends Controller
         ]);
     }
     /**
-     * Finaliza el proceso de compra validando stock y precios bajo transacción,
+     * Finaliza el proceso de reserva validando stock y precios bajo transacción,
      * generando la reserva y descontando el inventario correspondiente.
      *
      * @return RedirectResponse
@@ -270,7 +270,7 @@ class CarritoController extends Controller
                         ->decrement('stock', $item->cantidad);
                 }
 
-                // Vaciar el carrito tras la compra exitosa
+                // Vaciar el carrito tras la reserva confirmada
                 $carrito->items()->delete();
 
                 return $reserva;
@@ -278,7 +278,7 @@ class CarritoController extends Controller
                         // Carga las relaciones necesarias para construir los correos de confirmación
             $reserva->load(['user', 'items.producto', 'items.tienda']);
 
-            // Envía correo electrónico de confirmación al cliente que realizó la compra
+            // Envía correo electrónico de confirmación al cliente que realizó la reserva
             if ($reserva->user && $reserva->user->email) {
                 \Illuminate\Support\Facades\Mail::to($reserva->user->email)
                     ->send(new \App\Mail\ReservaUsuarioMail($reserva));
@@ -310,7 +310,7 @@ class CarritoController extends Controller
     }
 
     /**
-     * Obtiene el carrito activo del usuario autenticado o crea uno nuevo si no existe.
+     * Obtiene el carrito activo del usuario autentificado o crea uno nuevo si no existe.
      *
      * @return Carrito
      */

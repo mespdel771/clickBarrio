@@ -14,7 +14,7 @@ use Spatie\Permission\PermissionRegistrar;
 class RoleSeeder extends Seeder
 {
     /**
-     * Ejecuta el sembrado de roles y permisos limpiando previamente la caché de Spatie Permission.
+     * Ejecuta el rellenado de roles y permisos limpiando previamente la caché de Spatie Permission.
      *
      * @return void
      */
@@ -23,16 +23,14 @@ class RoleSeeder extends Seeder
         // Limpiar caché de permisos antes de registrar o actualizar reglas.
         app()[PermissionRegistrar::class]->forgetCachedPermissions();
 
-        // =========================
-        // CREAR ROLES
-        // =========================
+        /** CREAR ROLES*/
+       
         $admin = Role::findOrCreate('administrador');
         $gestor = Role::findOrCreate('gestor');
         $usuario = Role::findOrCreate('usuario');
 
-        // =========================
-        // CREAR PERMISOS
-        // =========================
+        /** CREAR PERMISOS */
+        
         $permisos = [
             // Tiendas
             'ver tiendas',
@@ -62,9 +60,7 @@ class RoleSeeder extends Seeder
             Permission::findOrCreate($permiso);
         }
 
-        // =========================
-        // ASIGNAR PERMISOS
-        // =========================
+       /**  ASIGNAR PERMISOS */ 
 
         // Administrador: acceso total a todos los permisos del sistema.
         $admin->givePermissionTo(Permission::all());

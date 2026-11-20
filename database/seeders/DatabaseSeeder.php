@@ -20,11 +20,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         /*
-        |--------------------------------------------------------------------------
-        | Seguridad del Motor de Base de Datos
-        |--------------------------------------------------------------------------
-        | Creamos un usuario específico para la aplicación en el motor MySQL
-        | y le asignamos únicamente los privilegios requeridos para la base de datos.
+         Seguridad del Motor de Base de Datos        
+         Creamos un usuario específico para la aplicación en el motor MySQL
+         y le asignamos únicamente los privilegios requeridos para la base de datos.
         */
         try {
             // 1. Crear el usuario del motor si no existe con una contraseña segura.
@@ -41,10 +39,8 @@ class DatabaseSeeder extends Seeder
             // Captura el flujo de forma silenciosa.
         }
 
-        /*
-        |--------------------------------------------------------------------------
-        | Ejecución de los Seeders en Orden Cronológico
-        |--------------------------------------------------------------------------
+        /*       
+         Ejecución de los Seeders en Orden Cronológico
         */
         $this->call([
             // 1. Roles

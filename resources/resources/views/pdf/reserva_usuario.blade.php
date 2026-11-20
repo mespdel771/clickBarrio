@@ -29,7 +29,7 @@
 
     <hr>
 
-    {{-- Datos del cliente que realizó la compra --}}
+    {{-- Datos del cliente que realizó la reserva --}}
     <p>
         <strong>Cliente:</strong>
         {{ $reserva->user->name }}

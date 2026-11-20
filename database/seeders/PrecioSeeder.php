@@ -6,13 +6,13 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Seeder encargado de poblar la tabla 'precios' asignando precios aleatorios
+ * Seeder encargado de rellenar la tabla 'precios' asignando precios aleatorios
  * a un subconjunto de productos correspondientes a la categoría de cada tienda.
  */
 class PrecioSeeder extends Seeder
 {
     /**
-     * Ejecuta el sembrado de precios seleccionando entre el 30 % y el 70 % de los productos
+     * Ejecuta el rellenado de precios seleccionando entre el 30 % y el 70 % de los productos
      * de la categoría de cada tienda e insertando o actualizando su precio correspondiente.
      *
      * @return void
@@ -32,7 +32,7 @@ class PrecioSeeder extends Seeder
                 continue;
             }
 
-            // Calcula cuántos productos asignar (entre el 30 % y el 70 % para mayor realismo).
+            // Calcula cuántos productos asignar (entre el 30 % y el 70 %).
             $cantidad = rand(
                 (int) ceil($total * 0.3),
                 (int) ceil($total * 0.7)

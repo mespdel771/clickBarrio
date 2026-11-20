@@ -5,13 +5,13 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 /**
- * Migración encargada de refactorizar la tabla 'reservas' en una cabecera de compra,
+ * Migración encargada de refactorizar la tabla 'reservas' en una cabecera de reserva,
  * eliminando el detalle unitario anterior y añadiendo el campo 'total'.
  */
 return new class extends Migration
 {
     /**
-     * Ejecuta la migración eliminando las columnas de detalle antiguas y añadiendo el total de la compra.
+     * Ejecuta la migración eliminando las columnas de detalle antiguas y añadiendo el total de la reserva.
      *
      * @return void
      */
@@ -31,7 +31,7 @@ return new class extends Migration
                 'importe',
             ]);
 
-            // Añade el importe total consolidado de la reserva.
+            // Añade el importe total de la reserva.
             $table->decimal('total', 10, 2)
                 ->default(0)
                 ->after('user_id');

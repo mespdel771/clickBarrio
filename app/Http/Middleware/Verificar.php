@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
- * Middleware encargado de comprobar si el usuario autenticado tiene autorización
+ * Middleware encargado de comprobar si el usuario autentificado tiene autorización
  * para modificar un determinado recurso según su rol, permisos y propiedad.
  */
 class Verificar
@@ -27,7 +27,7 @@ class Verificar
     {
         $user = auth()->user();
 
-        // 1. Si el usuario autenticado es administrador o tiene control total, paso libre directo.
+        //  Si el usuario autentificado es administrador o tiene control total, paso libre directo.
         if ($user && $user->hasRole('administrador')) {
             return $next($request);
         }

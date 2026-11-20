@@ -83,7 +83,7 @@ class TiendaController extends Controller
      */
     public function show(Tienda $store): View
     {
-        // Autenticación de usuario.
+        // Autentificación de usuario.
         $user = auth()->user();
 
         // Comprueba si el usuario es un cliente.
@@ -134,7 +134,7 @@ class TiendaController extends Controller
      */
     public function create(): View
     {
-        // Autenticación de usuario con rol administrador.
+        // Autentificación de usuario con rol administrador.
         if (!auth()->user()->hasRole('administrador')) {
             abort(403);
         }
@@ -207,14 +207,14 @@ class TiendaController extends Controller
 
     /**
      * Muestra el formulario de edición de una tienda verificando previamente los permisos
-     * según el rol del usuario autenticado (administradores o el gestor propietario).
+     * según el rol del usuario autentificado (administradores o el gestor propietario).
      *
      * @param Tienda $store Instancia de la tienda a editar.
      * @return View
      */
     public function edit(Tienda $store): View
     {
-        // Obtiene el usuario autenticado.
+        // Obtiene el usuario autentificado.
         $user = auth()->user();
 
         // Solo administradores y gestores pueden editar.
@@ -257,7 +257,7 @@ class TiendaController extends Controller
      */
     public function update(Request $request, Tienda $store): RedirectResponse
     {
-        // Autenticación de usuario.
+        // Autentificación de usuario.
         $user = auth()->user();
 
         // Solo los usuarios administradores o gestores pueden actualizar.

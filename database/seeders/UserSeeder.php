@@ -8,23 +8,22 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
 /**
- * Seeder encargado de poblar la tabla 'users' creando los usuarios de prueba
+ * Seeder encargado de rellenar la tabla 'users' creando los usuarios de prueba
  * con sus respectivos roles ('administrador', 'usuario' y 'gestor') y vinculando
  * cada gestor como propietario de su correspondiente tienda.
  */
 class UserSeeder extends Seeder
 {
     /**
-     * Ejecuta el sembrado de usuarios insertando o actualizando el administrador,
+     * Ejecuta el rellenado de usuarios insertando o actualizando el administrador,
      * los clientes de prueba y un gestor asignado para cada tienda registrada.
      *
      * @return void
      */
     public function run(): void
     {
-        // =========================
-        // ADMINISTRADOR
-        // =========================
+       /**ADMINISTRADOR */
+       
         $admin = User::updateOrCreate(
             [
                 'email' => 'admin@gmail.com',
@@ -37,9 +36,8 @@ class UserSeeder extends Seeder
 
         $admin->syncRoles(['administrador']);
 
-        // =========================
-        // USUARIO PRINCIPAL
-        // =========================
+        /** USUARIO PRINCIPAL */
+       
         $usuario = User::updateOrCreate(
             [
                 'email' => 'usuario@gmail.com',
@@ -52,9 +50,8 @@ class UserSeeder extends Seeder
 
         $usuario->syncRoles(['usuario']);
 
-        // =========================
-        // USUARIOS EXTRA
-        // =========================
+        /** USUARIOS EXTRA */ 
+
         for ($i = 1; $i <= 5; $i++) {
             $user = User::updateOrCreate(
                 [
@@ -69,9 +66,8 @@ class UserSeeder extends Seeder
             $user->syncRoles(['usuario']);
         }
 
-        // =========================
-        // GESTORES POR TIENDA
-        // =========================
+       /** GESTORES POR TIENDA */ 
+       
         // El nombre del usuario gestor es genérico e independiente del nombre comercial de la tienda.
         $tiendas = Tienda::orderBy('id')->get();
 
