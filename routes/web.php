@@ -22,7 +22,7 @@ Route::middleware(['auth', 'verified'])
     ->get('/dashboard', [DashboardController::class, 'index'])
     ->name('dashboard');
 
-// Gestión del perfil del usuario autenticado
+// Gestión del perfil del usuario autentificado
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])
         ->name('profile.edit');
@@ -56,12 +56,12 @@ Route::middleware('auth')
     ->get('/tiendas/{store}', [TiendaController::class, 'show'])
     ->name('tiendas.show');
 
-// Listado general de productos (requiere autenticación)
+// Listado general de productos (requiere autentificación)
 Route::middleware('auth')
     ->get('/productos', [ProductoController::class, 'index'])
     ->name('productos.index');
 
-// Historial y detalle individual de reservas/compras
+// Historial y detalle individual de reservas
 Route::middleware('auth')->group(function () {
     Route::get('/reservas', [ReservaController::class, 'index'])
         ->name('reservas.index');
@@ -70,7 +70,7 @@ Route::middleware('auth')->group(function () {
         ->name('reservas.show');
 });
 
-// Operaciones del carrito de compras y finalización de pedido
+// Operaciones del carrito de reservas y finalización de pedido
 Route::middleware('auth')->group(function () {
     Route::get('/carrito', [CarritoController::class, 'index'])
         ->name('carrito.index');

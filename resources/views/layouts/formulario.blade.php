@@ -28,7 +28,7 @@
     {{-- Cabecera principal --}}
     <div class="cabecera-formulario">
 
-        {{-- Zona izquierda: logotipo SVG y nombre del proyecto --}}
+        {{-- Zona izquierda: logotipo  y nombre del proyecto --}}
         <div class="cabecera-izquierda">
             <div class="logo-container">
                 

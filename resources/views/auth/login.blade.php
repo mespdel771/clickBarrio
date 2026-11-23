@@ -16,12 +16,12 @@
         </p>
     </div>
 
-    {{-- Mensaje de estado de la sesión (ej. tras restablecer contraseña) --}}
+    {{-- Mensaje de estado de la sesión. --}}
     <x-auth-session-status
         class="mensaje-auth"
         :status="session('status')" />
 
-    {{-- Formulario de autenticación de usuario --}}
+    {{-- Formulario de autentificación de usuario --}}
     <form method="POST" action="{{ route('login') }}">
         @csrf
 

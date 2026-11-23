@@ -132,11 +132,11 @@
     </header>
 
     @php
-        // Obtiene el usuario autenticado y su rol principal (por defecto 'usuario')
+        // Obtiene el usuario autentificado y su rol principal (por defecto 'usuario')
         $user = auth()->user();
         $role = $user?->getRoleNames()->first() ?? 'usuario';
     @endphp
-    {{-- PANEL DE CONTROL PARA ADMINISTRADOR (con contadores globales de todas las entidades) --}}
+    {{-- Panel de control solo para administrador(con contadores globales de todas las entidades) --}}
     @if($role === 'administrador')
 
         <div class="grupo-botones-principales">
@@ -171,7 +171,7 @@
             </a>
         </div>
 
-    {{-- PANEL DE CONTROL PARA GESTOR (acceso a sus tiendas, productos, reservas e ingresos) --}}
+    {{-- Panel de control para gestor (acceso a sus tiendas, productos, reservas e ingresos) --}}
     @elseif($role === 'gestor')
 
         <div class="grupo-botones-principales">
@@ -193,7 +193,7 @@
             </a>
         </div>
 
-    {{-- PANEL DE CONTROL PARA USUARIO CLIENTE (exploración del catálogo y sus reservas) --}}
+    {{-- Panel de control para usuario (exploración del catálogo y sus reservas) --}}
     @else
 
         <div class="grupo-botones-principales">

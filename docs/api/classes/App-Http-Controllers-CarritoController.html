@@ -181,8 +181,8 @@
 
     </aside>
 
-            <p class="phpdocumentor-summary">Controlador encargado de gestionar el carrito de compras del usuario,
-la validación de stock y precios, y la conversión del carrito en reserva.</p>
+            <p class="phpdocumentor-summary">Controlador encargado de gestionar el carrito de reservas del usuario,
+la validación de stock y precios, y la modificación del carrito en reserva.</p>
 
 
 
@@ -223,14 +223,14 @@ la validación de stock y precios, y la conversión del carrito en reserva.</p>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\Http\JsonResponse">JsonResponse</abbr>    </span>
 </dt>
-<dd>Elimina un artículo del carrito del usuario autenticado.</dd>
+<dd>Elimina un artículo del carrito del usuario autentificado.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-CarritoController.html#method_finalizar">finalizar()</a>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
-<dd>Finaliza el proceso de compra validando stock y precios bajo transacción,
+<dd>Finaliza el proceso de reserva validando stock y precios bajo transacción,
 generando la reserva y descontando el inventario correspondiente.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
@@ -238,7 +238,7 @@ generando la reserva y descontando el inventario correspondiente.</dd>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\View\View">View</abbr>    </span>
 </dt>
-<dd>Muestra la vista del carrito de compras del usuario autenticado.</dd>
+<dd>Muestra la vista del carrito de reservas del usuario autentificado.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-CarritoController.html#method_update">update()</a>
@@ -252,7 +252,7 @@ generando la reserva y descontando el inventario correspondiente.</dd>
     <span>
                                 &nbsp;: <a href="classes/App-Models-Carrito.html"><abbr title="\App\Models\Carrito">Carrito</abbr></a>    </span>
 </dt>
-<dd>Obtiene el carrito activo del usuario autenticado o crea uno nuevo si no existe.</dd>
+<dd>Obtiene el carrito activo del usuario autentificado o crea uno nuevo si no existe.</dd>
 
     </dl>
 
@@ -295,7 +295,7 @@ generando la reserva y descontando el inventario correspondiente.</dd>
     <div class="phpdocumentor-label-line">
         </div>
     
-        <section class="phpdocumentor-description"><p>Calcula los importes al vuelo sin persistir columnas calculadas en base de datos.</p>
+        <section class="phpdocumentor-description"><p>Calcula los importes sin persistir columnas calculadas en base de datos.</p>
 </section>
 
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -339,7 +339,7 @@ generando la reserva y descontando el inventario correspondiente.</dd>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Elimina un artículo del carrito del usuario autenticado.</p>
+        <p class="phpdocumentor-summary">Elimina un artículo del carrito del usuario autentificado.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -390,7 +390,7 @@ generando la reserva y descontando el inventario correspondiente.</dd>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Finaliza el proceso de compra validando stock y precios bajo transacción,
+        <p class="phpdocumentor-summary">Finaliza el proceso de reserva validando stock y precios bajo transacción,
 generando la reserva y descontando el inventario correspondiente.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -446,7 +446,7 @@ generando la reserva y descontando el inventario correspondiente.</p>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Muestra la vista del carrito de compras del usuario autenticado.</p>
+        <p class="phpdocumentor-summary">Muestra la vista del carrito de reservas del usuario autentificado.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -545,7 +545,7 @@ generando la reserva y descontando el inventario correspondiente.</p>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Obtiene el carrito activo del usuario autenticado o crea uno nuevo si no existe.</p>
+        <p class="phpdocumentor-summary">Obtiene el carrito activo del usuario autentificado o crea uno nuevo si no existe.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>

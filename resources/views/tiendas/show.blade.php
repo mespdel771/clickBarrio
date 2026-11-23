@@ -86,7 +86,7 @@
                         <th>Precio</th>
                         <th>Stock</th>
 
-                        {{-- Columnas de compra directa visibles únicamente para usuarios con rol cliente --}}
+                        {{-- Columnas de reserva directa visibles únicamente para usuarios con rol cliente --}}
                         @if(auth()->check() && auth()->user()->hasRole('usuario'))
                             <th>Cantidad</th>
                             <th>Acción</th>
@@ -149,7 +149,7 @@
                                     </span>
                                 @endif
                             </td>
-                            {{-- Controles de selección de cantidad y botón de compra para clientes --}}
+                            {{-- Controles de selección de cantidad y botón de reserva para clientes --}}
                             @if(auth()->check() && auth()->user()->hasRole('usuario'))
                                 <td>
                                     @if($stockDisponible > 0 && $precio)

@@ -179,11 +179,12 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Clase base de la que heredan todos los tests de la aplicación para preparar el entorno antes de cada prueba.</p>
+
 
 
 
@@ -240,11 +241,32 @@
 <dd>PI-03: Control de acceso por roles (Un cliente no puede gestionar usuarios ni crear tiendas)</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_crear_gestor_requiere_tienda_asignada">test_crear_gestor_requiere_tienda_asignada()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>PI-08: No se puede crear un usuario con rol gestor sin asignarle una tienda</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_crear_tienda_requiere_email_obligatorio">test_crear_tienda_requiere_email_obligatorio()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>PI-07: Crear una tienda exige correo electrónico obligatorio y evita excepción SQL</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_gestor_accede_a_ingresos_pero_no_a_crear_tienda">test_gestor_accede_a_ingresos_pero_no_a_crear_tienda()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
 <dd>PI-05: Un gestor puede ver el panel de ingresos pero no puede crear tiendas nuevas</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_gestor_debe_indicar_precio_y_stock_al_incorporar_producto">test_gestor_debe_indicar_precio_y_stock_al_incorporar_producto()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>PI-10: Un gestor no puede incorporar un producto a su tienda sin precio y stock obligatorios</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_invitado_redirigido_a_login_en_rutas_protegidas">test_invitado_redirigido_a_login_en_rutas_protegidas()</a>
@@ -253,11 +275,19 @@
 </dt>
 <dd>PI-02: Un usuario no autenticado es redirigido al login si intenta ver rutas privadas</dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_reemplazar_gestor_degrada_al_anterior_a_rol_usuario">test_reemplazar_gestor_degrada_al_anterior_a_rol_usuario()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>PI-09: Al asignar un nuevo gestor a una tienda ocupada, el antiguo gestor pasa a rol usuario</dd>
+
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a class="" href="classes/Tests-TestCase.html#method_setUp">setUp()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
+<dd>Se ejecuta automáticamente antes de cada test para limpiar la caché de permisos y asegurar que existen los roles básicos.</dd>
 
     </dl>
 
@@ -287,7 +317,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">16</span>
+    <span class="phpdocumentor-element-found-in__line">19</span>
 
     </aside>
 
@@ -322,7 +352,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">52</span>
+    <span class="phpdocumentor-element-found-in__line">55</span>
 
     </aside>
 
@@ -357,7 +387,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">76</span>
+    <span class="phpdocumentor-element-found-in__line">79</span>
 
     </aside>
 
@@ -392,7 +422,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">40</span>
+    <span class="phpdocumentor-element-found-in__line">43</span>
 
     </aside>
 
@@ -419,6 +449,76 @@
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_test_crear_gestor_requiere_tienda_asignada">
+        test_crear_gestor_requiere_tienda_asignada()
+        <a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_crear_gestor_requiere_tienda_asignada" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">129</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">PI-08: No se puede crear un usuario con rol gestor sin asignarle una tienda</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">test_crear_gestor_requiere_tienda_asignada</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+        
+    
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_test_crear_tienda_requiere_email_obligatorio">
+        test_crear_tienda_requiere_email_obligatorio()
+        <a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_crear_tienda_requiere_email_obligatorio" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">94</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">PI-07: Crear una tienda exige correo electrónico obligatorio y evita excepción SQL</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">test_crear_tienda_requiere_email_obligatorio</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+        
+    
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_test_gestor_accede_a_ingresos_pero_no_a_crear_tienda">
         test_gestor_accede_a_ingresos_pero_no_a_crear_tienda()
         <a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_gestor_accede_a_ingresos_pero_no_a_crear_tienda" class="headerlink"><i class="fas fa-link"></i></a>
@@ -427,7 +527,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">64</span>
+    <span class="phpdocumentor-element-found-in__line">67</span>
 
     </aside>
 
@@ -454,6 +554,41 @@
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_test_gestor_debe_indicar_precio_y_stock_al_incorporar_producto">
+        test_gestor_debe_indicar_precio_y_stock_al_incorporar_producto()
+        <a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_gestor_debe_indicar_precio_y_stock_al_incorporar_producto" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">189</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">PI-10: Un gestor no puede incorporar un producto a su tienda sin precio y stock obligatorios</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">test_gestor_debe_indicar_precio_y_stock_al_incorporar_producto</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+        
+    
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_test_invitado_redirigido_a_login_en_rutas_protegidas">
         test_invitado_redirigido_a_login_en_rutas_protegidas()
         <a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_invitado_redirigido_a_login_en_rutas_protegidas" class="headerlink"><i class="fas fa-link"></i></a>
@@ -462,7 +597,7 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">28</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
@@ -471,6 +606,41 @@
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">test_invitado_redirigido_a_login_en_rutas_protegidas</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+        
+    
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_test_reemplazar_gestor_degrada_al_anterior_a_rol_usuario">
+        test_reemplazar_gestor_degrada_al_anterior_a_rol_usuario()
+        <a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_reemplazar_gestor_degrada_al_anterior_a_rol_usuario" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">151</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">PI-09: Al asignar un nuevo gestor a una tienda ocupada, el antiguo gestor pasa a rol usuario</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">test_reemplazar_gestor_degrada_al_anterior_a_rol_usuario</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -497,11 +667,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/TestCase.php"><a href="files/tests-testcase.html"><abbr title="tests/TestCase.php">TestCase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Se ejecuta automáticamente antes de cada test para limpiar la caché de permisos y asegurar que existen los roles básicos.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
                     <span class="phpdocumentor-signature__name">setUp</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
@@ -543,8 +714,12 @@
                                             <li class=""><a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_administrador_accede_a_gestion_global">test_administrador_accede_a_gestion_global()</a></li>
                                             <li class=""><a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_administrador_recibe_errores_al_crear_categoria_vacia">test_administrador_recibe_errores_al_crear_categoria_vacia()</a></li>
                                             <li class=""><a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_cliente_no_puede_acceder_a_rutas_de_administrador_ni_gestor">test_cliente_no_puede_acceder_a_rutas_de_administrador_ni_gestor()</a></li>
+                                            <li class=""><a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_crear_gestor_requiere_tienda_asignada">test_crear_gestor_requiere_tienda_asignada()</a></li>
+                                            <li class=""><a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_crear_tienda_requiere_email_obligatorio">test_crear_tienda_requiere_email_obligatorio()</a></li>
                                             <li class=""><a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_gestor_accede_a_ingresos_pero_no_a_crear_tienda">test_gestor_accede_a_ingresos_pero_no_a_crear_tienda()</a></li>
+                                            <li class=""><a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_gestor_debe_indicar_precio_y_stock_al_incorporar_producto">test_gestor_debe_indicar_precio_y_stock_al_incorporar_producto()</a></li>
                                             <li class=""><a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_invitado_redirigido_a_login_en_rutas_protegidas">test_invitado_redirigido_a_login_en_rutas_protegidas()</a></li>
+                                            <li class=""><a href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_reemplazar_gestor_degrada_al_anterior_a_rol_usuario">test_reemplazar_gestor_degrada_al_anterior_a_rol_usuario()</a></li>
                                             <li class=""><a href="classes/Tests-TestCase.html#method_setUp">setUp()</a></li>
                                     </ul>
             </li>

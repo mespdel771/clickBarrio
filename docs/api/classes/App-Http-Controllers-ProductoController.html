@@ -216,7 +216,7 @@ precios e inventarios (stock), aplicando control de acceso según el rol del usu
     <span>
                                 &nbsp;: <abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
-<dd>Incorpora un producto existente del catálogo global a todas las tiendas del gestor autenticado,
+<dd>Incorpora un producto existente del catálogo global a todas las tiendas del gestor autentificado,
 inicializando su stock en 0 y su precio base en 0.01 antes de redirigir a su configuración.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
@@ -225,7 +225,7 @@ inicializando su stock en 0 y su precio base en 0.01 antes de redirigir a su con
                                 &nbsp;: <abbr title="\Illuminate\View\View">View</abbr>    </span>
 </dt>
 <dd>Muestra el formulario para crear un nuevo producto verificando previamente la Policy
-y filtrando las tiendas y categorías disponibles según el rol del usuario autenticado:
+y filtrando las tiendas y categorías disponibles según el rol del usuario autentificado:
 - Administrador: acceso total a todas las categorías y tiendas del sistema.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
@@ -233,7 +233,7 @@ y filtrando las tiendas y categorías disponibles según el rol del usuario aute
     <span>
                                 &nbsp;: <abbr title="\Illuminate\Http\RedirectResponse">RedirectResponse</abbr>    </span>
 </dt>
-<dd>Elimina un producto si no tiene reservas históricas asociadas, o muestra aviso amigable
+<dd>Elimina un producto si no tiene reservas históricas asociadas, o muestra aviso
 respetando la restricción ON DELETE RESTRICT de la base de datos.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
@@ -242,14 +242,14 @@ respetando la restricción ON DELETE RESTRICT de la base de datos.</dd>
                                 &nbsp;: <abbr title="\Illuminate\View\View">View</abbr>    </span>
 </dt>
 <dd>Muestra el formulario de edición de un producto filtrando categorías y tiendas
-(asignadas y disponibles) según el rol del usuario autenticado.</dd>
+(asignadas y disponibles) según el rol del usuario autentificado.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/App-Http-Controllers-ProductoController.html#method_index">index()</a>
     <span>
                                 &nbsp;: <abbr title="\Illuminate\View\View">View</abbr>    </span>
 </dt>
-<dd>Muestra el listado paginado de productos filtrado según el rol del usuario autenticado:
+<dd>Muestra el listado paginado de productos filtrado según el rol del usuario autentificado:
 - Administrador: visualiza todos los productos del catálogo global.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
@@ -316,7 +316,7 @@ protegiendo las filas de &#039;precios&#039; que ya tengan ventas históricas en
 
     </aside>
 
-        <p class="phpdocumentor-summary">Incorpora un producto existente del catálogo global a todas las tiendas del gestor autenticado,
+        <p class="phpdocumentor-summary">Incorpora un producto existente del catálogo global a todas las tiendas del gestor autentificado,
 inicializando su stock en 0 y su precio base en 0.01 antes de redirigir a su configuración.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -385,7 +385,7 @@ inicializando su stock en 0 y su precio base en 0.01 antes de redirigir a su con
     </aside>
 
         <p class="phpdocumentor-summary">Muestra el formulario para crear un nuevo producto verificando previamente la Policy
-y filtrando las tiendas y categorías disponibles según el rol del usuario autenticado:
+y filtrando las tiendas y categorías disponibles según el rol del usuario autentificado:
 - Administrador: acceso total a todas las categorías y tiendas del sistema.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -445,7 +445,7 @@ y filtrando las tiendas y categorías disponibles según el rol del usuario aute
 
     </aside>
 
-        <p class="phpdocumentor-summary">Elimina un producto si no tiene reservas históricas asociadas, o muestra aviso amigable
+        <p class="phpdocumentor-summary">Elimina un producto si no tiene reservas históricas asociadas, o muestra aviso
 respetando la restricción ON DELETE RESTRICT de la base de datos.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -498,7 +498,7 @@ respetando la restricción ON DELETE RESTRICT de la base de datos.</p>
     </aside>
 
         <p class="phpdocumentor-summary">Muestra el formulario de edición de un producto filtrando categorías y tiendas
-(asignadas y disponibles) según el rol del usuario autenticado.</p>
+(asignadas y disponibles) según el rol del usuario autentificado.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -565,7 +565,7 @@ respetando la restricción ON DELETE RESTRICT de la base de datos.</p>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Muestra el listado paginado de productos filtrado según el rol del usuario autenticado:
+        <p class="phpdocumentor-summary">Muestra el listado paginado de productos filtrado según el rol del usuario autentificado:
 - Administrador: visualiza todos los productos del catálogo global.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
@@ -576,7 +576,7 @@ respetando la restricción ON DELETE RESTRICT de la base de datos.</p>
         </div>
     
         <section class="phpdocumentor-description"><ul>
-<li>Gestor: visualiza los productos asignados a su tienda y los productos disponibles de su categoría para incorporar.</li>
+<li>Gestor: visualiza los productos asignados a su tienda o tiendas y los productos disponibles de su categoría para incorporar.</li>
 <li>Usuario: visualiza únicamente los productos que disponen de stock activo.</li>
 </ul>
 </section>

@@ -17,7 +17,7 @@
     {{-- Tarjeta central de presentación de la plataforma --}}
     <div class="welcome-card">
 
-        {{-- Logotipo vectorial SVG representativo de los comercios locales --}}
+        {{-- Logotipo  representativo del proyecto --}}
         <div class="logo-container">
          
             <img  src="{{ asset('imagen/logo.png') }}"  alt="Logotipo Las Tiendas del Barrio" 

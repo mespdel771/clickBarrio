@@ -176,11 +176,12 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/ValidacionDatosUnitTest.php"><a href="files/tests-unit-validaciondatosunittest.html"><abbr title="tests/Unit/ValidacionDatosUnitTest.php">ValidacionDatosUnitTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8</span>
+    <span class="phpdocumentor-element-found-in__line">15</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Clase de pruebas unitarias para comprobar que las reglas de validación, cálculos y modelos de la aplicación funcionan bien.</p>
+
 
 
 
@@ -209,38 +210,81 @@
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_asignacion_masiva_modelos_tienda_y_producto">test_asignacion_masiva_modelos_tienda_y_producto()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>PU-10: Verifica la asignación masiva de atributos en los modelos Tienda y Producto.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_calculo_subtotal_y_total_carrito">test_calculo_subtotal_y_total_carrito()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>PU-07: Verifica el cálculo de subtotales y total de un carrito multi-tienda.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_cifrado_y_verificacion_contrasena">test_cifrado_y_verificacion_contrasena()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>PU-09: Verifica el cifrado seguro de contraseñas mediante Hash.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_comprobacion_stock_disponible_frente_a_pedido">test_comprobacion_stock_disponible_frente_a_pedido()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>PU-08: Verifica el control de stock suficiente frente a la cantidad solicitada por el cliente.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_cantidad_entero_positivo">test_validacion_cantidad_entero_positivo()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>PU-02: Verifica que la cantidad/stock sea un número entero positivo</dd>
+<dd>PU-02: Verifica que la cantidad/stock sea un número entero positivo.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_email_y_longitud_nombre">test_validacion_email_y_longitud_nombre()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>PU-03: Verifica formato de correo electrónico y longitud máxima de campos</dd>
+<dd>PU-03: Verifica formato de correo electrónico y longitud máxima de campos.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_mascara_telefono">test_validacion_mascara_telefono()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>PU-04: Verifica máscara/formato de teléfono español (9 dígitos)</dd>
+<dd>PU-04: Verifica máscara/formato de teléfono español (9 dígitos).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_precio_positivo">test_validacion_precio_positivo()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>PU-01: Verifica que el precio de un producto/tienda sea numérico y estrictamente positivo</dd>
+<dd>PU-01: Verifica que el precio de un producto/tienda sea numérico y estrictamente positivo.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_roles_permitidos">test_validacion_roles_permitidos()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>PU-05: Verifica que los roles permitidos en el sistema sean únicamente administrador, gestor o usuario.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a class="" href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_tienda_obligatoria_si_es_gestor">test_validacion_tienda_obligatoria_si_es_gestor()</a>
+    <span>
+                                &nbsp;: void    </span>
+</dt>
+<dd>PU-06: Verifica que la asignación de tienda sea obligatoria únicamente cuando el rol es gestor.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a class="" href="classes/Tests-TestCase.html#method_setUp">setUp()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
+<dd>Se ejecuta automáticamente antes de cada test para limpiar la caché de permisos y asegurar que existen los roles básicos.</dd>
 
     </dl>
 
@@ -262,6 +306,146 @@
             -public
                                                         "
 >
+    <h4 class="phpdocumentor-element__name" id="method_test_asignacion_masiva_modelos_tienda_y_producto">
+        test_asignacion_masiva_modelos_tienda_y_producto()
+        <a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_asignacion_masiva_modelos_tienda_y_producto" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/ValidacionDatosUnitTest.php"><a href="files/tests-unit-validaciondatosunittest.html"><abbr title="tests/Unit/ValidacionDatosUnitTest.php">ValidacionDatosUnitTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">212</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">PU-10: Verifica la asignación masiva de atributos en los modelos Tienda y Producto.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">test_asignacion_masiva_modelos_tienda_y_producto</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+        
+    
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_test_calculo_subtotal_y_total_carrito">
+        test_calculo_subtotal_y_total_carrito()
+        <a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_calculo_subtotal_y_total_carrito" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/ValidacionDatosUnitTest.php"><a href="files/tests-unit-validaciondatosunittest.html"><abbr title="tests/Unit/ValidacionDatosUnitTest.php">ValidacionDatosUnitTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">154</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">PU-07: Verifica el cálculo de subtotales y total de un carrito multi-tienda.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">test_calculo_subtotal_y_total_carrito</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+        
+    
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_test_cifrado_y_verificacion_contrasena">
+        test_cifrado_y_verificacion_contrasena()
+        <a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_cifrado_y_verificacion_contrasena" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/ValidacionDatosUnitTest.php"><a href="files/tests-unit-validaciondatosunittest.html"><abbr title="tests/Unit/ValidacionDatosUnitTest.php">ValidacionDatosUnitTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">195</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">PU-09: Verifica el cifrado seguro de contraseñas mediante Hash.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">test_cifrado_y_verificacion_contrasena</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+        
+    
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_test_comprobacion_stock_disponible_frente_a_pedido">
+        test_comprobacion_stock_disponible_frente_a_pedido()
+        <a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_comprobacion_stock_disponible_frente_a_pedido" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/ValidacionDatosUnitTest.php"><a href="files/tests-unit-validaciondatosunittest.html"><abbr title="tests/Unit/ValidacionDatosUnitTest.php">ValidacionDatosUnitTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">177</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">PU-08: Verifica el control de stock suficiente frente a la cantidad solicitada por el cliente.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">test_comprobacion_stock_disponible_frente_a_pedido</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+        
+    
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
     <h4 class="phpdocumentor-element__name" id="method_test_validacion_cantidad_entero_positivo">
         test_validacion_cantidad_entero_positivo()
         <a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_cantidad_entero_positivo" class="headerlink"><i class="fas fa-link"></i></a>
@@ -270,11 +454,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/ValidacionDatosUnitTest.php"><a href="files/tests-unit-validaciondatosunittest.html"><abbr title="tests/Unit/ValidacionDatosUnitTest.php">ValidacionDatosUnitTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">29</span>
+    <span class="phpdocumentor-element-found-in__line">43</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">PU-02: Verifica que la cantidad/stock sea un número entero positivo</p>
+        <p class="phpdocumentor-summary">PU-02: Verifica que la cantidad/stock sea un número entero positivo.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -305,11 +489,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/ValidacionDatosUnitTest.php"><a href="files/tests-unit-validaciondatosunittest.html"><abbr title="tests/Unit/ValidacionDatosUnitTest.php">ValidacionDatosUnitTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">45</span>
+    <span class="phpdocumentor-element-found-in__line">64</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">PU-03: Verifica formato de correo electrónico y longitud máxima de campos</p>
+        <p class="phpdocumentor-summary">PU-03: Verifica formato de correo electrónico y longitud máxima de campos.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -340,11 +524,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/ValidacionDatosUnitTest.php"><a href="files/tests-unit-validaciondatosunittest.html"><abbr title="tests/Unit/ValidacionDatosUnitTest.php">ValidacionDatosUnitTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">64</span>
+    <span class="phpdocumentor-element-found-in__line">88</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">PU-04: Verifica máscara/formato de teléfono español (9 dígitos)</p>
+        <p class="phpdocumentor-summary">PU-04: Verifica máscara/formato de teléfono español (9 dígitos).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -375,15 +559,85 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/ValidacionDatosUnitTest.php"><a href="files/tests-unit-validaciondatosunittest.html"><abbr title="tests/Unit/ValidacionDatosUnitTest.php">ValidacionDatosUnitTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">22</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">PU-01: Verifica que el precio de un producto/tienda sea numérico y estrictamente positivo</p>
+        <p class="phpdocumentor-summary">PU-01: Verifica que el precio de un producto/tienda sea numérico y estrictamente positivo.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">test_validacion_precio_positivo</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+        
+    
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_test_validacion_roles_permitidos">
+        test_validacion_roles_permitidos()
+        <a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_roles_permitidos" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/ValidacionDatosUnitTest.php"><a href="files/tests-unit-validaciondatosunittest.html"><abbr title="tests/Unit/ValidacionDatosUnitTest.php">ValidacionDatosUnitTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">109</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">PU-05: Verifica que los roles permitidos en el sistema sean únicamente administrador, gestor o usuario.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">test_validacion_roles_permitidos</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    <div class="phpdocumentor-label-line">
+        </div>
+    
+    
+    
+    
+
+        
+    
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_test_validacion_tienda_obligatoria_si_es_gestor">
+        test_validacion_tienda_obligatoria_si_es_gestor()
+        <a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_tienda_obligatoria_si_es_gestor" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="tests/Unit/ValidacionDatosUnitTest.php"><a href="files/tests-unit-validaciondatosunittest.html"><abbr title="tests/Unit/ValidacionDatosUnitTest.php">ValidacionDatosUnitTest.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">130</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">PU-06: Verifica que la asignación de tienda sea obligatoria únicamente cuando el rol es gestor.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                    <span class="phpdocumentor-signature__name">test_validacion_tienda_obligatoria_si_es_gestor</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -410,11 +664,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/TestCase.php"><a href="files/tests-testcase.html"><abbr title="tests/TestCase.php">TestCase.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Se ejecuta automáticamente antes de cada test para limpiar la caché de permisos y asegurar que existen los roles básicos.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
                     <span class="phpdocumentor-signature__name">setUp</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
@@ -452,10 +707,16 @@
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
+                                            <li class=""><a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_asignacion_masiva_modelos_tienda_y_producto">test_asignacion_masiva_modelos_tienda_y_producto()</a></li>
+                                            <li class=""><a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_calculo_subtotal_y_total_carrito">test_calculo_subtotal_y_total_carrito()</a></li>
+                                            <li class=""><a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_cifrado_y_verificacion_contrasena">test_cifrado_y_verificacion_contrasena()</a></li>
+                                            <li class=""><a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_comprobacion_stock_disponible_frente_a_pedido">test_comprobacion_stock_disponible_frente_a_pedido()</a></li>
                                             <li class=""><a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_cantidad_entero_positivo">test_validacion_cantidad_entero_positivo()</a></li>
                                             <li class=""><a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_email_y_longitud_nombre">test_validacion_email_y_longitud_nombre()</a></li>
                                             <li class=""><a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_mascara_telefono">test_validacion_mascara_telefono()</a></li>
                                             <li class=""><a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_precio_positivo">test_validacion_precio_positivo()</a></li>
+                                            <li class=""><a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_roles_permitidos">test_validacion_roles_permitidos()</a></li>
+                                            <li class=""><a href="classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_tienda_obligatoria_si_es_gestor">test_validacion_tienda_obligatoria_si_es_gestor()</a></li>
                                             <li class=""><a href="classes/Tests-TestCase.html#method_setUp">setUp()</a></li>
                                     </ul>
             </li>

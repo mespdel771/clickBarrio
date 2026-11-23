@@ -11,7 +11,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
-// Rutas accesibles únicamente para usuarios invitados (no autenticados)
+// Rutas accesibles únicamente para usuarios invitados (no autentificados)
 Route::middleware('guest')->group(function () {
     // Registro de nuevos usuarios
     Route::get('register', [RegisteredUserController::class, 'create'])

@@ -48,7 +48,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\EmailVerificationPromptController",
             "name": "EmailVerificationPromptController",
-            "summary": "Controlador\u0020invocable\u0020encargado\u0020de\u0020mostrar\u0020la\u0020pantalla\u0020de\u0020verificaci\u00F3n\u0020de\u0020correo\u0020electr\u00F3nico.",
+            "summary": "Controlador\u0020encargado\u0020de\u0020mostrar\u0020la\u0020pantalla\u0020de\u0020verificaci\u00F3n\u0020de\u0020correo\u0020electr\u00F3nico.",
             "url": "classes/App-Http-Controllers-Auth-EmailVerificationPromptController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\Auth\\EmailVerificationPromptController\u003A\u003A__invoke\u0028\u0029",
@@ -138,12 +138,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\CarritoController",
             "name": "CarritoController",
-            "summary": "Controlador\u0020encargado\u0020de\u0020gestionar\u0020el\u0020carrito\u0020de\u0020compras\u0020del\u0020usuario,\nla\u0020validaci\u00F3n\u0020de\u0020stock\u0020y\u0020precios,\u0020y\u0020la\u0020conversi\u00F3n\u0020del\u0020carrito\u0020en\u0020reserva.",
+            "summary": "Controlador\u0020encargado\u0020de\u0020gestionar\u0020el\u0020carrito\u0020de\u0020reservas\u0020del\u0020usuario,\nla\u0020validaci\u00F3n\u0020de\u0020stock\u0020y\u0020precios,\u0020y\u0020la\u0020modificaci\u00F3n\u0020del\u0020carrito\u0020en\u0020reserva.",
             "url": "classes/App-Http-Controllers-CarritoController.html"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\CarritoController\u003A\u003Aindex\u0028\u0029",
             "name": "index",
-            "summary": "Muestra\u0020la\u0020vista\u0020del\u0020carrito\u0020de\u0020compras\u0020del\u0020usuario\u0020autenticado.",
+            "summary": "Muestra\u0020la\u0020vista\u0020del\u0020carrito\u0020de\u0020reservas\u0020del\u0020usuario\u0020autentificado.",
             "url": "classes/App-Http-Controllers-CarritoController.html#method_index"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\CarritoController\u003A\u003Aadd\u0028\u0029",
@@ -158,17 +158,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\CarritoController\u003A\u003Adestroy\u0028\u0029",
             "name": "destroy",
-            "summary": "Elimina\u0020un\u0020art\u00EDculo\u0020del\u0020carrito\u0020del\u0020usuario\u0020autenticado.",
+            "summary": "Elimina\u0020un\u0020art\u00EDculo\u0020del\u0020carrito\u0020del\u0020usuario\u0020autentificado.",
             "url": "classes/App-Http-Controllers-CarritoController.html#method_destroy"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\CarritoController\u003A\u003Afinalizar\u0028\u0029",
             "name": "finalizar",
-            "summary": "Finaliza\u0020el\u0020proceso\u0020de\u0020compra\u0020validando\u0020stock\u0020y\u0020precios\u0020bajo\u0020transacci\u00F3n,\ngenerando\u0020la\u0020reserva\u0020y\u0020descontando\u0020el\u0020inventario\u0020correspondiente.",
+            "summary": "Finaliza\u0020el\u0020proceso\u0020de\u0020reserva\u0020validando\u0020stock\u0020y\u0020precios\u0020bajo\u0020transacci\u00F3n,\ngenerando\u0020la\u0020reserva\u0020y\u0020descontando\u0020el\u0020inventario\u0020correspondiente.",
             "url": "classes/App-Http-Controllers-CarritoController.html#method_finalizar"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\CarritoController\u003A\u003AobtenerCarrito\u0028\u0029",
             "name": "obtenerCarrito",
-            "summary": "Obtiene\u0020el\u0020carrito\u0020activo\u0020del\u0020usuario\u0020autenticado\u0020o\u0020crea\u0020uno\u0020nuevo\u0020si\u0020no\u0020existe.",
+            "summary": "Obtiene\u0020el\u0020carrito\u0020activo\u0020del\u0020usuario\u0020autentificado\u0020o\u0020crea\u0020uno\u0020nuevo\u0020si\u0020no\u0020existe.",
             "url": "classes/App-Http-Controllers-CarritoController.html#method_obtenerCarrito"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\CategoriaController",
@@ -218,7 +218,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\DashboardController\u003A\u003Aindex\u0028\u0029",
             "name": "index",
-            "summary": "Obtiene\u0020los\u0020datos\u0020correspondientes\u0020al\u0020rol\u0020del\u0020usuario\u0020autenticado\u0020y\u0020muestra\u0020la\u0020vista\u0020del\u0020Dashboard.",
+            "summary": "Obtiene\u0020los\u0020datos\u0020correspondientes\u0020al\u0020rol\u0020del\u0020usuario\u0020autentificado\u0020y\u0020muestra\u0020la\u0020vista\u0020del\u0020Dashboard.",
             "url": "classes/App-Http-Controllers-DashboardController.html#method_index"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\IngresoController",
@@ -268,7 +268,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\PrecioController\u003A\u003AcomprobarPermisoTienda\u0028\u0029",
             "name": "comprobarPermisoTienda",
-            "summary": "Comprueba\u0020si\u0020el\u0020usuario\u0020autenticado\u0020tiene\u0020permisos\u0020sobre\u0020la\u0020tienda\u0020asociada\u0020al\u0020precio.",
+            "summary": "Comprueba\u0020si\u0020el\u0020usuario\u0020autentificado\u0020tiene\u0020permisos\u0020sobre\u0020la\u0020tienda\u0020asociada\u0020al\u0020precio.",
             "url": "classes/App-Http-Controllers-PrecioController.html#method_comprobarPermisoTienda"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ProductoController",
@@ -278,12 +278,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ProductoController\u003A\u003Aindex\u0028\u0029",
             "name": "index",
-            "summary": "Muestra\u0020el\u0020listado\u0020paginado\u0020de\u0020productos\u0020filtrado\u0020seg\u00FAn\u0020el\u0020rol\u0020del\u0020usuario\u0020autenticado\u003A\n\u002D\u0020Administrador\u003A\u0020visualiza\u0020todos\u0020los\u0020productos\u0020del\u0020cat\u00E1logo\u0020global.",
+            "summary": "Muestra\u0020el\u0020listado\u0020paginado\u0020de\u0020productos\u0020filtrado\u0020seg\u00FAn\u0020el\u0020rol\u0020del\u0020usuario\u0020autentificado\u003A\n\u002D\u0020Administrador\u003A\u0020visualiza\u0020todos\u0020los\u0020productos\u0020del\u0020cat\u00E1logo\u0020global.",
             "url": "classes/App-Http-Controllers-ProductoController.html#method_index"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ProductoController\u003A\u003Acreate\u0028\u0029",
             "name": "create",
-            "summary": "Muestra\u0020el\u0020formulario\u0020para\u0020crear\u0020un\u0020nuevo\u0020producto\u0020verificando\u0020previamente\u0020la\u0020Policy\ny\u0020filtrando\u0020las\u0020tiendas\u0020y\u0020categor\u00EDas\u0020disponibles\u0020seg\u00FAn\u0020el\u0020rol\u0020del\u0020usuario\u0020autenticado\u003A\n\u002D\u0020Administrador\u003A\u0020acceso\u0020total\u0020a\u0020todas\u0020las\u0020categor\u00EDas\u0020y\u0020tiendas\u0020del\u0020sistema.",
+            "summary": "Muestra\u0020el\u0020formulario\u0020para\u0020crear\u0020un\u0020nuevo\u0020producto\u0020verificando\u0020previamente\u0020la\u0020Policy\ny\u0020filtrando\u0020las\u0020tiendas\u0020y\u0020categor\u00EDas\u0020disponibles\u0020seg\u00FAn\u0020el\u0020rol\u0020del\u0020usuario\u0020autentificado\u003A\n\u002D\u0020Administrador\u003A\u0020acceso\u0020total\u0020a\u0020todas\u0020las\u0020categor\u00EDas\u0020y\u0020tiendas\u0020del\u0020sistema.",
             "url": "classes/App-Http-Controllers-ProductoController.html#method_create"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ProductoController\u003A\u003Astore\u0028\u0029",
@@ -293,12 +293,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ProductoController\u003A\u003AaddToCatalog\u0028\u0029",
             "name": "addToCatalog",
-            "summary": "Incorpora\u0020un\u0020producto\u0020existente\u0020del\u0020cat\u00E1logo\u0020global\u0020a\u0020todas\u0020las\u0020tiendas\u0020del\u0020gestor\u0020autenticado,\ninicializando\u0020su\u0020stock\u0020en\u00200\u0020y\u0020su\u0020precio\u0020base\u0020en\u00200.01\u0020antes\u0020de\u0020redirigir\u0020a\u0020su\u0020configuraci\u00F3n.",
+            "summary": "Incorpora\u0020un\u0020producto\u0020existente\u0020del\u0020cat\u00E1logo\u0020global\u0020a\u0020todas\u0020las\u0020tiendas\u0020del\u0020gestor\u0020autentificado,\ninicializando\u0020su\u0020stock\u0020en\u00200\u0020y\u0020su\u0020precio\u0020base\u0020en\u00200.01\u0020antes\u0020de\u0020redirigir\u0020a\u0020su\u0020configuraci\u00F3n.",
             "url": "classes/App-Http-Controllers-ProductoController.html#method_addToCatalog"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ProductoController\u003A\u003Aedit\u0028\u0029",
             "name": "edit",
-            "summary": "Muestra\u0020el\u0020formulario\u0020de\u0020edici\u00F3n\u0020de\u0020un\u0020producto\u0020filtrando\u0020categor\u00EDas\u0020y\u0020tiendas\n\u0028asignadas\u0020y\u0020disponibles\u0029\u0020seg\u00FAn\u0020el\u0020rol\u0020del\u0020usuario\u0020autenticado.",
+            "summary": "Muestra\u0020el\u0020formulario\u0020de\u0020edici\u00F3n\u0020de\u0020un\u0020producto\u0020filtrando\u0020categor\u00EDas\u0020y\u0020tiendas\n\u0028asignadas\u0020y\u0020disponibles\u0029\u0020seg\u00FAn\u0020el\u0020rol\u0020del\u0020usuario\u0020autentificado.",
             "url": "classes/App-Http-Controllers-ProductoController.html#method_edit"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ProductoController\u003A\u003Aupdate\u0028\u0029",
@@ -308,7 +308,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ProductoController\u003A\u003Adestroy\u0028\u0029",
             "name": "destroy",
-            "summary": "Elimina\u0020un\u0020producto\u0020si\u0020no\u0020tiene\u0020reservas\u0020hist\u00F3ricas\u0020asociadas,\u0020o\u0020muestra\u0020aviso\u0020amigable\nrespetando\u0020la\u0020restricci\u00F3n\u0020ON\u0020DELETE\u0020RESTRICT\u0020de\u0020la\u0020base\u0020de\u0020datos.",
+            "summary": "Elimina\u0020un\u0020producto\u0020si\u0020no\u0020tiene\u0020reservas\u0020hist\u00F3ricas\u0020asociadas,\u0020o\u0020muestra\u0020aviso\nrespetando\u0020la\u0020restricci\u00F3n\u0020ON\u0020DELETE\u0020RESTRICT\u0020de\u0020la\u0020base\u0020de\u0020datos.",
             "url": "classes/App-Http-Controllers-ProductoController.html#method_destroy"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ProductoController\u003A\u003AremoveFromCatalog\u0028\u0029",
@@ -328,17 +328,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ProfileController\u003A\u003Aedit\u0028\u0029",
             "name": "edit",
-            "summary": "Muestra\u0020el\u0020formulario\u0020de\u0020edici\u00F3n\u0020del\u0020perfil\u0020del\u0020usuario\u0020autenticado.",
+            "summary": "Muestra\u0020el\u0020formulario\u0020de\u0020edici\u00F3n\u0020del\u0020perfil\u0020del\u0020usuario\u0020autentificado.",
             "url": "classes/App-Http-Controllers-ProfileController.html#method_edit"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ProfileController\u003A\u003Aupdate\u0028\u0029",
             "name": "update",
-            "summary": "Actualiza\u0020los\u0020datos\u0020del\u0020perfil\u0020del\u0020usuario\u0020autenticado.",
+            "summary": "Actualiza\u0020los\u0020datos\u0020del\u0020perfil\u0020del\u0020usuario\u0020autentificado.",
             "url": "classes/App-Http-Controllers-ProfileController.html#method_update"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ProfileController\u003A\u003Adestroy\u0028\u0029",
             "name": "destroy",
-            "summary": "Elimina\u0020permanentemente\u0020la\u0020cuenta\u0020del\u0020usuario\u0020autenticado\u0020previa\u0020confirmaci\u00F3n\u0020de\u0020contrase\u00F1a.",
+            "summary": "Elimina\u0020permanentemente\u0020la\u0020cuenta\u0020del\u0020usuario\u0020autentificado\u0020previa\u0020confirmaci\u00F3n\u0020de\u0020contrase\u00F1a.",
             "url": "classes/App-Http-Controllers-ProfileController.html#method_destroy"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ReservaController",
@@ -348,7 +348,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ReservaController\u003A\u003Aindex\u0028\u0029",
             "name": "index",
-            "summary": "Muestra\u0020el\u0020listado\u0020de\u0020reservas\u0020filtrado\u0020seg\u00FAn\u0020el\u0020rol\u0020del\u0020usuario\u0020autenticado\u003A\n\u002D\u0020Administrador\u003A\u0020visualiza\u0020todas\u0020las\u0020reservas\u0020del\u0020sistema.",
+            "summary": "Muestra\u0020el\u0020listado\u0020de\u0020reservas\u0020filtrado\u0020seg\u00FAn\u0020el\u0020rol\u0020del\u0020usuario\u0020autentificado\u003A\n\u002D\u0020Administrador\u003A\u0020visualiza\u0020todas\u0020las\u0020reservas\u0020del\u0020sistema.",
             "url": "classes/App-Http-Controllers-ReservaController.html#method_index"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\ReservaController\u003A\u003Ashow\u0028\u0029",
@@ -388,7 +388,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Controllers\\TiendaController\u003A\u003Aedit\u0028\u0029",
             "name": "edit",
-            "summary": "Muestra\u0020el\u0020formulario\u0020de\u0020edici\u00F3n\u0020de\u0020una\u0020tienda\u0020verificando\u0020previamente\u0020los\u0020permisos\nseg\u00FAn\u0020el\u0020rol\u0020del\u0020usuario\u0020autenticado\u0020\u0028administradores\u0020o\u0020el\u0020gestor\u0020propietario\u0029.",
+            "summary": "Muestra\u0020el\u0020formulario\u0020de\u0020edici\u00F3n\u0020de\u0020una\u0020tienda\u0020verificando\u0020previamente\u0020los\u0020permisos\nseg\u00FAn\u0020el\u0020rol\u0020del\u0020usuario\u0020autentificado\u0020\u0028administradores\u0020o\u0020el\u0020gestor\u0020propietario\u0029.",
             "url": "classes/App-Http-Controllers-TiendaController.html#method_edit"
         },                {
             "fqsen": "\\App\\Http\\Controllers\\TiendaController\u003A\u003Aupdate\u0028\u0029",
@@ -443,7 +443,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Middleware\\Verificar",
             "name": "Verificar",
-            "summary": "Middleware\u0020encargado\u0020de\u0020comprobar\u0020si\u0020el\u0020usuario\u0020autenticado\u0020tiene\u0020autorizaci\u00F3n\npara\u0020modificar\u0020un\u0020determinado\u0020recurso\u0020seg\u00FAn\u0020su\u0020rol,\u0020permisos\u0020y\u0020propiedad.",
+            "summary": "Middleware\u0020encargado\u0020de\u0020comprobar\u0020si\u0020el\u0020usuario\u0020autentificado\u0020tiene\u0020autorizaci\u00F3n\npara\u0020modificar\u0020un\u0020determinado\u0020recurso\u0020seg\u00FAn\u0020su\u0020rol,\u0020permisos\u0020y\u0020propiedad.",
             "url": "classes/App-Http-Middleware-Verificar.html"
         },                {
             "fqsen": "\\App\\Http\\Middleware\\Verificar\u003A\u003Ahandle\u0028\u0029",
@@ -453,7 +453,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Requests\\Auth\\LoginRequest",
             "name": "LoginRequest",
-            "summary": "FormRequest\u0020personalizado\u0020encargado\u0020de\u0020validar\u0020las\u0020credenciales\u0020de\u0020inicio\u0020de\u0020sesi\u00F3n\ny\u0020gestionar\u0020la\u0020autenticaci\u00F3n\u0020junto\u0020con\u0020el\u0020l\u00EDmite\u0020de\u0020intentos\u0020fallidos\u0020\u0028rate\u0020limiting\u0029.",
+            "summary": "FormRequest\u0020personalizado\u0020encargado\u0020de\u0020validar\u0020las\u0020credenciales\u0020de\u0020inicio\u0020de\u0020sesi\u00F3n\ny\u0020gestionar\u0020la\u0020autentificaci\u00F3n\u0020junto\u0020con\u0020el\u0020l\u00EDmite\u0020de\u0020intentos\u0020fallidos\u0020\u0028rate\u0020limiting\u0029.",
             "url": "classes/App-Http-Requests-Auth-LoginRequest.html"
         },                {
             "fqsen": "\\App\\Http\\Requests\\Auth\\LoginRequest\u003A\u003Aauthorize\u0028\u0029",
@@ -468,7 +468,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Http\\Requests\\Auth\\LoginRequest\u003A\u003Aauthenticate\u0028\u0029",
             "name": "authenticate",
-            "summary": "Intenta\u0020autenticar\u0020las\u0020credenciales\u0020de\u0020la\u0020solicitud\u0020verificando\u0020previamente\nque\u0020no\u0020se\u0020haya\u0020superado\u0020el\u0020l\u00EDmite\u0020de\u0020intentos\u0020fallidos.",
+            "summary": "Intenta\u0020autentificar\u0020las\u0020credenciales\u0020de\u0020la\u0020solicitud\u0020verificando\u0020previamente\nque\u0020no\u0020se\u0020haya\u0020superado\u0020el\u0020l\u00EDmite\u0020de\u0020intentos\u0020fallidos.",
             "url": "classes/App-Http-Requests-Auth-LoginRequest.html#method_authenticate"
         },                {
             "fqsen": "\\App\\Http\\Requests\\Auth\\LoginRequest\u003A\u003AensureIsNotRateLimited\u0028\u0029",
@@ -583,7 +583,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Models\\CarritoItem\u003A\u003Atienda\u0028\u0029",
             "name": "tienda",
-            "summary": "Obtiene\u0020la\u0020tienda\u0020asociada\u0020a\u0020este\u0020art\u00EDculo\u0020del\u0020carrito,\nincluyendo\u0020tiendas\u0020eliminadas\u0020l\u00F3gicamente\u0020\u0028SoftDeletes\u0029\u0020para\u0020evitar\u0020errores\u0020de\u0020lectura.",
+            "summary": "Obtiene\u0020la\u0020tienda\u0020asociada\u0020a\u0020este\u0020art\u00EDculo\u0020del\u0020carrito,\nincluyendo\u0020tiendas\u0020eliminadas\u0020\u0028SoftDeletes\u0029\u0020para\u0020evitar\u0020errores\u0020de\u0020lectura.",
             "url": "classes/App-Models-CarritoItem.html#method_tienda"
         },                {
             "fqsen": "\\App\\Models\\CarritoItem\u003A\u003Aproducto\u0028\u0029",
@@ -688,7 +688,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Models\\Reserva\u003A\u003AgetTotalAttribute\u0028\u0029",
             "name": "getTotalAttribute",
-            "summary": "Calcula\u0020el\u0020total\u0020de\u0020la\u0020reserva\u0020al\u0020vuelo\u0020sumando\u0020\u0028cantidad\u0020\u002A\u0020precio\u0029\u0020de\u0020sus\u0020l\u00EDneas.",
+            "summary": "Calcula\u0020el\u0020total\u0020de\u0020la\u0020reserva\u0020sumando\u0020\u0028cantidad\u0020\u002A\u0020precio\u0029\u0020de\u0020sus\u0020l\u00EDneas.",
             "url": "classes/App-Models-Reserva.html#method_getTotalAttribute"
         },                {
             "fqsen": "\\App\\Models\\Reserva\u003A\u003A\u0024fillable",
@@ -718,7 +718,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Models\\ReservaItem\u003A\u003AgetImporteAttribute\u0028\u0029",
             "name": "getImporteAttribute",
-            "summary": "Calcula\u0020el\u0020importe\u0020de\u0020la\u0020l\u00EDnea\u0020al\u0020vuelo\u0020\u0028cantidad\u0020\u002A\u0020precio\u0029.",
+            "summary": "Calcula\u0020el\u0020importe\u0020de\u0020la\u0020l\u00EDnea\u0020\u0028cantidad\u0020\u002A\u0020precio\u0029.",
             "url": "classes/App-Models-ReservaItem.html#method_getImporteAttribute"
         },                {
             "fqsen": "\\App\\Models\\ReservaItem\u003A\u003AgetImporteRealAttribute\u0028\u0029",
@@ -938,12 +938,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Services\\CheckoutService",
             "name": "CheckoutService",
-            "summary": "Servicio\u0020encargado\u0020de\u0020gestionar\u0020el\u0020proceso\u0020completo\u0020de\u0020compra\u0020\u0028checkout\u0029,\nvalidando\u0020stock\u0020y\u0020precios\u0020bajo\u0020transacci\u00F3n,\u0020generando\u0020la\u0020reserva\u0020y\u0020descontando\u0020el\u0020inventario.",
+            "summary": "Servicio\u0020encargado\u0020de\u0020gestionar\u0020el\u0020proceso\u0020completo\u0020de\u0020reserva\u0020\u0028checkout\u0029,\nvalidando\u0020stock\u0020y\u0020precios\u0020bajo\u0020transacci\u00F3n,\u0020generando\u0020la\u0020reserva\u0020y\u0020descontando\u0020el\u0020inventario.",
             "url": "classes/App-Services-CheckoutService.html"
         },                {
             "fqsen": "\\App\\Services\\CheckoutService\u003A\u003Aprocess\u0028\u0029",
             "name": "process",
-            "summary": "Procesa\u0020la\u0020compra\u0020completa\u0020de\u0020un\u0020carrito\u0020de\u0020compras\u0020bajo\u0020una\u0020transacci\u00F3n\u0020de\u0020base\u0020de\u0020datos,\ncreando\u0020la\u0020reserva\u0020asociada,\u0020descontando\u0020el\u0020stock\u0020y\u0020vaciando\u0020el\u0020carrito.",
+            "summary": "Procesa\u0020la\u0020reserva\u0020completa\u0020de\u0020un\u0020carrito\u0020de\u0020reservas\u0020bajo\u0020una\u0020transacci\u00F3n\u0020de\u0020base\u0020de\u0020datos,\ncreando\u0020la\u0020reserva\u0020asociada,\u0020descontando\u0020el\u0020stock\u0020y\u0020vaciando\u0020el\u0020carrito.",
             "url": "classes/App-Services-CheckoutService.html#method_process"
         },                {
             "fqsen": "\\App\\Services\\DashboardService",
@@ -1018,7 +1018,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Database\\Seeders\\CategoriaSeeder",
             "name": "CategoriaSeeder",
-            "summary": "Seeder\u0020encargado\u0020de\u0020poblar\u0020la\u0020tabla\u0020\u0027categorias\u0027\u0020con\u0020las\u0020categor\u00EDas\u0020base\u0020del\u0020cat\u00E1logo.",
+            "summary": "Seeder\u0020encargado\u0020de\u0020rellenar\u0020la\u0020tabla\u0020\u0027categorias\u0027\u0020con\u0020las\u0020categor\u00EDas\u0020base\u0020del\u0020cat\u00E1logo.",
             "url": "classes/Database-Seeders-CategoriaSeeder.html"
         },                {
             "fqsen": "\\Database\\Seeders\\CategoriaSeeder\u003A\u003Arun\u0028\u0029",
@@ -1038,32 +1038,32 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Database\\Seeders\\PrecioSeeder",
             "name": "PrecioSeeder",
-            "summary": "Seeder\u0020encargado\u0020de\u0020poblar\u0020la\u0020tabla\u0020\u0027precios\u0027\u0020asignando\u0020precios\u0020aleatorios\na\u0020un\u0020subconjunto\u0020de\u0020productos\u0020correspondientes\u0020a\u0020la\u0020categor\u00EDa\u0020de\u0020cada\u0020tienda.",
+            "summary": "Seeder\u0020encargado\u0020de\u0020rellenar\u0020la\u0020tabla\u0020\u0027precios\u0027\u0020asignando\u0020precios\u0020aleatorios\na\u0020un\u0020subconjunto\u0020de\u0020productos\u0020correspondientes\u0020a\u0020la\u0020categor\u00EDa\u0020de\u0020cada\u0020tienda.",
             "url": "classes/Database-Seeders-PrecioSeeder.html"
         },                {
             "fqsen": "\\Database\\Seeders\\PrecioSeeder\u003A\u003Arun\u0028\u0029",
             "name": "run",
-            "summary": "Ejecuta\u0020el\u0020sembrado\u0020de\u0020precios\u0020seleccionando\u0020entre\u0020el\u002030\u0020\u0025\u0020y\u0020el\u002070\u0020\u0025\u0020de\u0020los\u0020productos\nde\u0020la\u0020categor\u00EDa\u0020de\u0020cada\u0020tienda\u0020e\u0020insertando\u0020o\u0020actualizando\u0020su\u0020precio\u0020correspondiente.",
+            "summary": "Ejecuta\u0020el\u0020rellenado\u0020de\u0020precios\u0020seleccionando\u0020entre\u0020el\u002030\u0020\u0025\u0020y\u0020el\u002070\u0020\u0025\u0020de\u0020los\u0020productos\nde\u0020la\u0020categor\u00EDa\u0020de\u0020cada\u0020tienda\u0020e\u0020insertando\u0020o\u0020actualizando\u0020su\u0020precio\u0020correspondiente.",
             "url": "classes/Database-Seeders-PrecioSeeder.html#method_run"
         },                {
             "fqsen": "\\Database\\Seeders\\ProductoSeeder",
             "name": "ProductoSeeder",
-            "summary": "Seeder\u0020encargado\u0020de\u0020poblar\u0020la\u0020tabla\u0020\u0027productos\u0027\u0020con\u0020el\u0020cat\u00E1logo\u0020inicial\ndistribuido\u0020por\u0020categor\u00EDas\u0020\u0028Alimentaci\u00F3n,\u0020Ropa,\u0020Peluquer\u00EDa,\u0020Ferreter\u00EDa\u0020y\u0020Otros\u0029.",
+            "summary": "Seeder\u0020encargado\u0020de\u0020rellenar\u0020la\u0020tabla\u0020\u0027productos\u0027\u0020con\u0020el\u0020cat\u00E1logo\u0020inicial\ndistribuido\u0020por\u0020categor\u00EDas\u0020\u0028Alimentaci\u00F3n,\u0020Ropa,\u0020Peluquer\u00EDa,\u0020Ferreter\u00EDa\u0020y\u0020Otros\u0029.",
             "url": "classes/Database-Seeders-ProductoSeeder.html"
         },                {
             "fqsen": "\\Database\\Seeders\\ProductoSeeder\u003A\u003Arun\u0028\u0029",
             "name": "run",
-            "summary": "Ejecuta\u0020el\u0020sembrado\u0020de\u0020datos\u0020insertando\u0020o\u0020actualizando\u0020los\u0020productos\u0020base\u0020del\u0020cat\u00E1logo.",
+            "summary": "Ejecuta\u0020el\u0020rellenado\u0020de\u0020datos\u0020insertando\u0020o\u0020actualizando\u0020los\u0020productos\u0020base\u0020del\u0020cat\u00E1logo.",
             "url": "classes/Database-Seeders-ProductoSeeder.html#method_run"
         },                {
             "fqsen": "\\Database\\Seeders\\ReservaSeeder",
             "name": "ReservaSeeder",
-            "summary": "Seeder\u0020encargado\u0020de\u0020poblar\u0020las\u0020tablas\u0020\u0027reservas\u0027\u0020y\u0020\u0027reserva_items\u0027\ncon\u0020reservas\u0020de\u0020prueba\u0020coherentes\u0020bajo\u0020la\u0020estructura\u0020Cabecera\u002DDetalle\u0020sin\u0020columnas\u0020calculadas.",
+            "summary": "Seeder\u0020encargado\u0020de\u0020rellenar\u0020las\u0020tablas\u0020\u0027reservas\u0027\u0020y\u0020\u0027reserva_items\u0027\ncon\u0020reservas\u0020de\u0020prueba\u0020coherentes\u0020bajo\u0020la\u0020estructura\u0020Cabecera\u002DDetalle\u0020sin\u0020columnas\u0020calculadas.",
             "url": "classes/Database-Seeders-ReservaSeeder.html"
         },                {
             "fqsen": "\\Database\\Seeders\\ReservaSeeder\u003A\u003Arun\u0028\u0029",
             "name": "run",
-            "summary": "Ejecuta\u0020el\u0020sembrado\u0020de\u0020reservas\u0020de\u0020prueba\u0020generando\u0020hasta\u002015\u0020registros\u0020aleatorios\na\u0020partir\u0020de\u0020los\u0020usuarios\u0020con\u0020rol\u0020cliente\u0020y\u0020los\u0020precios\u0020disponibles\u0020por\u0020tienda.",
+            "summary": "Ejecuta\u0020el\u0020rellenado\u0020de\u0020reservas\u0020de\u0020prueba\u0020generando\u0020hasta\u002015\u0020registros\u0020aleatorios\na\u0020partir\u0020de\u0020los\u0020usuarios\u0020con\u0020rol\u0020cliente\u0020y\u0020los\u0020precios\u0020disponibles\u0020por\u0020tienda.",
             "url": "classes/Database-Seeders-ReservaSeeder.html#method_run"
         },                {
             "fqsen": "\\Database\\Seeders\\RoleSeeder",
@@ -1073,177 +1073,172 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Database\\Seeders\\RoleSeeder\u003A\u003Arun\u0028\u0029",
             "name": "run",
-            "summary": "Ejecuta\u0020el\u0020sembrado\u0020de\u0020roles\u0020y\u0020permisos\u0020limpiando\u0020previamente\u0020la\u0020cach\u00E9\u0020de\u0020Spatie\u0020Permission.",
+            "summary": "Ejecuta\u0020el\u0020rellenado\u0020de\u0020roles\u0020y\u0020permisos\u0020limpiando\u0020previamente\u0020la\u0020cach\u00E9\u0020de\u0020Spatie\u0020Permission.",
             "url": "classes/Database-Seeders-RoleSeeder.html#method_run"
         },                {
             "fqsen": "\\Database\\Seeders\\StockSeeder",
             "name": "StockSeeder",
-            "summary": "Seeder\u0020encargado\u0020de\u0020poblar\u0020la\u0020tabla\u0020\u0027stocks\u0027\u0020asignando\u0020cantidades\u0020iniciales\u0020aleatorias\na\u0020cada\u0020combinaci\u00F3n\u0020de\u0020producto\u0020y\u0020tienda\u0020que\u0020tenga\u0020un\u0020precio\u0020registrado.",
+            "summary": "Seeder\u0020encargado\u0020de\u0020rellenar\u0020la\u0020tabla\u0020\u0027stocks\u0027\u0020asignando\u0020cantidades\u0020iniciales\u0020aleatorias\na\u0020cada\u0020combinaci\u00F3n\u0020de\u0020producto\u0020y\u0020tienda\u0020que\u0020tenga\u0020un\u0020precio\u0020registrado.",
             "url": "classes/Database-Seeders-StockSeeder.html"
         },                {
             "fqsen": "\\Database\\Seeders\\StockSeeder\u003A\u003Arun\u0028\u0029",
             "name": "run",
-            "summary": "Ejecuta\u0020el\u0020sembrado\u0020de\u0020inventario\u0020recorriendo\u0020los\u0020registros\u0020de\u0020\u0027precios\u0027\ne\u0020insertando\u0020o\u0020actualizando\u0020un\u0020stock\u0020aleatorio\u0020entre\u002010\u0020y\u0020100\u0020unidades.",
+            "summary": "Ejecuta\u0020el\u0020rellenado\u0020de\u0020inventario\u0020recorriendo\u0020los\u0020registros\u0020de\u0020\u0027precios\u0027\ne\u0020insertando\u0020o\u0020actualizando\u0020un\u0020stock\u0020aleatorio\u0020entre\u002010\u0020y\u0020100\u0020unidades.",
             "url": "classes/Database-Seeders-StockSeeder.html#method_run"
         },                {
             "fqsen": "\\Database\\Seeders\\TiendaSeeder",
             "name": "TiendaSeeder",
-            "summary": "Seeder\u0020encargado\u0020de\u0020poblar\u0020la\u0020tabla\u0020\u0027tiendas\u0027\u0020con\u0020los\u0020establecimientos\u0020iniciales\ndistribuidos\u0020entre\u0020las\u0020cinco\u0020categor\u00EDas\u0020del\u0020sistema.",
+            "summary": "Seeder\u0020encargado\u0020de\u0020rellenar\u0020la\u0020tabla\u0020\u0027tiendas\u0027\u0020con\u0020los\u0020establecimientos\u0020iniciales\ndistribuidos\u0020entre\u0020las\u0020cinco\u0020categor\u00EDas\u0020del\u0020sistema.",
             "url": "classes/Database-Seeders-TiendaSeeder.html"
         },                {
             "fqsen": "\\Database\\Seeders\\TiendaSeeder\u003A\u003Arun\u0028\u0029",
             "name": "run",
-            "summary": "Ejecuta\u0020el\u0020sembrado\u0020de\u0020datos\u0020insertando\u0020o\u0020actualizando\u0020las\u0020tiendas\u0020base.",
+            "summary": "Ejecuta\u0020el\u0020rellenado\u0020de\u0020datos\u0020insertando\u0020o\u0020actualizando\u0020las\u0020tiendas\u0020base.",
             "url": "classes/Database-Seeders-TiendaSeeder.html#method_run"
         },                {
             "fqsen": "\\Database\\Seeders\\UserSeeder",
             "name": "UserSeeder",
-            "summary": "Seeder\u0020encargado\u0020de\u0020poblar\u0020la\u0020tabla\u0020\u0027users\u0027\u0020creando\u0020los\u0020usuarios\u0020de\u0020prueba\ncon\u0020sus\u0020respectivos\u0020roles\u0020\u0028\u0027administrador\u0027,\u0020\u0027usuario\u0027\u0020y\u0020\u0027gestor\u0027\u0029\u0020y\u0020vinculando\ncada\u0020gestor\u0020como\u0020propietario\u0020de\u0020su\u0020correspondiente\u0020tienda.",
+            "summary": "Seeder\u0020encargado\u0020de\u0020rellenar\u0020la\u0020tabla\u0020\u0027users\u0027\u0020creando\u0020los\u0020usuarios\u0020de\u0020prueba\ncon\u0020sus\u0020respectivos\u0020roles\u0020\u0028\u0027administrador\u0027,\u0020\u0027usuario\u0027\u0020y\u0020\u0027gestor\u0027\u0029\u0020y\u0020vinculando\ncada\u0020gestor\u0020como\u0020propietario\u0020de\u0020su\u0020correspondiente\u0020tienda.",
             "url": "classes/Database-Seeders-UserSeeder.html"
         },                {
             "fqsen": "\\Database\\Seeders\\UserSeeder\u003A\u003Arun\u0028\u0029",
             "name": "run",
-            "summary": "Ejecuta\u0020el\u0020sembrado\u0020de\u0020usuarios\u0020insertando\u0020o\u0020actualizando\u0020el\u0020administrador,\nlos\u0020clientes\u0020de\u0020prueba\u0020y\u0020un\u0020gestor\u0020asignado\u0020para\u0020cada\u0020tienda\u0020registrada.",
+            "summary": "Ejecuta\u0020el\u0020rellenado\u0020de\u0020usuarios\u0020insertando\u0020o\u0020actualizando\u0020el\u0020administrador,\nlos\u0020clientes\u0020de\u0020prueba\u0020y\u0020un\u0020gestor\u0020asignado\u0020para\u0020cada\u0020tienda\u0020registrada.",
             "url": "classes/Database-Seeders-UserSeeder.html#method_run"
-        },                {
-            "fqsen": "\\LARAVEL_START",
-            "name": "LARAVEL_START",
-            "summary": "",
-            "url": "namespaces/default.html#constant_LARAVEL_START"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\AuthenticationTest",
             "name": "AuthenticationTest",
-            "summary": "",
+            "summary": "Clase\u0020de\u0020pruebas\u0020para\u0020comprobar\u0020que\u0020el\u0020inicio\u0020y\u0020cierre\u0020de\u0020sesi\u00F3n\u0020funcionan\u0020bien.",
             "url": "classes/Tests-Feature-Auth-AuthenticationTest.html"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\AuthenticationTest\u003A\u003Atest_login_screen_can_be_rendered\u0028\u0029",
             "name": "test_login_screen_can_be_rendered",
-            "summary": "",
+            "summary": "Comprueba\u0020que\u0020la\u0020p\u00E1gina\u0020de\u0020login\u0020carga\u0020correctamente\u0020\u0028c\u00F3digo\u0020200\u0029.",
             "url": "classes/Tests-Feature-Auth-AuthenticationTest.html#method_test_login_screen_can_be_rendered"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\AuthenticationTest\u003A\u003Atest_users_can_authenticate_using_the_login_screen\u0028\u0029",
             "name": "test_users_can_authenticate_using_the_login_screen",
-            "summary": "",
+            "summary": "Prueba\u0020que\u0020un\u0020usuario\u0020registrado\u0020puede\u0020iniciar\u0020sesi\u00F3n\u0020con\u0020sus\u0020datos\u0020correctos.",
             "url": "classes/Tests-Feature-Auth-AuthenticationTest.html#method_test_users_can_authenticate_using_the_login_screen"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\AuthenticationTest\u003A\u003Atest_users_can_not_authenticate_with_invalid_password\u0028\u0029",
             "name": "test_users_can_not_authenticate_with_invalid_password",
-            "summary": "",
+            "summary": "Comprueba\u0020que\u0020no\u0020deja\u0020entrar\u0020si\u0020la\u0020contrase\u00F1a\u0020est\u00E1\u0020mal.",
             "url": "classes/Tests-Feature-Auth-AuthenticationTest.html#method_test_users_can_not_authenticate_with_invalid_password"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\AuthenticationTest\u003A\u003Atest_users_can_logout\u0028\u0029",
             "name": "test_users_can_logout",
-            "summary": "",
+            "summary": "Prueba\u0020que\u0020un\u0020usuario\u0020que\u0020ya\u0020ha\u0020iniciado\u0020sesi\u00F3n\u0020puede\u0020cerrarla\u0020correctamente.",
             "url": "classes/Tests-Feature-Auth-AuthenticationTest.html#method_test_users_can_logout"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\EmailVerificationTest",
             "name": "EmailVerificationTest",
-            "summary": "",
+            "summary": "Clase\u0020de\u0020pruebas\u0020para\u0020comprobar\u0020que\u0020la\u0020verificaci\u00F3n\u0020del\u0020correo\u0020electr\u00F3nico\u0020funciona\u0020correctamente.",
             "url": "classes/Tests-Feature-Auth-EmailVerificationTest.html"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\EmailVerificationTest\u003A\u003Atest_email_verification_screen_can_be_rendered\u0028\u0029",
             "name": "test_email_verification_screen_can_be_rendered",
-            "summary": "",
+            "summary": "Comprueba\u0020que\u0020la\u0020pantalla\u0020de\u0020aviso\u0020para\u0020verificar\u0020el\u0020email\u0020carga\u0020bien.",
             "url": "classes/Tests-Feature-Auth-EmailVerificationTest.html#method_test_email_verification_screen_can_be_rendered"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\EmailVerificationTest\u003A\u003Atest_email_can_be_verified\u0028\u0029",
             "name": "test_email_can_be_verified",
-            "summary": "",
+            "summary": "Prueba\u0020que\u0020un\u0020usuario\u0020puede\u0020verificar\u0020su\u0020email\u0020usando\u0020un\u0020enlace\u0020v\u00E1lido.",
             "url": "classes/Tests-Feature-Auth-EmailVerificationTest.html#method_test_email_can_be_verified"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\EmailVerificationTest\u003A\u003Atest_email_is_not_verified_with_invalid_hash\u0028\u0029",
             "name": "test_email_is_not_verified_with_invalid_hash",
-            "summary": "",
+            "summary": "Comprueba\u0020que\u0020el\u0020correo\u0020no\u0020se\u0020verifica\u0020si\u0020el\u0020enlace\u0020tiene\u0020un\u0020c\u00F3digo\u0020\u0028hash\u0029\u0020incorrecto.",
             "url": "classes/Tests-Feature-Auth-EmailVerificationTest.html#method_test_email_is_not_verified_with_invalid_hash"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\PasswordConfirmationTest",
             "name": "PasswordConfirmationTest",
-            "summary": "",
+            "summary": "Clase\u0020de\u0020pruebas\u0020para\u0020comprobar\u0020que\u0020la\u0020confirmaci\u00F3n\u0020de\u0020contrase\u00F1a\u0020funciona\u0020bien\u0020antes\u0020de\u0020hacer\u0020acciones\u0020delicadas.",
             "url": "classes/Tests-Feature-Auth-PasswordConfirmationTest.html"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\PasswordConfirmationTest\u003A\u003Atest_confirm_password_screen_can_be_rendered\u0028\u0029",
             "name": "test_confirm_password_screen_can_be_rendered",
-            "summary": "",
+            "summary": "Comprueba\u0020que\u0020la\u0020pantalla\u0020para\u0020confirmar\u0020la\u0020contrase\u00F1a\u0020carga\u0020correctamente.",
             "url": "classes/Tests-Feature-Auth-PasswordConfirmationTest.html#method_test_confirm_password_screen_can_be_rendered"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\PasswordConfirmationTest\u003A\u003Atest_password_can_be_confirmed\u0028\u0029",
             "name": "test_password_can_be_confirmed",
-            "summary": "",
+            "summary": "Prueba\u0020que\u0020el\u0020usuario\u0020puede\u0020confirmar\u0020su\u0020identidad\u0020escribiendo\u0020su\u0020contrase\u00F1a\u0020correcta.",
             "url": "classes/Tests-Feature-Auth-PasswordConfirmationTest.html#method_test_password_can_be_confirmed"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\PasswordConfirmationTest\u003A\u003Atest_password_is_not_confirmed_with_invalid_password\u0028\u0029",
             "name": "test_password_is_not_confirmed_with_invalid_password",
-            "summary": "",
+            "summary": "Comprueba\u0020que\u0020da\u0020error\u0020si\u0020el\u0020usuario\u0020mete\u0020una\u0020contrase\u00F1a\u0020que\u0020no\u0020es\u0020la\u0020suya.",
             "url": "classes/Tests-Feature-Auth-PasswordConfirmationTest.html#method_test_password_is_not_confirmed_with_invalid_password"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\PasswordResetTest",
             "name": "PasswordResetTest",
-            "summary": "",
+            "summary": "Clase\u0020de\u0020pruebas\u0020para\u0020comprobar\u0020todo\u0020el\u0020proceso\u0020de\u0020recuperaci\u00F3n\u0020y\u0020cambio\u0020de\u0020contrase\u00F1a\u0020olvidada.",
             "url": "classes/Tests-Feature-Auth-PasswordResetTest.html"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\PasswordResetTest\u003A\u003Atest_reset_password_link_screen_can_be_rendered\u0028\u0029",
             "name": "test_reset_password_link_screen_can_be_rendered",
-            "summary": "",
+            "summary": "Comprueba\u0020que\u0020la\u0020pantalla\u0020de\u0020\u0022\u00BFOlvidaste\u0020tu\u0020contrase\u00F1a\u003F\u0022\u0020carga\u0020bien.",
             "url": "classes/Tests-Feature-Auth-PasswordResetTest.html#method_test_reset_password_link_screen_can_be_rendered"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\PasswordResetTest\u003A\u003Atest_reset_password_link_can_be_requested\u0028\u0029",
             "name": "test_reset_password_link_can_be_requested",
-            "summary": "",
+            "summary": "Prueba\u0020que\u0020al\u0020introducir\u0020un\u0020correo\u0020registrado\u0020se\u0020env\u00EDa\u0020la\u0020notificaci\u00F3n\u0020de\u0020recuperaci\u00F3n.",
             "url": "classes/Tests-Feature-Auth-PasswordResetTest.html#method_test_reset_password_link_can_be_requested"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\PasswordResetTest\u003A\u003Atest_reset_password_screen_can_be_rendered\u0028\u0029",
             "name": "test_reset_password_screen_can_be_rendered",
-            "summary": "",
+            "summary": "Comprueba\u0020que\u0020el\u0020formulario\u0020para\u0020escribir\u0020la\u0020nueva\u0020contrase\u00F1a\u0020abre\u0020bien\u0020usando\u0020el\u0020token\u0020del\u0020correo.",
             "url": "classes/Tests-Feature-Auth-PasswordResetTest.html#method_test_reset_password_screen_can_be_rendered"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\PasswordResetTest\u003A\u003Atest_password_can_be_reset_with_valid_token\u0028\u0029",
             "name": "test_password_can_be_reset_with_valid_token",
-            "summary": "",
+            "summary": "Prueba\u0020que\u0020el\u0020usuario\u0020puede\u0020cambiar\u0020su\u0020contrase\u00F1a\u0020finalmente\u0020si\u0020tiene\u0020un\u0020token\u0020v\u00E1lido.",
             "url": "classes/Tests-Feature-Auth-PasswordResetTest.html#method_test_password_can_be_reset_with_valid_token"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\PasswordUpdateTest",
             "name": "PasswordUpdateTest",
-            "summary": "",
+            "summary": "Clase\u0020de\u0020pruebas\u0020para\u0020comprobar\u0020que\u0020el\u0020usuario\u0020puede\u0020cambiar\u0020su\u0020contrase\u00F1a\u0020desde\u0020su\u0020perfil.",
             "url": "classes/Tests-Feature-Auth-PasswordUpdateTest.html"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\PasswordUpdateTest\u003A\u003Atest_password_can_be_updated\u0028\u0029",
             "name": "test_password_can_be_updated",
-            "summary": "",
+            "summary": "Prueba\u0020que\u0020la\u0020contrase\u00F1a\u0020se\u0020actualiza\u0020correctamente\u0020cuando\u0020se\u0020pone\u0020bien\u0020la\u0020actual.",
             "url": "classes/Tests-Feature-Auth-PasswordUpdateTest.html#method_test_password_can_be_updated"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\PasswordUpdateTest\u003A\u003Atest_correct_password_must_be_provided_to_update_password\u0028\u0029",
             "name": "test_correct_password_must_be_provided_to_update_password",
-            "summary": "",
+            "summary": "Comprueba\u0020que\u0020no\u0020deja\u0020cambiar\u0020la\u0020contrase\u00F1a\u0020si\u0020el\u0020usuario\u0020escribe\u0020mal\u0020su\u0020contrase\u00F1a\u0020actual.",
             "url": "classes/Tests-Feature-Auth-PasswordUpdateTest.html#method_test_correct_password_must_be_provided_to_update_password"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\RegistrationTest",
             "name": "RegistrationTest",
-            "summary": "",
+            "summary": "Clase\u0020de\u0020pruebas\u0020para\u0020comprobar\u0020que\u0020el\u0020registro\u0020de\u0020nuevos\u0020usuarios\u0020funciona\u0020correctamente.",
             "url": "classes/Tests-Feature-Auth-RegistrationTest.html"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\RegistrationTest\u003A\u003Atest_registration_screen_can_be_rendered\u0028\u0029",
             "name": "test_registration_screen_can_be_rendered",
-            "summary": "",
+            "summary": "Comprueba\u0020que\u0020la\u0020p\u00E1gina\u0020de\u0020registro\u0020carga\u0020sin\u0020errores\u0020\u0028c\u00F3digo\u0020200\u0029.",
             "url": "classes/Tests-Feature-Auth-RegistrationTest.html#method_test_registration_screen_can_be_rendered"
         },                {
             "fqsen": "\\Tests\\Feature\\Auth\\RegistrationTest\u003A\u003Atest_new_users_can_register\u0028\u0029",
             "name": "test_new_users_can_register",
-            "summary": "",
+            "summary": "Prueba\u0020que\u0020un\u0020usuario\u0020nuevo\u0020se\u0020puede\u0020registrar\u0020rellenando\u0020el\u0020formulario\u0020correctamente.",
             "url": "classes/Tests-Feature-Auth-RegistrationTest.html#method_test_new_users_can_register"
         },                {
             "fqsen": "\\Tests\\Feature\\ExampleTest",
             "name": "ExampleTest",
-            "summary": "",
+            "summary": "Clase\u0020de\u0020prueba\u0020b\u00E1sica\u0020para\u0020verificar\u0020que\u0020la\u0020p\u00E1gina\u0020principal\u0020de\u0020la\u0020aplicaci\u00F3n\u0020funciona.",
             "url": "classes/Tests-Feature-ExampleTest.html"
         },                {
             "fqsen": "\\Tests\\Feature\\ExampleTest\u003A\u003Atest_the_application_returns_a_successful_response\u0028\u0029",
             "name": "test_the_application_returns_a_successful_response",
-            "summary": "A\u0020basic\u0020test\u0020example.",
+            "summary": "Comprueba\u0020que\u0020al\u0020entrar\u0020a\u0020la\u0020ruta\u0020inicial\u0020\u0028\/\u0029\u0020la\u0020aplicaci\u00F3n\u0020responde\u0020correctamente.",
             "url": "classes/Tests-Feature-ExampleTest.html#method_test_the_application_returns_a_successful_response"
         },                {
             "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest",
             "name": "FlujosClickBarrioFeatureTest",
-            "summary": "",
+            "summary": "Clase\u0020base\u0020de\u0020la\u0020que\u0020heredan\u0020todos\u0020los\u0020tests\u0020de\u0020la\u0020aplicaci\u00F3n\u0020para\u0020preparar\u0020el\u0020entorno\u0020antes\u0020de\u0020cada\u0020prueba.",
             "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html"
         },                {
             "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_acceso_a_portada_y_escaparate_autenticado\u0028\u0029",
@@ -1276,80 +1271,130 @@ Search.appendIndex(
             "summary": "PI\u002D06\u003A\u0020El\u0020sistema\u0020rechaza\u0020el\u0020env\u00EDo\u0020de\u0020formularios\u0020con\u0020datos\u0020vac\u00EDos\u0020o\u0020err\u00F3neos",
             "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_administrador_recibe_errores_al_crear_categoria_vacia"
         },                {
+            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_crear_tienda_requiere_email_obligatorio\u0028\u0029",
+            "name": "test_crear_tienda_requiere_email_obligatorio",
+            "summary": "PI\u002D07\u003A\u0020Crear\u0020una\u0020tienda\u0020exige\u0020correo\u0020electr\u00F3nico\u0020obligatorio\u0020y\u0020evita\u0020excepci\u00F3n\u0020SQL",
+            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_crear_tienda_requiere_email_obligatorio"
+        },                {
+            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_crear_gestor_requiere_tienda_asignada\u0028\u0029",
+            "name": "test_crear_gestor_requiere_tienda_asignada",
+            "summary": "PI\u002D08\u003A\u0020No\u0020se\u0020puede\u0020crear\u0020un\u0020usuario\u0020con\u0020rol\u0020gestor\u0020sin\u0020asignarle\u0020una\u0020tienda",
+            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_crear_gestor_requiere_tienda_asignada"
+        },                {
+            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_reemplazar_gestor_degrada_al_anterior_a_rol_usuario\u0028\u0029",
+            "name": "test_reemplazar_gestor_degrada_al_anterior_a_rol_usuario",
+            "summary": "PI\u002D09\u003A\u0020Al\u0020asignar\u0020un\u0020nuevo\u0020gestor\u0020a\u0020una\u0020tienda\u0020ocupada,\u0020el\u0020antiguo\u0020gestor\u0020pasa\u0020a\u0020rol\u0020usuario",
+            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_reemplazar_gestor_degrada_al_anterior_a_rol_usuario"
+        },                {
+            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_gestor_debe_indicar_precio_y_stock_al_incorporar_producto\u0028\u0029",
+            "name": "test_gestor_debe_indicar_precio_y_stock_al_incorporar_producto",
+            "summary": "PI\u002D10\u003A\u0020Un\u0020gestor\u0020no\u0020puede\u0020incorporar\u0020un\u0020producto\u0020a\u0020su\u0020tienda\u0020sin\u0020precio\u0020y\u0020stock\u0020obligatorios",
+            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_gestor_debe_indicar_precio_y_stock_al_incorporar_producto"
+        },                {
             "fqsen": "\\Tests\\Feature\\ProfileTest",
             "name": "ProfileTest",
-            "summary": "",
+            "summary": "Clase\u0020de\u0020pruebas\u0020para\u0020comprobar\u0020que\u0020el\u0020usuario\u0020puede\u0020ver,\u0020editar\u0020y\u0020borrar\u0020su\u0020perfil.",
             "url": "classes/Tests-Feature-ProfileTest.html"
         },                {
             "fqsen": "\\Tests\\Feature\\ProfileTest\u003A\u003Atest_profile_page_is_displayed\u0028\u0029",
             "name": "test_profile_page_is_displayed",
-            "summary": "",
+            "summary": "Comprueba\u0020que\u0020la\u0020p\u00E1gina\u0020de\u0020perfil\u0020carga\u0020bien\u0020cuando\u0020el\u0020usuario\u0020ha\u0020iniciado\u0020sesi\u00F3n.",
             "url": "classes/Tests-Feature-ProfileTest.html#method_test_profile_page_is_displayed"
         },                {
             "fqsen": "\\Tests\\Feature\\ProfileTest\u003A\u003Atest_profile_information_can_be_updated\u0028\u0029",
             "name": "test_profile_information_can_be_updated",
-            "summary": "",
+            "summary": "Prueba\u0020que\u0020el\u0020usuario\u0020puede\u0020actualizar\u0020su\u0020nombre\u0020y\u0020su\u0020correo\u0020electr\u00F3nico.",
             "url": "classes/Tests-Feature-ProfileTest.html#method_test_profile_information_can_be_updated"
         },                {
             "fqsen": "\\Tests\\Feature\\ProfileTest\u003A\u003Atest_email_verification_status_is_unchanged_when_the_email_address_is_unchanged\u0028\u0029",
             "name": "test_email_verification_status_is_unchanged_when_the_email_address_is_unchanged",
-            "summary": "",
+            "summary": "Comprueba\u0020que\u0020si\u0020el\u0020usuario\u0020cambia\u0020su\u0020nombre\u0020pero\u0020deja\u0020el\u0020mismo\u0020email,\u0020su\u0020correo\u0020sigue\u0020verificado.",
             "url": "classes/Tests-Feature-ProfileTest.html#method_test_email_verification_status_is_unchanged_when_the_email_address_is_unchanged"
         },                {
             "fqsen": "\\Tests\\Feature\\ProfileTest\u003A\u003Atest_user_can_delete_their_account\u0028\u0029",
             "name": "test_user_can_delete_their_account",
-            "summary": "",
+            "summary": "Prueba\u0020que\u0020un\u0020usuario\u0020puede\u0020eliminar\u0020su\u0020propia\u0020cuenta\u0020poniendo\u0020su\u0020contrase\u00F1a\u0020correcta.",
             "url": "classes/Tests-Feature-ProfileTest.html#method_test_user_can_delete_their_account"
         },                {
             "fqsen": "\\Tests\\Feature\\ProfileTest\u003A\u003Atest_correct_password_must_be_provided_to_delete_account\u0028\u0029",
             "name": "test_correct_password_must_be_provided_to_delete_account",
-            "summary": "",
+            "summary": "Comprueba\u0020que\u0020no\u0020deja\u0020borrar\u0020la\u0020cuenta\u0020si\u0020el\u0020usuario\u0020escribe\u0020mal\u0020su\u0020contrase\u00F1a.",
             "url": "classes/Tests-Feature-ProfileTest.html#method_test_correct_password_must_be_provided_to_delete_account"
         },                {
             "fqsen": "\\Tests\\TestCase",
             "name": "TestCase",
-            "summary": "",
+            "summary": "Clase\u0020base\u0020de\u0020la\u0020que\u0020heredan\u0020todos\u0020los\u0020tests\u0020de\u0020la\u0020aplicaci\u00F3n\u0020para\u0020preparar\u0020el\u0020entorno\u0020antes\u0020de\u0020cada\u0020prueba.",
             "url": "classes/Tests-TestCase.html"
         },                {
             "fqsen": "\\Tests\\TestCase\u003A\u003AsetUp\u0028\u0029",
             "name": "setUp",
-            "summary": "",
+            "summary": "Se\u0020ejecuta\u0020autom\u00E1ticamente\u0020antes\u0020de\u0020cada\u0020test\u0020para\u0020limpiar\u0020la\u0020cach\u00E9\u0020de\u0020permisos\u0020y\u0020asegurar\u0020que\u0020existen\u0020los\u0020roles\u0020b\u00E1sicos.",
             "url": "classes/Tests-TestCase.html#method_setUp"
         },                {
             "fqsen": "\\Tests\\Unit\\ExampleTest",
             "name": "ExampleTest",
-            "summary": "",
+            "summary": "Clase\u0020de\u0020prueba\u0020unitaria\u0020b\u00E1sica\u0020de\u0020ejemplo\u0020que\u0020viene\u0020por\u0020defecto\u0020en\u0020el\u0020proyecto.",
             "url": "classes/Tests-Unit-ExampleTest.html"
         },                {
             "fqsen": "\\Tests\\Unit\\ExampleTest\u003A\u003Atest_that_true_is_true\u0028\u0029",
             "name": "test_that_true_is_true",
-            "summary": "A\u0020basic\u0020test\u0020example.",
+            "summary": "Prueba\u0020sencilla\u0020que\u0020simplemente\u0020comprueba\u0020que\u0020verdadero\u0020es\u0020verdadero\u0020para\u0020verificar\u0020que\u0020PHPUnit\u0020funciona.",
             "url": "classes/Tests-Unit-ExampleTest.html#method_test_that_true_is_true"
         },                {
             "fqsen": "\\Tests\\Unit\\ValidacionDatosUnitTest",
             "name": "ValidacionDatosUnitTest",
-            "summary": "",
+            "summary": "Clase\u0020de\u0020pruebas\u0020unitarias\u0020para\u0020comprobar\u0020que\u0020las\u0020reglas\u0020de\u0020validaci\u00F3n,\u0020c\u00E1lculos\u0020y\u0020modelos\u0020de\u0020la\u0020aplicaci\u00F3n\u0020funcionan\u0020bien.",
             "url": "classes/Tests-Unit-ValidacionDatosUnitTest.html"
         },                {
             "fqsen": "\\Tests\\Unit\\ValidacionDatosUnitTest\u003A\u003Atest_validacion_precio_positivo\u0028\u0029",
             "name": "test_validacion_precio_positivo",
-            "summary": "PU\u002D01\u003A\u0020Verifica\u0020que\u0020el\u0020precio\u0020de\u0020un\u0020producto\/tienda\u0020sea\u0020num\u00E9rico\u0020y\u0020estrictamente\u0020positivo",
+            "summary": "PU\u002D01\u003A\u0020Verifica\u0020que\u0020el\u0020precio\u0020de\u0020un\u0020producto\/tienda\u0020sea\u0020num\u00E9rico\u0020y\u0020estrictamente\u0020positivo.",
             "url": "classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_precio_positivo"
         },                {
             "fqsen": "\\Tests\\Unit\\ValidacionDatosUnitTest\u003A\u003Atest_validacion_cantidad_entero_positivo\u0028\u0029",
             "name": "test_validacion_cantidad_entero_positivo",
-            "summary": "PU\u002D02\u003A\u0020Verifica\u0020que\u0020la\u0020cantidad\/stock\u0020sea\u0020un\u0020n\u00FAmero\u0020entero\u0020positivo",
+            "summary": "PU\u002D02\u003A\u0020Verifica\u0020que\u0020la\u0020cantidad\/stock\u0020sea\u0020un\u0020n\u00FAmero\u0020entero\u0020positivo.",
             "url": "classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_cantidad_entero_positivo"
         },                {
             "fqsen": "\\Tests\\Unit\\ValidacionDatosUnitTest\u003A\u003Atest_validacion_email_y_longitud_nombre\u0028\u0029",
             "name": "test_validacion_email_y_longitud_nombre",
-            "summary": "PU\u002D03\u003A\u0020Verifica\u0020formato\u0020de\u0020correo\u0020electr\u00F3nico\u0020y\u0020longitud\u0020m\u00E1xima\u0020de\u0020campos",
+            "summary": "PU\u002D03\u003A\u0020Verifica\u0020formato\u0020de\u0020correo\u0020electr\u00F3nico\u0020y\u0020longitud\u0020m\u00E1xima\u0020de\u0020campos.",
             "url": "classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_email_y_longitud_nombre"
         },                {
             "fqsen": "\\Tests\\Unit\\ValidacionDatosUnitTest\u003A\u003Atest_validacion_mascara_telefono\u0028\u0029",
             "name": "test_validacion_mascara_telefono",
-            "summary": "PU\u002D04\u003A\u0020Verifica\u0020m\u00E1scara\/formato\u0020de\u0020tel\u00E9fono\u0020espa\u00F1ol\u0020\u00289\u0020d\u00EDgitos\u0029",
+            "summary": "PU\u002D04\u003A\u0020Verifica\u0020m\u00E1scara\/formato\u0020de\u0020tel\u00E9fono\u0020espa\u00F1ol\u0020\u00289\u0020d\u00EDgitos\u0029.",
             "url": "classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_mascara_telefono"
+        },                {
+            "fqsen": "\\Tests\\Unit\\ValidacionDatosUnitTest\u003A\u003Atest_validacion_roles_permitidos\u0028\u0029",
+            "name": "test_validacion_roles_permitidos",
+            "summary": "PU\u002D05\u003A\u0020Verifica\u0020que\u0020los\u0020roles\u0020permitidos\u0020en\u0020el\u0020sistema\u0020sean\u0020\u00FAnicamente\u0020administrador,\u0020gestor\u0020o\u0020usuario.",
+            "url": "classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_roles_permitidos"
+        },                {
+            "fqsen": "\\Tests\\Unit\\ValidacionDatosUnitTest\u003A\u003Atest_validacion_tienda_obligatoria_si_es_gestor\u0028\u0029",
+            "name": "test_validacion_tienda_obligatoria_si_es_gestor",
+            "summary": "PU\u002D06\u003A\u0020Verifica\u0020que\u0020la\u0020asignaci\u00F3n\u0020de\u0020tienda\u0020sea\u0020obligatoria\u0020\u00FAnicamente\u0020cuando\u0020el\u0020rol\u0020es\u0020gestor.",
+            "url": "classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_validacion_tienda_obligatoria_si_es_gestor"
+        },                {
+            "fqsen": "\\Tests\\Unit\\ValidacionDatosUnitTest\u003A\u003Atest_calculo_subtotal_y_total_carrito\u0028\u0029",
+            "name": "test_calculo_subtotal_y_total_carrito",
+            "summary": "PU\u002D07\u003A\u0020Verifica\u0020el\u0020c\u00E1lculo\u0020de\u0020subtotales\u0020y\u0020total\u0020de\u0020un\u0020carrito\u0020multi\u002Dtienda.",
+            "url": "classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_calculo_subtotal_y_total_carrito"
+        },                {
+            "fqsen": "\\Tests\\Unit\\ValidacionDatosUnitTest\u003A\u003Atest_comprobacion_stock_disponible_frente_a_pedido\u0028\u0029",
+            "name": "test_comprobacion_stock_disponible_frente_a_pedido",
+            "summary": "PU\u002D08\u003A\u0020Verifica\u0020el\u0020control\u0020de\u0020stock\u0020suficiente\u0020frente\u0020a\u0020la\u0020cantidad\u0020solicitada\u0020por\u0020el\u0020cliente.",
+            "url": "classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_comprobacion_stock_disponible_frente_a_pedido"
+        },                {
+            "fqsen": "\\Tests\\Unit\\ValidacionDatosUnitTest\u003A\u003Atest_cifrado_y_verificacion_contrasena\u0028\u0029",
+            "name": "test_cifrado_y_verificacion_contrasena",
+            "summary": "PU\u002D09\u003A\u0020Verifica\u0020el\u0020cifrado\u0020seguro\u0020de\u0020contrase\u00F1as\u0020mediante\u0020Hash.",
+            "url": "classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_cifrado_y_verificacion_contrasena"
+        },                {
+            "fqsen": "\\Tests\\Unit\\ValidacionDatosUnitTest\u003A\u003Atest_asignacion_masiva_modelos_tienda_y_producto\u0028\u0029",
+            "name": "test_asignacion_masiva_modelos_tienda_y_producto",
+            "summary": "PU\u002D10\u003A\u0020Verifica\u0020la\u0020asignaci\u00F3n\u0020masiva\u0020de\u0020atributos\u0020en\u0020los\u0020modelos\u0020Tienda\u0020y\u0020Producto.",
+            "url": "classes/Tests-Unit-ValidacionDatosUnitTest.html#method_test_asignacion_masiva_modelos_tienda_y_producto"
         },                {
             "fqsen": "\\",
             "name": "\\",

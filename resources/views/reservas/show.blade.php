@@ -10,7 +10,7 @@
         </a>
     </div>
 
-    {{-- Mensaje de éxito en sesión (ej. al confirmar una nueva compra) --}}
+    {{-- Mensaje de éxito en sesión (ej. al confirmar una nueva reserva) --}}
     @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}

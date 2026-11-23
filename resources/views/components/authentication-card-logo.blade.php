@@ -1,5 +1,5 @@
 {{-- Componente visual con el logotipo vectorial SVG enlazado a la página de inicio --}}
-<a href="/">
+/*<a href="/">
     <div class="logo-container">
         {{-- Estilo inline forzado para evitar conflictos con clases globales de ancho/alto --}}
         <svg xmlns="http://w3.org" fill="none" viewBox="0 0 48 24" stroke-width="1.5" style="width: 180px !important; height: 90px !important; display: block;">
@@ -26,4 +26,4 @@
             </g>
         </svg>
     </div>
-</a>
+</a>*/

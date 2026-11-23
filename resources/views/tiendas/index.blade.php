@@ -105,7 +105,7 @@
                                     {{ $tienda->direccion ?? 'Sin dirección' }}
                                 </td>
 
-                                {{-- Enlace directo al escaparate de la tienda (detiene la propagación del clic de fila) --}}
+                                {{-- Enlace directo al escaparate de la tienda --}}
                                 <td>
                                     <a href="{{ route('tiendas.show', $tienda) }}"
                                        class="boton-editar"

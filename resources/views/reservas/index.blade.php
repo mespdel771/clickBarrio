@@ -1,9 +1,9 @@
-{{-- Vista principal del historial de compras/reservas agrupadas por pedido y establecimiento --}}
+{{-- Vista principal del historial de reservas agrupadas por pedido y establecimiento --}}
 @extends('layouts.formulario')
 
 @section('contenido')
 
-    {{-- Enlace superior de navegación según el rol del usuario autenticado --}}
+    {{-- Enlace superior de navegación según el rol del usuario autentificado --}}
     <div class="acciones-tabla">
         @if(auth()->user()->hasRole('administrador') || auth()->user()->hasRole('gestor'))
             <a href="{{ route('dashboard') }}" class="boton-volver">
@@ -20,7 +20,7 @@
         Mis compras
     </h2>
 
-    {{-- Comprueba si el usuario tiene compras o reservas registradas --}}
+    {{-- Comprueba si el usuario tiene reservas registradas --}}
     @if($reservas->count())
 
         {{-- Recorre cada reserva realizada --}}
@@ -134,7 +134,7 @@
 
                 @endforeach
 
-                {{-- Pie de la compra con el importe total consolidado (las reservas son histórico inmutable) --}}
+                {{-- Pie de la compra con el importe total consolidado (las reservas son histórico no modificable) --}}
                 <div class="carrito-finalizar">
                     <div class="carrito-total">
                         <span>

@@ -86,7 +86,7 @@
 
     <br>
 
-    {{-- Importe total consolidado de toda la reserva --}}
+    {{-- Importe total confirmado de toda la reserva --}}
     <h2 class="total">
         Total:
         {{ number_format($reserva->total, 2) }} €

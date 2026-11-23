@@ -20,7 +20,7 @@
         Productos
     </h2>
 
-    {{-- SECCIÓN PARA EL ROL GESTOR (o usuarios con tiendas asignadas) --}}
+    {{-- Sección para el gestor (o usuarios con tiendas asignadas) --}}
     @if(auth()->user()->hasRole('gestor') || (isset($tiendas) && $tiendas->count()))
 
         <h2 class="titulo-categoria">
@@ -198,7 +198,7 @@
             </table>
         </div>
 
-    {{-- SECCIÓN PARA EL ROL ADMINISTRADOR --}}
+    {{-- Sección par el rol administrador --}}
     @elseif(auth()->user()->hasRole('administrador'))
 
         {{-- Cuadrícula completa de productos con opciones de edición y borrado --}}
@@ -265,7 +265,7 @@
             </div>
         @endif
 
-    {{-- SECCIÓN PARA EL ROL USUARIO (CLIENTE) --}}
+    {{-- Sección para el rol usuario --}}
     @else
 
         @php
