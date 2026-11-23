@@ -1236,61 +1236,6 @@ Search.appendIndex(
             "summary": "Comprueba\u0020que\u0020al\u0020entrar\u0020a\u0020la\u0020ruta\u0020inicial\u0020\u0028\/\u0029\u0020la\u0020aplicaci\u00F3n\u0020responde\u0020correctamente.",
             "url": "classes/Tests-Feature-ExampleTest.html#method_test_the_application_returns_a_successful_response"
         },                {
-            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest",
-            "name": "FlujosClickBarrioFeatureTest",
-            "summary": "Clase\u0020base\u0020de\u0020la\u0020que\u0020heredan\u0020todos\u0020los\u0020tests\u0020de\u0020la\u0020aplicaci\u00F3n\u0020para\u0020preparar\u0020el\u0020entorno\u0020antes\u0020de\u0020cada\u0020prueba.",
-            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html"
-        },                {
-            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_acceso_a_portada_y_escaparate_autenticado\u0028\u0029",
-            "name": "test_acceso_a_portada_y_escaparate_autenticado",
-            "summary": "PI\u002D01\u003A\u0020La\u0020portada\u0020carga\u0020correctamente\u0020y\u0020un\u0020usuario\u0020autenticado\u0020accede\u0020a\u0020tiendas\u0020y\u0020categor\u00EDas",
-            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_acceso_a_portada_y_escaparate_autenticado"
-        },                {
-            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_invitado_redirigido_a_login_en_rutas_protegidas\u0028\u0029",
-            "name": "test_invitado_redirigido_a_login_en_rutas_protegidas",
-            "summary": "PI\u002D02\u003A\u0020Un\u0020usuario\u0020no\u0020autenticado\u0020es\u0020redirigido\u0020al\u0020login\u0020si\u0020intenta\u0020ver\u0020rutas\u0020privadas",
-            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_invitado_redirigido_a_login_en_rutas_protegidas"
-        },                {
-            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_cliente_no_puede_acceder_a_rutas_de_administrador_ni_gestor\u0028\u0029",
-            "name": "test_cliente_no_puede_acceder_a_rutas_de_administrador_ni_gestor",
-            "summary": "PI\u002D03\u003A\u0020Control\u0020de\u0020acceso\u0020por\u0020roles\u0020\u0028Un\u0020cliente\u0020no\u0020puede\u0020gestionar\u0020usuarios\u0020ni\u0020crear\u0020tiendas\u0029",
-            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_cliente_no_puede_acceder_a_rutas_de_administrador_ni_gestor"
-        },                {
-            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_administrador_accede_a_gestion_global\u0028\u0029",
-            "name": "test_administrador_accede_a_gestion_global",
-            "summary": "PI\u002D04\u003A\u0020Un\u0020administrador\u0020s\u00ED\u0020tiene\u0020acceso\u0020a\u0020la\u0020gesti\u00F3n\u0020de\u0020usuarios\u0020y\u0020creaci\u00F3n\u0020de\u0020tiendas",
-            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_administrador_accede_a_gestion_global"
-        },                {
-            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_gestor_accede_a_ingresos_pero_no_a_crear_tienda\u0028\u0029",
-            "name": "test_gestor_accede_a_ingresos_pero_no_a_crear_tienda",
-            "summary": "PI\u002D05\u003A\u0020Un\u0020gestor\u0020puede\u0020ver\u0020el\u0020panel\u0020de\u0020ingresos\u0020pero\u0020no\u0020puede\u0020crear\u0020tiendas\u0020nuevas",
-            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_gestor_accede_a_ingresos_pero_no_a_crear_tienda"
-        },                {
-            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_administrador_recibe_errores_al_crear_categoria_vacia\u0028\u0029",
-            "name": "test_administrador_recibe_errores_al_crear_categoria_vacia",
-            "summary": "PI\u002D06\u003A\u0020El\u0020sistema\u0020rechaza\u0020el\u0020env\u00EDo\u0020de\u0020formularios\u0020con\u0020datos\u0020vac\u00EDos\u0020o\u0020err\u00F3neos",
-            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_administrador_recibe_errores_al_crear_categoria_vacia"
-        },                {
-            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_crear_tienda_requiere_email_obligatorio\u0028\u0029",
-            "name": "test_crear_tienda_requiere_email_obligatorio",
-            "summary": "PI\u002D07\u003A\u0020Crear\u0020una\u0020tienda\u0020exige\u0020correo\u0020electr\u00F3nico\u0020obligatorio\u0020y\u0020evita\u0020excepci\u00F3n\u0020SQL",
-            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_crear_tienda_requiere_email_obligatorio"
-        },                {
-            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_crear_gestor_requiere_tienda_asignada\u0028\u0029",
-            "name": "test_crear_gestor_requiere_tienda_asignada",
-            "summary": "PI\u002D08\u003A\u0020No\u0020se\u0020puede\u0020crear\u0020un\u0020usuario\u0020con\u0020rol\u0020gestor\u0020sin\u0020asignarle\u0020una\u0020tienda",
-            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_crear_gestor_requiere_tienda_asignada"
-        },                {
-            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_reemplazar_gestor_degrada_al_anterior_a_rol_usuario\u0028\u0029",
-            "name": "test_reemplazar_gestor_degrada_al_anterior_a_rol_usuario",
-            "summary": "PI\u002D09\u003A\u0020Al\u0020asignar\u0020un\u0020nuevo\u0020gestor\u0020a\u0020una\u0020tienda\u0020ocupada,\u0020el\u0020antiguo\u0020gestor\u0020pasa\u0020a\u0020rol\u0020usuario",
-            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_reemplazar_gestor_degrada_al_anterior_a_rol_usuario"
-        },                {
-            "fqsen": "\\Tests\\Feature\\FlujosClickBarrioFeatureTest\u003A\u003Atest_gestor_debe_indicar_precio_y_stock_al_incorporar_producto\u0028\u0029",
-            "name": "test_gestor_debe_indicar_precio_y_stock_al_incorporar_producto",
-            "summary": "PI\u002D10\u003A\u0020Un\u0020gestor\u0020no\u0020puede\u0020incorporar\u0020un\u0020producto\u0020a\u0020su\u0020tienda\u0020sin\u0020precio\u0020y\u0020stock\u0020obligatorios",
-            "url": "classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_gestor_debe_indicar_precio_y_stock_al_incorporar_producto"
-        },                {
             "fqsen": "\\Tests\\Feature\\ProfileTest",
             "name": "ProfileTest",
             "summary": "Clase\u0020de\u0020pruebas\u0020para\u0020comprobar\u0020que\u0020el\u0020usuario\u0020puede\u0020ver,\u0020editar\u0020y\u0020borrar\u0020su\u0020perfil.",
