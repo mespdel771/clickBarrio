@@ -179,11 +179,12 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">12</span>
+    <span class="phpdocumentor-element-found-in__line">16</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">Clase base de la que heredan todos los tests de la aplicación para preparar el entorno antes de cada prueba.</p>
+            <p class="phpdocumentor-summary">Clase de pruebas de integración para comprobar los flujos principales de la aplicación:
+control de acceso por roles, creación de tiendas, gestión de gestores y catálogo.</p>
 
 
 
@@ -217,70 +218,70 @@
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>PI-01: La portada carga correctamente y un usuario autenticado accede a tiendas y categorías</dd>
+<dd>PI-01: La portada carga correctamente y un usuario autenticado accede a tiendas y categorías.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_administrador_accede_a_gestion_global">test_administrador_accede_a_gestion_global()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>PI-04: Un administrador sí tiene acceso a la gestión de usuarios y creación de tiendas</dd>
+<dd>PI-04: Un administrador sí tiene acceso a la gestión de usuarios y creación de tiendas.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_administrador_recibe_errores_al_crear_categoria_vacia">test_administrador_recibe_errores_al_crear_categoria_vacia()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>PI-06: El sistema rechaza el envío de formularios con datos vacíos o erróneos</dd>
+<dd>PI-06: El sistema rechaza el envío de formularios con datos vacíos o erróneos.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_cliente_no_puede_acceder_a_rutas_de_administrador_ni_gestor">test_cliente_no_puede_acceder_a_rutas_de_administrador_ni_gestor()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>PI-03: Control de acceso por roles (Un cliente no puede gestionar usuarios ni crear tiendas)</dd>
+<dd>PI-03: Control de acceso por roles (Un cliente no puede gestionar usuarios ni crear tiendas).</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_crear_gestor_requiere_tienda_asignada">test_crear_gestor_requiere_tienda_asignada()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>PI-08: No se puede crear un usuario con rol gestor sin asignarle una tienda</dd>
+<dd>PI-08: No se puede crear un usuario con rol gestor sin asignarle una tienda.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_crear_tienda_requiere_email_obligatorio">test_crear_tienda_requiere_email_obligatorio()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>PI-07: Crear una tienda exige correo electrónico obligatorio y evita excepción SQL</dd>
+<dd>PI-07: Crear una tienda exige correo electrónico obligatorio y evita excepción SQL.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_gestor_accede_a_ingresos_pero_no_a_crear_tienda">test_gestor_accede_a_ingresos_pero_no_a_crear_tienda()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>PI-05: Un gestor puede ver el panel de ingresos pero no puede crear tiendas nuevas</dd>
+<dd>PI-05: Un gestor puede ver el panel de ingresos pero no puede crear tiendas nuevas.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_gestor_debe_indicar_precio_y_stock_al_incorporar_producto">test_gestor_debe_indicar_precio_y_stock_al_incorporar_producto()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>PI-10: Un gestor no puede incorporar un producto a su tienda sin precio y stock obligatorios</dd>
+<dd>PI-10: Un gestor no puede incorporar un producto a su tienda sin precio y stock obligatorios.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_invitado_redirigido_a_login_en_rutas_protegidas">test_invitado_redirigido_a_login_en_rutas_protegidas()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>PI-02: Un usuario no autenticado es redirigido al login si intenta ver rutas privadas</dd>
+<dd>PI-02: Un usuario no autenticado es redirigido al login si intenta ver rutas privadas.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a class="" href="classes/Tests-Feature-FlujosClickBarrioFeatureTest.html#method_test_reemplazar_gestor_degrada_al_anterior_a_rol_usuario">test_reemplazar_gestor_degrada_al_anterior_a_rol_usuario()</a>
     <span>
                                 &nbsp;: void    </span>
 </dt>
-<dd>PI-09: Al asignar un nuevo gestor a una tienda ocupada, el antiguo gestor pasa a rol usuario</dd>
+<dd>PI-09: Al asignar un nuevo gestor a una tienda ocupada, el antiguo gestor pasa a rol usuario.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a class="" href="classes/Tests-TestCase.html#method_setUp">setUp()</a>
@@ -317,11 +318,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">26</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">PI-01: La portada carga correctamente y un usuario autenticado accede a tiendas y categorías</p>
+        <p class="phpdocumentor-summary">PI-01: La portada carga correctamente y un usuario autenticado accede a tiendas y categorías.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -352,11 +353,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">55</span>
+    <span class="phpdocumentor-element-found-in__line">73</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">PI-04: Un administrador sí tiene acceso a la gestión de usuarios y creación de tiendas</p>
+        <p class="phpdocumentor-summary">PI-04: Un administrador sí tiene acceso a la gestión de usuarios y creación de tiendas.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -387,11 +388,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">79</span>
+    <span class="phpdocumentor-element-found-in__line">105</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">PI-06: El sistema rechaza el envío de formularios con datos vacíos o erróneos</p>
+        <p class="phpdocumentor-summary">PI-06: El sistema rechaza el envío de formularios con datos vacíos o erróneos.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -422,11 +423,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">43</span>
+    <span class="phpdocumentor-element-found-in__line">57</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">PI-03: Control de acceso por roles (Un cliente no puede gestionar usuarios ni crear tiendas)</p>
+        <p class="phpdocumentor-summary">PI-03: Control de acceso por roles (Un cliente no puede gestionar usuarios ni crear tiendas).</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -457,11 +458,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">129</span>
+    <span class="phpdocumentor-element-found-in__line">164</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">PI-08: No se puede crear un usuario con rol gestor sin asignarle una tienda</p>
+        <p class="phpdocumentor-summary">PI-08: No se puede crear un usuario con rol gestor sin asignarle una tienda.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -492,11 +493,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">94</span>
+    <span class="phpdocumentor-element-found-in__line">125</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">PI-07: Crear una tienda exige correo electrónico obligatorio y evita excepción SQL</p>
+        <p class="phpdocumentor-summary">PI-07: Crear una tienda exige correo electrónico obligatorio y evita excepción SQL.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -527,11 +528,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">67</span>
+    <span class="phpdocumentor-element-found-in__line">89</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">PI-05: Un gestor puede ver el panel de ingresos pero no puede crear tiendas nuevas</p>
+        <p class="phpdocumentor-summary">PI-05: Un gestor puede ver el panel de ingresos pero no puede crear tiendas nuevas.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -562,11 +563,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">189</span>
+    <span class="phpdocumentor-element-found-in__line">233</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">PI-10: Un gestor no puede incorporar un producto a su tienda sin precio y stock obligatorios</p>
+        <p class="phpdocumentor-summary">PI-10: Un gestor no puede incorporar un producto a su tienda sin precio y stock obligatorios.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -597,11 +598,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">31</span>
+    <span class="phpdocumentor-element-found-in__line">42</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">PI-02: Un usuario no autenticado es redirigido al login si intenta ver rutas privadas</p>
+        <p class="phpdocumentor-summary">PI-02: Un usuario no autenticado es redirigido al login si intenta ver rutas privadas.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
@@ -632,11 +633,11 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="tests/Feature/FlujosClickBarrioFeatureTest.php"><a href="files/tests-feature-flujosclickbarriofeaturetest.html"><abbr title="tests/Feature/FlujosClickBarrioFeatureTest.php">FlujosClickBarrioFeatureTest.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">151</span>
+    <span class="phpdocumentor-element-found-in__line">191</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">PI-09: Al asignar un nuevo gestor a una tienda ocupada, el antiguo gestor pasa a rol usuario</p>
+        <p class="phpdocumentor-summary">PI-09: Al asignar un nuevo gestor a una tienda ocupada, el antiguo gestor pasa a rol usuario.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>

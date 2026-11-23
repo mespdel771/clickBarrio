@@ -225,7 +225,6 @@ class FlujosClickBarrioFeatureTest extends TestCase
         $this->assertFalse($antiguoGestor->hasRole('gestor'));
         $this->assertEquals('nuevogestor@ejemplo.com', $tienda->user->email);
     }
-
     /**
      * PI-10: Un gestor no puede incorporar un producto a su tienda sin precio y stock obligatorios.
      *
@@ -253,3 +252,44 @@ class FlujosClickBarrioFeatureTest extends TestCase
         // Intento activando la tienda pero sin precio ni stock -> devuelve error de validación
         $this->actingAs($gestor)
             ->put(route('productos.update', $producto), [
+                'denominacion' => 'Auriculares Bluetooth',
+                'categoria_id' => $categoria->id,
+                'tiendas'      => [
+                    $tienda->id => [
+                        'activo' => '1',
+                        'precio' => '',
+                        'stock'  => '',
+                    ],
+                ],
+            ])
+            ->assertSessionHasErrors(["tiendas.{$tienda->id}.precio"]);
+
+        // Intento indicando precio y stock válidos -> se guarda correctamente en la tienda
+        $this->actingAs($gestor)
+            ->put(route('productos.update', $producto), [
+                'denominacion' => 'Auriculares Bluetooth',
+                'categoria_id' => $categoria->id,
+                'tiendas'      => [
+                    $tienda->id => [
+                        'activo' => '1',
+                        'precio' => 29.95,
+                        'stock'  => 15,
+                    ],
+                ],
+            ])
+            ->assertRedirect(route('productos.index'));
+
+        // Comprobamos que tanto el precio como el stock se han registrado en la base de datos
+        $this->assertDatabaseHas('precios', [
+            'producto_id' => $producto->id,
+            'tienda_id'   => $tienda->id,
+            'precio'      => 29.95,
+        ]);
+
+        $this->assertDatabaseHas('stocks', [
+            'producto_id' => $producto->id,
+            'tienda_id'   => $tienda->id,
+            'stock'       => 15,
+        ]);
+    }
+}
