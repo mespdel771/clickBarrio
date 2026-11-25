@@ -2,6 +2,13 @@
 
 Aplicación web hecha con Laravel 12 para gestionar las tiendas del barrio, ver sus productos, hacer la compra en un carrito multi-tienda y reservar pedidos generando las facturas y comprobantes en PDF automáticamente.
 
+## Versión desplegada en producción
+
+La aplicación está desplegada y operativa en Railway para su revisión directa sin necesidad de instalación local:
+
+- **URL de acceso:** [https://railway.app](https://railway.app)
+- *(Puedes iniciar sesión directamente usando cualquiera de las cuentas de prueba indicadas en la sección [Usuarios de prueba](#usuarios-de-prueba)).*
+
 ## Qué hace la aplicación
 
 - **Diferentes tipos de usuario (roles):**
@@ -14,11 +21,11 @@ Aplicación web hecha con Laravel 12 para gestionar las tiendas del barrio, ver 
   - A cada tienda implicada en la compra le llega también su propio correo avisando del pedido con un PDF que incluye solo los productos de su comercio.
 - **Documentación del código:** Todo el código está comentado con PHPDoc y generado en web dentro de `docs/api/index.html`.
 
-## Qué necesitas tener instalado
+## Qué necesitas tener instalado (para ejecución en local)
 
 - PHP 8.2 o superior
 - Composer
-- Node.js y NPM (opcional si se usan los archivos compilados en `public/build/`)
+- Node.js y NPM (opcional: los assets compilados ya se incluyen en `public/build/`)
 - Un entorno local con MySQL o MariaDB (XAMPP, Laragon, MAMP o similar)
 
 ## Preparación de la Base de Datos (válido para Windows, macOS y Linux)
@@ -93,7 +100,7 @@ php artisan config:clear
 
 ## Usuarios de prueba
 
-Al importar `02_llenado.sql` (o ejecutar los seeders) se crean las siguientes cuentas listas para probar cada rol (todas con contraseña **`password`**):
+Tanto en la versión desplegada como al importar `02_llenado.sql` (o ejecutar los seeders), se crean las siguientes cuentas listas para probar cada rol (todas con contraseña **`password`**):
 
 - **Administrador:** `admin@gmail.com` | Contraseña: `password` (Acceso total a toda la aplicación)
 - **Gestor de Tienda:** `gestor1@gmail.com` hasta `gestor20@gmail.com` | Contraseña: `password` (Gestiona su tienda o tiendas asignadas, precios, stock y pedidos)
@@ -101,10 +108,11 @@ Al importar `02_llenado.sql` (o ejecutar los seeders) se crean las siguientes cu
 
 ## Ejecutar los tests
 
-El proyecto tiene 45 pruebas unitarias y de integración en `tests/Unit` y `tests/Feature`. Para lanzarlas todas:
+El proyecto tiene 45 pruebas unitarias y de integración en `tests/Unit` y `tests/Feature`. Para lanzarlas todas en local:
 ```bash
 php artisan test
 ```
+*(Nota: Si los tests modifican la estructura de tablas durante la ejecución, asegúrate de tener `DB_USERNAME=root` en tu `.env` local o de que `click_user` disponga de permisos de creación de tablas).*
 
 ## Ver la documentación del código
 
