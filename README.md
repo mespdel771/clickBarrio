@@ -6,7 +6,7 @@ Aplicación web hecha con Laravel 12 para gestionar las tiendas del barrio, ver 
 
 La aplicación está desplegada y operativa en Railway para su revisión directa sin necesidad de instalación local:
 
-- **URL de acceso:** [https://railway.app](https://railway.app)
+- **URL de acceso:** [https://clickbarrio-production.up.railway.app/](https://clickbarrio-production.up.railway.app/)
 - *(Puedes iniciar sesión directamente usando cualquiera de las cuentas de prueba indicadas en la sección [Usuarios de prueba](#usuarios-de-prueba)).*
 
 ## Qué hace la aplicación
